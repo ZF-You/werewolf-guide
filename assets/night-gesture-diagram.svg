@@ -1,0 +1,125 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">狼人杀夜间手势图解</title>
+  <desc id="desc">包含 1 到 12 号码手势，以及狼人杀常用角色和战术手势。</desc>
+  <defs>
+    <style>
+      .bg { fill: #fbf3dd; }
+      .panel { fill: #fffaf0; stroke: #d7bd8f; stroke-width: 2; }
+      .title { fill: #322719; font: 800 54px "Noto Serif SC", "Songti SC", "SimSun", serif; }
+      .section { fill: #8e4b2d; font: 800 30px "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .label { fill: #fffaf0; font: 800 24px Arial, sans-serif; }
+      .small { fill: #4a3d2c; font: 800 22px "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .tiny { fill: #6f5a40; font: 700 18px "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .skin { fill: #f7d2ad; stroke: #8b5338; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .line { fill: none; stroke: #8b5338; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #8b5338; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .accent { fill: none; stroke: #235f5b; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .wine { fill: none; stroke: #78343a; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .gold { fill: none; stroke: #9a7728; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .badge { fill: #9a7728; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <rect x="26" y="24" width="1548" height="852" rx="26" fill="#fff6df" stroke="#e4c894" stroke-width="3"/>
+  <text class="title" x="800" y="88" text-anchor="middle">狼人杀夜间手势图解</text>
+  <text class="section" x="800" y="135" text-anchor="middle">号码手势 1-12</text>
+
+  <g transform="translate(40 165)">
+    <g transform="translate(0 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">1</text>
+      <path class="line" d="M60 188 L60 92"/><path class="thin" d="M36 188 Q60 224 84 188"/><text class="small" x="60" y="230" text-anchor="middle">食指</text>
+    </g>
+    <g transform="translate(128 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">2</text>
+      <path class="line" d="M44 188 L38 94"/><path class="line" d="M76 188 L82 94"/><path class="thin" d="M32 190 Q60 224 88 190"/><text class="small" x="60" y="230" text-anchor="middle">食中</text>
+    </g>
+    <g transform="translate(256 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">3</text>
+      <path class="line" d="M38 188 L28 110"/><path class="line" d="M60 188 L60 92"/><path class="line" d="M82 188 L92 110"/><path class="thin" d="M32 190 Q60 224 88 190"/><text class="small" x="60" y="230" text-anchor="middle">拇食中</text>
+    </g>
+    <g transform="translate(384 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">4</text>
+      <path class="line" d="M28 188 L22 108"/><path class="line" d="M50 188 L48 92"/><path class="line" d="M72 188 L74 92"/><path class="line" d="M94 188 L98 112"/><text class="small" x="60" y="230" text-anchor="middle">四指</text>
+    </g>
+    <g transform="translate(512 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">5</text>
+      <path class="line" d="M24 184 L12 118"/><path class="line" d="M42 184 L38 94"/><path class="line" d="M60 184 L60 82"/><path class="line" d="M78 184 L84 94"/><path class="line" d="M96 184 L108 122"/><text class="small" x="60" y="230" text-anchor="middle">张开</text>
+    </g>
+    <g transform="translate(640 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">6</text>
+      <path class="line" d="M62 188 L22 126"/><path class="line" d="M62 188 L104 128"/><path class="thin" d="M42 178 Q60 204 80 178"/><text class="small" x="60" y="230" text-anchor="middle">拇小</text>
+    </g>
+    <g transform="translate(768 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">7</text>
+      <circle cx="62" cy="105" r="11" fill="#f7d2ad" stroke="#8b5338" stroke-width="5"/>
+      <path class="line" d="M32 176 L62 106"/><path class="line" d="M60 182 L62 106"/><path class="line" d="M90 176 L62 106"/><path class="thin" d="M34 184 q18 28 36 0"/><path class="thin" d="M70 184 q18 28 36 0"/><text class="small" x="60" y="230" text-anchor="middle">三指捏</text>
+    </g>
+    <g transform="translate(896 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">8</text>
+      <path class="line" d="M52 188 L52 92"/><path class="line" d="M54 182 L96 138"/><path class="thin" d="M38 188 q22 26 46 0"/><text class="small" x="60" y="230" text-anchor="middle">拇食张开</text>
+    </g>
+    <g transform="translate(1024 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">9</text>
+      <path class="line" d="M58 188 C58 148 58 130 82 120 C100 112 100 92 78 86"/><path class="thin" d="M34 188 q26 28 58 0"/><text class="small" x="60" y="222" text-anchor="middle">食指弯</text><text class="tiny" x="60" y="244" text-anchor="middle">拇指收</text>
+    </g>
+    <g transform="translate(1152 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">10</text>
+      <rect class="skin" x="26" y="112" width="68" height="70" rx="24"/><path class="thin" d="M28 130 H92 M28 150 H92"/><text class="small" x="60" y="230" text-anchor="middle">拳头</text>
+    </g>
+    <g transform="translate(1280 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">11</text>
+      <rect class="skin" x="30" y="82" width="60" height="58" rx="18"/><path class="line" d="M60 136 L60 208"/><text class="small" x="60" y="230" text-anchor="middle">朝下 1</text>
+    </g>
+    <g transform="translate(1408 0)">
+      <rect class="panel" width="120" height="250" rx="16"/><circle class="badge" cx="60" cy="32" r="25"/><text class="label" x="60" y="40" text-anchor="middle">12</text>
+      <rect class="skin" x="30" y="82" width="60" height="58" rx="18"/><path class="line" d="M46 136 L42 208"/><path class="line" d="M74 136 L78 208"/><text class="small" x="60" y="230" text-anchor="middle">朝下 2</text>
+    </g>
+  </g>
+
+  <text class="section" x="800" y="470" text-anchor="middle">角色 / 战术动作</text>
+  <g transform="translate(40 500)">
+    <g transform="translate(0 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">狼人刀人</text>
+      <path class="wine" d="M42 96 L108 172"/><path class="line" d="M28 126 L120 126"/><text class="tiny" x="74" y="260" text-anchor="middle">下切 + 号码</text>
+    </g>
+    <g transform="translate(156 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">预言家</text>
+      <ellipse cx="58" cy="110" rx="30" ry="18" fill="none" stroke="#235f5b" stroke-width="7"/><circle cx="58" cy="110" r="8" fill="#235f5b"/><path class="accent" d="M82 132 L118 164"/><text class="tiny" x="74" y="260" text-anchor="middle">看 / 查 + 号码</text>
+    </g>
+    <g transform="translate(312 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">女巫药水</text>
+      <path class="gold" d="M62 82 h24 v30 q28 28 0 64 h-24 q-28-36 0-64z"/><path class="accent" d="M36 196 L58 174 L80 196"/><path class="wine" d="M96 174 L118 196 L140 174"/><text class="tiny" x="74" y="260" text-anchor="middle">救 / 毒 + 号码</text>
+    </g>
+    <g transform="translate(468 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">猎人开枪</text>
+      <path class="line" d="M38 154 L104 118"/><path class="line" d="M48 168 L92 168"/><path class="thin" d="M94 118 L124 118"/><text class="tiny" x="74" y="260" text-anchor="middle">枪形 + 号码</text>
+    </g>
+    <g transform="translate(624 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">守卫守护</text>
+      <path class="line" d="M42 190 L36 96"/><path class="line" d="M62 190 L60 88"/><path class="line" d="M92 190 L96 88"/><path class="line" d="M112 190 L118 100"/><path class="thin" d="M34 196 q40 34 84 0"/><text class="tiny" x="74" y="248" text-anchor="middle">食中并拢</text><text class="tiny" x="74" y="274" text-anchor="middle">无小并拢，中间分开</text>
+    </g>
+    <g transform="translate(780 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">自爆</text>
+      <rect class="skin" x="44" y="100" width="60" height="56" rx="18"/><path class="wine" d="M74 78 V42 M102 88 l24-24 M46 88 L22 64 M110 132 h30 M38 132 H8"/><text class="tiny" x="74" y="260" text-anchor="middle">拳头打开</text>
+    </g>
+    <g transform="translate(936 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">冲锋</text>
+      <rect class="skin" x="28" y="116" width="64" height="58" rx="18"/><path class="gold" d="M92 146 H128 M112 126 L132 146 L112 166"/><text class="tiny" x="74" y="260" text-anchor="middle">向前推</text>
+    </g>
+    <g transform="translate(1092 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">倒钩</text>
+      <path class="line" d="M92 84 C44 100 46 154 88 154 C118 154 114 118 86 126"/><path class="wine" d="M92 84 l28 10"/><text class="tiny" x="74" y="260" text-anchor="middle">弯钩 / 反打</text>
+    </g>
+    <g transform="translate(1248 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">悍跳</text>
+      <path class="line" d="M50 178 L50 92"/><path class="thin" d="M30 178 q22 26 46 0"/><text class="section" x="104" y="130" text-anchor="middle">预</text><text class="tiny" x="74" y="260" text-anchor="middle">假跳身份</text>
+    </g>
+    <g transform="translate(1404 0)">
+      <rect class="panel" width="148" height="300" rx="16"/><text class="small" x="74" y="40" text-anchor="middle">换位交易</text>
+      <path class="accent" d="M38 112 H112 M92 92 L114 112 L92 132"/><path class="gold" d="M112 174 H38 M58 154 L36 174 L58 194"/><text class="tiny" x="74" y="260" text-anchor="middle">两个号码</text>
+    </g>
+  </g>
+  <text class="tiny" x="800" y="848" text-anchor="middle">开局以当局法官手势为准；这张图用于新人快速记忆。</text>
+</svg>
+
