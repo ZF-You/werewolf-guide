@@ -758,21 +758,21 @@ tr:last-child td {
 
 .role-mini-card::before {
   position: absolute;
-  inset: 0;
+  inset: 10px;
   z-index: -2;
   background-image: var(--role-art, url("images/site-setup-roles.jpg"));
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: auto 100%;
+  background-size: contain;
   content: "";
-  opacity: 0.34;
+  opacity: 0.48;
 }
 
 .role-mini-card::after {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(255, 250, 240, 0.96) 0%, rgba(255, 250, 240, 0.84) 56%, rgba(255, 250, 240, 0.26) 100%);
+  background: linear-gradient(90deg, rgba(255, 250, 240, 0.97) 0%, rgba(255, 250, 240, 0.88) 58%, rgba(255, 250, 240, 0.3) 100%);
   content: "";
 }
 

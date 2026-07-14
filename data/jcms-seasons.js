@@ -5,7 +5,7 @@
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 76,
+      "episodeCount": 86,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -842,16 +842,126 @@
           "date": "2026-07-07",
           "section": "正片",
           "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260708 正赛 第六期 Day-2 第一局-预女猎白混",
+          "bvid": "BV11uMG6PEkr",
+          "url": "https://www.bilibili.com/video/BV11uMG6PEkr",
+          "duration": 6665,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-07-08",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260708 正赛 第六期 Day-2 第二局-唯邻是从",
+          "bvid": "BV1KuMG6NEez",
+          "url": "https://www.bilibili.com/video/BV1KuMG6NEez",
+          "duration": 3818,
+          "board": "唯邻是从",
+          "stage": "正赛",
+          "date": "2026-07-08",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260708 正赛 第六期 Day-2 第三局-机械狼通灵师",
+          "bvid": "BV1suMG6PEYP",
+          "url": "https://www.bilibili.com/video/BV1suMG6PEYP",
+          "duration": 6504,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-07-08",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260709 正赛 第六期 Day-3 第一局-预女猎白混",
+          "bvid": "BV13ZMp63EPs",
+          "url": "https://www.bilibili.com/video/BV13ZMp63EPs",
+          "duration": 5532,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-07-09",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260709 正赛 第六期 Day-3 第二局-诡术之境",
+          "bvid": "BV1hZMp63Esx",
+          "url": "https://www.bilibili.com/video/BV1hZMp63Esx",
+          "duration": 7495,
+          "board": "诡术之境",
+          "stage": "正赛",
+          "date": "2026-07-09",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260709 正赛 第六期 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV13ZMp63EEB",
+          "url": "https://www.bilibili.com/video/BV13ZMp63EEB",
+          "duration": 3981,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-07-09",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260710 正赛 第六期 Day-4 第一局-预女猎白混",
+          "bvid": "BV1GxNH6YESw",
+          "url": "https://www.bilibili.com/video/BV1GxNH6YESw",
+          "duration": 6760,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-07-10",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260710 正赛 第六期 Day-4 第二局-假面舞会",
+          "bvid": "BV1GxNH6YEht",
+          "url": "https://www.bilibili.com/video/BV1GxNH6YEht",
+          "duration": 3001,
+          "board": "假面舞会",
+          "stage": "正赛",
+          "date": "2026-07-10",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260710 正赛 第六期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1VxNH6YETC",
+          "url": "https://www.bilibili.com/video/BV1VxNH6YETC",
+          "duration": 3145,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-07-10",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
+        },
+        {
+          "title": "20260710 正赛 第六期 Day-4 第四局-机械狼通灵师",
+          "bvid": "BV1YxNH6YEqY",
+          "url": "https://www.bilibili.com/video/BV1YxNH6YEqY",
+          "duration": 3104,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-07-10",
+          "section": "正片",
+          "seasonTitle": "曙光航纪"
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 25
+          "count": 29
         },
         {
           "name": "预女猎白混",
-          "count": 23
+          "count": 26
         },
         {
           "name": "盗宝大师",
@@ -859,15 +969,15 @@
         },
         {
           "name": "诡术之境",
-          "count": 8
+          "count": 9
         },
         {
           "name": "假面舞会",
-          "count": 6
+          "count": 7
         },
         {
           "name": "唯邻是从",
-          "count": 2
+          "count": 3
         },
         {
           "name": "狼王守卫",
