@@ -496,7 +496,8 @@ function renderRolePage() {
 function roleCard(item) {
   const art = ROLE_ART[item.name] || (item.camp.includes("狼人") ? "werewolf.png" : "villager.png");
   return `
-    <article class="role-mini-card" style="--role-art: url('../images/identities/${escapeHtml(art)}')">
+    <article class="role-mini-card">
+      <img class="role-mini-card-art" src="../images/identities/${escapeHtml(art)}" alt="" aria-hidden="true" loading="lazy" />
       <span>${escapeHtml(item.camp)}</span>
       <h3>${escapeHtml(item.name)}</h3>
       <p><strong>技能：</strong>${escapeHtml(item.skill)}</p>

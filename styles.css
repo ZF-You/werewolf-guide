@@ -754,31 +754,32 @@ tr:last-child td {
   isolation: isolate;
   min-height: 248px;
   overflow: hidden;
+  background: #fffaf0;
 }
 
-.role-mini-card::before {
+.role-mini-card-art {
   position: absolute;
   inset: 10px;
-  z-index: -2;
-  background-image: var(--role-art, url("images/site-setup-roles.jpg"));
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  content: "";
-  opacity: 0.48;
+  z-index: 0;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: contain;
+  object-position: right center;
+  opacity: 0.62;
+  pointer-events: none;
 }
 
 .role-mini-card::after {
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, rgba(255, 250, 240, 0.97) 0%, rgba(255, 250, 240, 0.88) 58%, rgba(255, 250, 240, 0.3) 100%);
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(255, 250, 240, 0.98) 0%, rgba(255, 250, 240, 0.9) 50%, rgba(255, 250, 240, 0.22) 100%);
   content: "";
 }
 
-.role-mini-card > * {
+.role-mini-card > :not(.role-mini-card-art) {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .gesture-grid {
