@@ -433,7 +433,7 @@ function bindScrollReveals() {
   if (!("IntersectionObserver" in window)) return;
 
   const targets = document.querySelectorAll(
-    ".hero-copy, .hero-media, .page-hero-copy, .page-hero-media, .page-section, .portal-card, .stat-card, .setup-panel, .season-panel",
+    ".hero-copy, .hero-media, .page-hero-copy, .page-hero-media, .page-section > .page-visual, .page-section > h2, .portal-card, .stat-card, .setup-panel, .season-panel, .glossary-list > div",
   );
   if (!targets.length) return;
 
@@ -451,7 +451,7 @@ function bindScrollReveals() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.08, rootMargin: "0px 0px -42px" },
+    { threshold: 0.04, rootMargin: "0px 0px -24px" },
   );
   targets.forEach((target) => observer.observe(target));
 }
