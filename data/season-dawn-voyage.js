@@ -1,14 +1,14 @@
 ﻿window.SEASON_DAWN_VOYAGE = {
-  "source": "C:\\Users\\Crystal\\.codex\\attachments\\3e0240f6-a08b-4a22-ae3a-a54eca000aab\\pasted-text.txt",
-  "page_title": "20260702 正赛 第五期 Day-3 第三局-机械狼通灵师_游戏热门视频",
+  "source": "C:\\Users\\Crystal\\.codex\\attachments\\f32ac451-3687-4408-807a-7c1739281ae8\\pasted-text.txt",
+  "page_title": "20260716 正赛 第七期 Day-1 第三局-机械狼通灵师_游戏热门视频",
   "video": {
-    "title": "20260702 正赛 第五期 Day-3 第三局-机械狼通灵师",
-    "bvid": "BV149TJ6WETs",
-    "aid": 116851363415701,
-    "cid": 39599344123,
-    "duration": 5138,
-    "pubdate": 1783010673,
-    "desc": "京城大师赛\n20260702",
+    "title": "20260716 正赛 第七期 Day-1 第三局-机械狼通灵师",
+    "bvid": "BV1dYKV6UEYM",
+    "aid": 116930367195779,
+    "cid": 40016416631,
+    "duration": 6091,
+    "pubdate": 1784216285,
+    "desc": "京城大师赛\n20260716",
     "owner": "京城大师赛官方"
   },
   "season": {
@@ -16,12 +16,12 @@
     "title": "曙光航纪",
     "mid": 19106800,
     "section_count": 1,
-    "episode_count": 86
+    "episode_count": 96
   },
   "sections": [
     {
       "title": "正片",
-      "episode_count": 86
+      "episode_count": 96
     }
   ],
   "episodes": [
@@ -1880,6 +1880,86 @@
       "url": "https://www.bilibili.com/video/BV1YxNH6YEqY",
       "section": "正片",
       "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260714 正赛 第七期 Day-1 第一局-预女猎白混",
+      "bvid": "BV1sEN86gEM2",
+      "duration": 3762,
+      "url": "https://www.bilibili.com/video/BV1sEN86gEM2",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260714 正赛 第七期 Day-1 第二局-盗宝大师",
+      "bvid": "BV1PEN863EXG",
+      "duration": 4994,
+      "url": "https://www.bilibili.com/video/BV1PEN863EXG",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260714 正赛 第七期 Day-1 第三局-机械狼通灵师",
+      "bvid": "BV1WEN86gE1i",
+      "duration": 4128,
+      "url": "https://www.bilibili.com/video/BV1WEN86gE1i",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260714 正赛 第七期 Day-1 第四局-机械狼通灵师",
+      "bvid": "BV1WEN86gERp",
+      "duration": 3911,
+      "url": "https://www.bilibili.com/video/BV1WEN86gERp",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260715 正赛 第七期 Day-2 第一局-预女猎白混",
+      "bvid": "BV1BPNB6QE1s",
+      "duration": 8360,
+      "url": "https://www.bilibili.com/video/BV1BPNB6QE1s",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260715 正赛 第七期 Day-2 第二局-诡术之境",
+      "bvid": "BV1BPNB6QE1V",
+      "duration": 5311,
+      "url": "https://www.bilibili.com/video/BV1BPNB6QE1V",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260715 正赛 第七期 Day-2 第三局-机械狼通灵师",
+      "bvid": "BV1BPNB6QE4z",
+      "duration": 3551,
+      "url": "https://www.bilibili.com/video/BV1BPNB6QE4z",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260716 正赛 第七期 Day-1 第一局-预女猎白混",
+      "bvid": "BV1jYKV6SETU",
+      "duration": 5806,
+      "url": "https://www.bilibili.com/video/BV1jYKV6SETU",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260716 正赛 第七期 Day-1 第二局-假面舞会",
+      "bvid": "BV1jYKV6SEwK",
+      "duration": 3347,
+      "url": "https://www.bilibili.com/video/BV1jYKV6SEwK",
+      "section": "正片",
+      "season_title": "曙光航纪"
+    },
+    {
+      "title": "20260716 正赛 第七期 Day-1 第三局-机械狼通灵师",
+      "bvid": "BV1dYKV6UEYM",
+      "duration": 6091,
+      "url": "https://www.bilibili.com/video/BV1dYKV6UEYM",
+      "section": "正片",
+      "season_title": "曙光航纪"
     }
   ],
   "subtitles": [
@@ -1914,6 +1994,6 @@
       "url": ""
     }
   ],
-  "bvid_count_in_html": 112
+  "bvid_count_in_html": 145
 };
 
