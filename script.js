@@ -5,7 +5,10 @@
   renderJcmsPage();
   renderIdentityGallery();
   renderRolePage();
+  bindSiteMotion();
 });
+
+const ASSET_VERSION = "20260717-guide18";
 
 function bindImageFallbacks() {
   const fallback =
@@ -340,6 +343,18 @@ const ROLE_ART = {
   "证婚人": "officiant.png",
 };
 
+const IDENTITY_MOTION_GROUPS = {
+  wolf: new Set([
+    "白狼王", "典狱长", "诡术师", "黑夜使者", "机械狼", "假面", "傀儡", "狼美人", "狼人", "狼术师",
+    "狼王", "梦魇", "石像鬼", "隐狼",
+  ]),
+  mystic: new Set([
+    "白夜使者", "盗宝大师", "毒师", "鬼魂新娘", "混血儿", "魔术师", "女巫", "情侣", "丘比特", "摄梦人",
+    "通灵师", "舞者", "预言家",
+  ]),
+  martial: new Set(["白神", "猎人", "骑士", "守卫", "熊"]),
+};
+
 function renderIdentityGallery() {
   const container = document.querySelector("#identity-gallery");
   if (!container) return;
@@ -347,12 +362,147 @@ function renderIdentityGallery() {
   container.innerHTML = Object.entries(ROLE_ART)
     .map(
       ([name, art]) => `
-        <figure class="identity-gallery-card" aria-label="${escapeHtml(name)}身份牌" title="${escapeHtml(name)}">
-          <img src="../images/identities/${escapeHtml(art)}" alt="${escapeHtml(name)}身份牌" width="480" height="680" loading="lazy" />
+        <figure class="identity-gallery-card identity-motion-${identityMotionGroup(name)}" data-identity-name="${escapeHtml(name)}" tabindex="0" role="button" aria-label="查看${escapeHtml(name)}身份牌大图" title="${escapeHtml(name)}">
+          <img src="../images/identities/${escapeHtml(art)}?v=${ASSET_VERSION}" alt="${escapeHtml(name)}身份牌" width="480" height="680" loading="lazy" />
         </figure>
       `,
     )
     .join("");
+}
+
+function identityMotionGroup(name) {
+  const entry = Object.entries(IDENTITY_MOTION_GROUPS).find(([, names]) => names.has(name));
+  return entry?.[0] || "story";
+}
+
+function bindSiteMotion() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  bindIdentityLightbox();
+  bindScrollProgress();
+
+  if (reduceMotion) return;
+  bindScrollReveals();
+  bindPointerHalo();
+}
+
+function bindIdentityLightbox() {
+  const cards = document.querySelectorAll(".identity-gallery-card");
+  if (!cards.length) return;
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "identity-dialog";
+  dialog.setAttribute("aria-label", "身份牌大图");
+  dialog.innerHTML = `
+    <button class="identity-dialog-close" type="button" aria-label="关闭大图">&times;</button>
+    <figure>
+      <img alt="" />
+      <figcaption></figcaption>
+    </figure>
+  `;
+  document.body.appendChild(dialog);
+
+  const image = dialog.querySelector("img");
+  const caption = dialog.querySelector("figcaption");
+  const closeButton = dialog.querySelector(".identity-dialog-close");
+
+  const openCard = (card) => {
+    const cardImage = card.querySelector("img");
+    image.src = cardImage.currentSrc || cardImage.src;
+    image.alt = cardImage.alt;
+    caption.textContent = card.dataset.identityName || "身份牌";
+    dialog.showModal();
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => openCard(card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openCard(card);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+}
+
+function bindScrollReveals() {
+  if (!("IntersectionObserver" in window)) return;
+
+  const targets = document.querySelectorAll(
+    ".hero-copy, .hero-media, .page-hero-copy, .page-hero-media, .page-section, .portal-card, .stat-card, .setup-panel, .season-panel",
+  );
+  if (!targets.length) return;
+
+  document.body.classList.add("has-scroll-reveal");
+  targets.forEach((target, index) => {
+    target.dataset.reveal = "";
+    target.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 55}ms`);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -42px" },
+  );
+  targets.forEach((target) => observer.observe(target));
+}
+
+function bindPointerHalo() {
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+
+  const halo = document.createElement("span");
+  halo.className = "pointer-halo";
+  halo.setAttribute("aria-hidden", "true");
+  document.body.appendChild(halo);
+
+  let frame = 0;
+  let x = -100;
+  let y = -100;
+  const paint = () => {
+    halo.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    frame = 0;
+  };
+
+  document.addEventListener("pointermove", (event) => {
+    x = event.clientX;
+    y = event.clientY;
+    halo.classList.add("is-visible");
+    if (!frame) frame = window.requestAnimationFrame(paint);
+  });
+  document.addEventListener("pointerover", (event) => {
+    halo.classList.toggle("is-active", Boolean(event.target.closest("a, button, summary, .identity-gallery-card")));
+  });
+  document.addEventListener("pointerleave", () => halo.classList.remove("is-visible"));
+}
+
+function bindScrollProgress() {
+  const progress = document.createElement("span");
+  progress.className = "scroll-progress";
+  progress.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progress);
+
+  let frame = 0;
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+    progress.style.transform = `scaleX(${ratio})`;
+    frame = 0;
+  };
+  const requestUpdate = () => {
+    if (!frame) frame = window.requestAnimationFrame(update);
+  };
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  update();
 }
 
 function role(name, camp, skill, play) {
@@ -496,8 +646,8 @@ function renderRolePage() {
 function roleCard(item) {
   const art = ROLE_ART[item.name] || (item.camp.includes("狼人") ? "werewolf.png" : "villager.png");
   return `
-    <article class="role-mini-card">
-      <img class="role-mini-card-art" src="../images/identities/${escapeHtml(art)}" alt="" aria-hidden="true" loading="lazy" />
+    <article class="role-mini-card identity-motion-${identityMotionGroup(item.name)}">
+      <img class="role-mini-card-art" src="../images/identities/${escapeHtml(art)}?v=${ASSET_VERSION}" alt="" aria-hidden="true" loading="lazy" />
       <span>${escapeHtml(item.camp)}</span>
       <h3>${escapeHtml(item.name)}</h3>
       <p><strong>技能：</strong>${escapeHtml(item.skill)}</p>

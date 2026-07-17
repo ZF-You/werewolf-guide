@@ -734,6 +734,11 @@ tr:last-child td {
 }
 
 .identity-gallery-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  aspect-ratio: 480 / 681;
+  place-items: center;
   min-width: 0;
   margin: 0;
   padding: 5px;
@@ -741,13 +746,207 @@ tr:last-child td {
   border-radius: 5px;
   background: rgba(255, 250, 240, 0.72);
   box-shadow: 0 10px 24px rgba(67, 52, 22, 0.08);
+  cursor: zoom-in;
+  transform: translateY(0) scale(1);
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.identity-gallery-card::before {
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border-radius: 7px;
+  background: radial-gradient(circle at 50% 45%, rgba(214, 177, 74, 0.24), transparent 68%);
+  content: "";
+  opacity: 0;
+  transform: scale(0.86);
+  transition: opacity 280ms ease, transform 3s ease;
+}
+
+.identity-gallery-card:hover,
+.identity-gallery-card:focus-visible {
+  z-index: 4;
+  border-color: rgba(154, 119, 40, 0.9);
+  box-shadow: 0 22px 42px rgba(67, 52, 22, 0.2), 0 0 0 3px rgba(154, 119, 40, 0.1);
+  outline: none;
+  transform: translateY(-7px) scale(1.045);
+}
+
+.identity-gallery-card:hover::before,
+.identity-gallery-card:focus-visible::before {
+  opacity: 1;
+  transform: scale(1.12);
 }
 
 .identity-gallery-card img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
+  transform-origin: 50% 55%;
+  transition: filter 240ms ease, transform 220ms ease;
+}
+
+.identity-motion-wolf:hover img,
+.identity-motion-wolf:focus-visible img {
+  animation: identity-wolf-awaken 3s cubic-bezier(0.22, 0.72, 0.2, 1) both;
+}
+
+.identity-motion-mystic:hover img,
+.identity-motion-mystic:focus-visible img {
+  animation: identity-mystic-awaken 3s cubic-bezier(0.22, 0.72, 0.2, 1) both;
+}
+
+.identity-motion-martial:hover img,
+.identity-motion-martial:focus-visible img {
+  animation: identity-martial-awaken 3s cubic-bezier(0.22, 0.72, 0.2, 1) both;
+}
+
+.identity-motion-story:hover img,
+.identity-motion-story:focus-visible img {
+  animation: identity-story-awaken 3s cubic-bezier(0.22, 0.72, 0.2, 1) both;
+}
+
+@keyframes identity-wolf-awaken {
+  0% { filter: brightness(1) saturate(1); transform: scale(1) rotate(0); }
+  24% { filter: brightness(0.92) saturate(1.18) drop-shadow(0 0 7px rgba(120, 52, 58, 0.3)); transform: scale(1.035) rotate(-0.8deg); }
+  56% { filter: brightness(1.08) saturate(1.26) drop-shadow(0 0 13px rgba(120, 52, 58, 0.42)); transform: scale(1.055) rotate(0.7deg); }
+  100% { filter: brightness(1.03) saturate(1.12) drop-shadow(0 0 8px rgba(120, 52, 58, 0.28)); transform: scale(1.025) rotate(0); }
+}
+
+@keyframes identity-mystic-awaken {
+  0% { filter: brightness(1) saturate(1); transform: translateY(0) scale(1); }
+  32% { filter: brightness(1.08) saturate(1.1) drop-shadow(0 0 8px rgba(73, 86, 144, 0.32)); transform: translateY(-5px) scale(1.025); }
+  66% { filter: brightness(1.12) saturate(1.16) drop-shadow(0 0 14px rgba(154, 119, 40, 0.34)); transform: translateY(-2px) scale(1.045); }
+  100% { filter: brightness(1.05) saturate(1.08) drop-shadow(0 0 8px rgba(73, 86, 144, 0.24)); transform: translateY(0) scale(1.025); }
+}
+
+@keyframes identity-martial-awaken {
+  0% { filter: contrast(1) brightness(1); transform: scale(1) rotate(0); }
+  26% { filter: contrast(1.06) brightness(1.05); transform: scale(1.035) rotate(0.65deg); }
+  44% { transform: scale(1.045) rotate(-0.45deg); }
+  64% { filter: contrast(1.1) brightness(1.08) drop-shadow(0 0 10px rgba(35, 95, 91, 0.28)); transform: scale(1.055) rotate(0.2deg); }
+  100% { filter: contrast(1.04) brightness(1.03); transform: scale(1.025) rotate(0); }
+}
+
+@keyframes identity-story-awaken {
+  0% { filter: brightness(1); transform: translateY(0) scale(1) rotate(0); }
+  38% { filter: brightness(1.08) saturate(1.08); transform: translateY(-4px) scale(1.035) rotate(-0.4deg); }
+  72% { transform: translateY(-1px) scale(1.045) rotate(0.35deg); }
+  100% { filter: brightness(1.04) saturate(1.04); transform: translateY(0) scale(1.025) rotate(0); }
+}
+
+.identity-dialog {
+  width: min(540px, calc(100vw - 36px));
+  max-width: none;
+  max-height: calc(100vh - 36px);
+  padding: 12px;
+  overflow: visible;
+  border: 1px solid rgba(200, 181, 141, 0.92);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.98);
+  box-shadow: 0 30px 90px rgba(24, 18, 10, 0.42);
+  color: var(--ink);
+}
+
+.identity-dialog::backdrop {
+  background: rgba(24, 20, 15, 0.76);
+  backdrop-filter: blur(7px);
+}
+
+.identity-dialog figure {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.identity-dialog img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 112px);
+  object-fit: contain;
+}
+
+.identity-dialog figcaption {
+  color: var(--muted);
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.identity-dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(200, 181, 141, 0.9);
+  border-radius: 50%;
+  background: rgba(255, 250, 240, 0.92);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.has-scroll-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 640ms ease var(--reveal-delay, 0ms), transform 640ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+.has-scroll-reveal [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pointer-halo {
+  position: fixed;
+  top: -17px;
+  left: -17px;
+  z-index: 180;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(154, 119, 40, 0.52);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 241, 181, 0.14), transparent 66%);
+  box-shadow: 0 0 16px rgba(154, 119, 40, 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transition: width 180ms ease, height 180ms ease, top 180ms ease, left 180ms ease, border-color 180ms ease, opacity 180ms ease;
+}
+
+.pointer-halo.is-visible {
+  opacity: 1;
+}
+
+.pointer-halo.is-active {
+  top: -24px;
+  left: -24px;
+  width: 48px;
+  height: 48px;
+  border-color: rgba(35, 95, 91, 0.62);
+  background: radial-gradient(circle, rgba(35, 95, 91, 0.12), transparent 68%);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 190;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), #c69c39, var(--wine));
+  box-shadow: 0 1px 8px rgba(154, 119, 40, 0.28);
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 .role-mini-card {
@@ -772,6 +971,11 @@ tr:last-child td {
   object-position: center;
   opacity: 0.62;
   pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.role-mini-card:hover .role-mini-card-art {
+  opacity: 0.72;
 }
 
 .role-mini-card::after {
@@ -1170,6 +1374,29 @@ ul {
 
   .site-footer p + p {
     margin-top: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .identity-gallery-card,
+  .identity-gallery-card::before,
+  .identity-gallery-card img,
+  .has-scroll-reveal [data-reveal] {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .has-scroll-reveal [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .pointer-halo {
+    display: none;
   }
 }
 
