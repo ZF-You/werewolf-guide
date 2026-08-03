@@ -9,7 +9,7 @@
       name="description"
       content="狼人杀入门教学网站：了解基本玩法，查询京城大师赛、版型身份、夜间手势、常用术语、游戏技巧和交流活动。"
     />
-    <link rel="stylesheet" href="styles.css?v=20260803-guide20" />
+    <link rel="stylesheet" href="styles.css?v=20260804-guide22" />
   </head>
   <body class="page-home">
     <a class="skip-link" href="#content">跳到正文</a>
@@ -33,15 +33,26 @@
     </header>
 
     <main id="content">
-      <section class="home-cinematic" aria-label="狼人杀身份群像海报">
-        <div class="home-poster-stage">
-          <img
-            class="home-poster-image"
-            src="images/home-ensemble-hero.png"
-            alt="月黑风高的村庄中，狼人杀各类身份集结成群像"
-            width="1672"
-            height="941"
-          />
+      <section class="home-cinematic" aria-label="狼人杀动态身份群像海报">
+        <div class="home-video-stage" data-video-player>
+          <video
+            class="home-poster-video"
+            src="media/werewolf-dynamic-poster.mp4"
+            aria-label="月黑风高的村庄中，狼人杀各类身份动态群像"
+            autoplay
+            muted
+            playsinline
+            preload="metadata"
+          ></video>
+          <div class="video-controls" aria-label="视频控制栏">
+            <button class="video-control-button" type="button" data-video-toggle aria-label="暂停" title="播放或暂停">❚❚</button>
+            <input class="video-progress" type="range" min="0" max="1000" value="0" step="1" data-video-progress aria-label="视频进度" />
+            <span class="video-time" aria-live="off"><span data-video-current>0:00</span><span aria-hidden="true"> / </span><span data-video-duration>0:00</span></span>
+            <button class="video-control-button" type="button" data-video-mute aria-label="开启声音" title="静音或开启声音">🔇</button>
+            <input class="video-volume" type="range" min="0" max="1" value="0" step="0.05" data-video-volume aria-label="音量" />
+            <button class="video-speed" type="button" data-video-speed aria-label="调整播放速度" title="调整播放速度">1×</button>
+            <button class="video-control-button" type="button" data-video-fullscreen aria-label="全屏播放" title="全屏">⛶</button>
+          </div>
         </div>
       </section>
 
@@ -131,7 +142,7 @@
       <p>狼人杀入坑指南</p>
       <p>具体房规和手势以当局法官说明为准。</p>
     </footer>
-    <script src="script.js?v=20260803-guide20"></script>
+    <script src="script.js?v=20260804-guide22"></script>
   </body>
 </html>
 

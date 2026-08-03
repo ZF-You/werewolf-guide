@@ -6,10 +6,140 @@
   renderIdentityGallery();
   renderRolePage();
   bindGlossarySearch();
+  bindHomeVideoPlayer();
   bindSiteMotion();
 });
 
-const ASSET_VERSION = "20260803-guide20";
+const ASSET_VERSION = "20260804-guide22";
+
+function bindHomeVideoPlayer() {
+  const player = document.querySelector("[data-video-player]");
+  if (!player) return;
+
+  const video = player.querySelector("video");
+  const toggle = player.querySelector("[data-video-toggle]");
+  const progress = player.querySelector("[data-video-progress]");
+  const current = player.querySelector("[data-video-current]");
+  const duration = player.querySelector("[data-video-duration]");
+  const mute = player.querySelector("[data-video-mute]");
+  const volume = player.querySelector("[data-video-volume]");
+  const speed = player.querySelector("[data-video-speed]");
+  const fullscreen = player.querySelector("[data-video-fullscreen]");
+  const speeds = [0.5, 0.75, 1, 1.25, 1.5, 2];
+  let lastVolume = 1;
+
+  const timeLabel = (seconds) => {
+    if (!Number.isFinite(seconds)) return "0:00";
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const rest = Math.floor(seconds % 60);
+    return hours
+      ? `${hours}:${String(minutes).padStart(2, "0")}:${String(rest).padStart(2, "0")}`
+      : `${minutes}:${String(rest).padStart(2, "0")}`;
+  };
+
+  const updatePlayback = () => {
+    const playing = !video.paused && !video.ended;
+    toggle.textContent = playing ? "❚❚" : "▶";
+    toggle.setAttribute("aria-label", playing ? "暂停" : "播放");
+  };
+
+  const updateProgress = () => {
+    const ratio = video.duration ? video.currentTime / video.duration : 0;
+    progress.value = String(Math.round(ratio * 1000));
+    progress.style.setProperty("--video-progress", `${ratio * 100}%`);
+    current.textContent = timeLabel(video.currentTime);
+    duration.textContent = timeLabel(video.duration);
+  };
+
+  const updateVolume = () => {
+    const effectiveVolume = video.muted ? 0 : video.volume;
+    volume.value = String(effectiveVolume);
+    volume.style.setProperty("--video-volume", `${effectiveVolume * 100}%`);
+    mute.textContent = effectiveVolume === 0 ? "🔇" : effectiveVolume < 0.55 ? "🔉" : "🔊";
+    mute.setAttribute("aria-label", effectiveVolume === 0 ? "开启声音" : "静音");
+  };
+
+  toggle.addEventListener("click", async () => {
+    if (video.paused || video.ended) {
+      if (video.ended || video.currentTime >= video.duration) video.currentTime = 0;
+      try {
+        await video.play();
+      } catch {
+        updatePlayback();
+      }
+    } else {
+      video.pause();
+    }
+  });
+
+  progress.addEventListener("input", () => {
+    if (!video.duration) return;
+    video.currentTime = (Number(progress.value) / 1000) * video.duration;
+    updateProgress();
+  });
+
+  mute.addEventListener("click", () => {
+    if (video.muted || video.volume === 0) {
+      video.muted = false;
+      video.volume = lastVolume || 1;
+    } else {
+      lastVolume = video.volume;
+      video.muted = true;
+    }
+    updateVolume();
+  });
+
+  volume.addEventListener("input", () => {
+    const nextVolume = Number(volume.value);
+    video.volume = nextVolume;
+    video.muted = nextVolume === 0;
+    if (nextVolume > 0) lastVolume = nextVolume;
+    updateVolume();
+  });
+
+  speed.addEventListener("click", () => {
+    const currentIndex = speeds.indexOf(video.playbackRate);
+    const nextSpeed = speeds[(currentIndex + 1) % speeds.length];
+    video.playbackRate = nextSpeed;
+    speed.textContent = `${nextSpeed}×`;
+    speed.setAttribute("aria-label", `当前播放速度 ${nextSpeed} 倍，点击继续调整`);
+  });
+
+  fullscreen.addEventListener("click", async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else if (player.requestFullscreen) {
+      await player.requestFullscreen();
+    } else if (video.webkitEnterFullscreen) {
+      video.webkitEnterFullscreen();
+    }
+  });
+
+  video.addEventListener("loadedmetadata", updateProgress);
+  video.addEventListener("durationchange", updateProgress);
+  video.addEventListener("timeupdate", updateProgress);
+  video.addEventListener("play", updatePlayback);
+  video.addEventListener("pause", updatePlayback);
+  video.addEventListener("ended", () => {
+    updatePlayback();
+    updateProgress();
+  });
+  video.addEventListener("volumechange", updateVolume);
+
+  updatePlayback();
+  updateVolume();
+
+  const startMutedPlayback = () => {
+    video.muted = true;
+    video.play().catch(updatePlayback);
+  };
+  if (video.readyState >= 2) {
+    startMutedPlayback();
+  } else {
+    video.addEventListener("canplay", startMutedPlayback, { once: true });
+  }
+}
 
 function bindGlossarySearch() {
   const input = document.querySelector("#glossary-search");
@@ -410,27 +540,8 @@ function bindSiteMotion() {
   bindScrollProgress();
 
   if (reduceMotion) return;
-  bindHomePosterMotion();
   bindScrollReveals();
   bindPointerHalo();
-}
-
-function bindHomePosterMotion() {
-  const poster = document.querySelector(".home-poster-stage");
-  if (!poster || !window.matchMedia("(pointer: fine)").matches) return;
-
-  poster.parentElement.addEventListener("pointermove", (event) => {
-    const bounds = poster.parentElement.getBoundingClientRect();
-    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * -12;
-    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * -8;
-    poster.style.setProperty("--poster-x", `${x.toFixed(2)}px`);
-    poster.style.setProperty("--poster-y", `${y.toFixed(2)}px`);
-  });
-
-  poster.parentElement.addEventListener("pointerleave", () => {
-    poster.style.setProperty("--poster-x", "0px");
-    poster.style.setProperty("--poster-y", "0px");
-  });
 }
 
 function bindIdentityLightbox() {
@@ -614,13 +725,12 @@ function renderJcmsPage() {
   }
 
   root.innerHTML = seasons
-    .map((season, seasonIndex) => {
+    .map((season) => {
       const boards = (season.boards || []).slice(0, 8);
       const episodes = season.episodes || [];
-      const open = seasonIndex === 0 ? " open" : "";
 
       return `
-        <details class="season-panel"${open}>
+        <details class="season-panel">
           <summary>
             <span>${escapeHtml(displaySeasonTitle(season.title))}</span>
             <small>${episodes.length} 条视频</small>
@@ -671,9 +781,9 @@ function renderRolePage() {
   const list = document.querySelector("#setup-guide-list");
   if (!list) return;
 
-  list.innerHTML = SETUP_GUIDES.map((guide, index) => {
+  list.innerHTML = SETUP_GUIDES.map((guide) => {
     return `
-      <details class="setup-panel"${index < 2 ? " open" : ""}>
+      <details class="setup-panel">
         <summary>
           <span>${escapeHtml(guide.name)}</span>
           <small>${guide.roles.length} 类身份</small>
