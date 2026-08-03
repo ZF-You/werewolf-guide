@@ -1,6 +1,6 @@
 ﻿:root {
   color-scheme: light;
-  --paper: #f6efd9;
+  --paper: #f8f2e2;
   --paper-soft: #fbf7ea;
   --surface: #fffaf0;
   --ink: #282117;
@@ -15,9 +15,6 @@
   --shadow: 0 18px 40px rgba(67, 52, 22, 0.1);
   --radius: 8px;
   --max: 1100px;
-  --side-width: clamp(96px, calc(37.5vw - 444px), 228px);
-  --side-left-image: url("images/side-generated/home-left.png");
-  --side-right-image: url("images/side-generated/home-right.png");
 }
 
 * {
@@ -31,9 +28,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background:
-    linear-gradient(180deg, rgba(255, 250, 240, 0.84), rgba(246, 239, 217, 0.96)),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
   font-size: 17px;
@@ -43,66 +38,8 @@ body {
 
 body::before,
 body::after {
-  position: absolute;
-  top: 86px;
-  bottom: 84px;
-  z-index: 0;
-  width: var(--side-width);
-  border: 1px solid rgba(200, 181, 141, 0.78);
-  border-radius: var(--radius);
-  background-color: rgba(255, 250, 240, 0.9);
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% auto;
-  box-shadow: 0 18px 42px rgba(67, 52, 22, 0.1);
-  content: "";
-  opacity: 0.82;
-  pointer-events: none;
-}
-
-body::before {
-  left: clamp(10px, 1.4vw, 22px);
-  background-image: var(--side-left-image);
-}
-
-body::after {
-  right: clamp(10px, 1.4vw, 22px);
-  background-image: var(--side-right-image);
-}
-
-.page-jcms {
-  --side-left-image: url("images/side-generated/jcms-left.png");
-  --side-right-image: url("images/side-generated/jcms-right.png");
-}
-
-.page-roles {
-  --side-left-image: url("images/side-generated/identities-left.png");
-  --side-right-image: url("images/side-generated/identities-right.png");
-}
-
-.page-signals {
-  --side-left-image: url("images/side-generated/signals-left.png");
-  --side-right-image: url("images/side-generated/signals-right.png");
-}
-
-.page-terms {
-  --side-left-image: url("images/side-generated/terms-left.png");
-  --side-right-image: url("images/side-generated/terms-right.png");
-}
-
-.page-tips {
-  --side-left-image: url("images/side-generated/tips-left.png");
-  --side-right-image: url("images/side-generated/tips-right.png");
-}
-
-.page-forum {
-  --side-left-image: url("images/side-generated/forum-left.png");
-  --side-right-image: url("images/side-generated/forum-right.png");
-}
-
-.page-home {
-  --side-left-image: url("images/side-generated/home-left.png");
-  --side-right-image: url("images/side-generated/home-right.png");
+  display: none;
+  content: none;
 }
 
 .site-header,
@@ -385,6 +322,59 @@ p {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.home-cinematic {
+  position: relative;
+  width: 100%;
+  height: clamp(560px, calc(100svh - 64px), 980px);
+  overflow: hidden;
+  background: #111719;
+  box-shadow: inset 0 -1px 0 rgba(200, 181, 141, 0.62);
+}
+
+.home-poster-stage {
+  position: absolute;
+  inset: -10px;
+  overflow: hidden;
+  transform: translate3d(var(--poster-x, 0), var(--poster-y, 0), 0) scale(1.015);
+  transition: transform 420ms ease-out;
+}
+
+.home-poster-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  animation: poster-alive 12s ease-in-out infinite alternate;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.home-guide-intro {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.home-guide-intro .hero-copy {
+  max-width: 900px;
+}
+
+@keyframes poster-alive {
+  0% {
+    transform: scale(1);
+    filter: saturate(1) contrast(1.02) brightness(0.98);
+  }
+
+  55% {
+    transform: scale(1.012) translateY(-2px);
+    filter: saturate(1.04) contrast(1.025) brightness(1.02);
+  }
+
+  100% {
+    transform: scale(1.02) translateY(-4px);
+    filter: saturate(1.02) contrast(1.03) brightness(1);
+  }
 }
 
 .section,
@@ -1123,6 +1113,54 @@ tr:last-child td {
   scroll-margin-top: 140px;
 }
 
+.glossary-search {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.glossary-search label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.glossary-search-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.glossary-search input {
+  min-width: 0;
+  flex: 1;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 240, 0.86);
+  color: var(--ink);
+  font: inherit;
+  box-shadow: 0 8px 20px rgba(67, 52, 22, 0.05);
+}
+
+.glossary-search input:focus {
+  border-color: var(--teal);
+  outline: 3px solid rgba(35, 95, 91, 0.14);
+}
+
+#glossary-count {
+  min-width: 86px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  text-align: right;
+}
+
+.glossary-empty {
+  padding: 20px 0;
+  color: var(--muted);
+}
+
 .glossary-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1240,16 +1278,9 @@ ul {
   display: none !important;
 }
 
-@media (max-width: 1439px) {
-  body::before,
-  body::after {
-    display: none;
-  }
-}
-
 @media (min-width: 1440px) {
   .page-roles .page-shell {
-    width: min(1280px, calc(100vw - (2 * var(--side-width)) - 96px));
+    width: min(1280px, calc(100vw - 96px));
   }
 }
 
@@ -1324,6 +1355,20 @@ ul {
     padding-top: 42px;
   }
 
+  .home-cinematic {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-poster-stage {
+    inset: 0;
+    transform: none;
+  }
+
+  .home-poster-image {
+    object-fit: contain;
+  }
+
   .hero h1 {
     font-size: clamp(2.15rem, 11vw, 3.25rem);
   }
@@ -1358,6 +1403,17 @@ ul {
     grid-template-columns: minmax(104px, 0.34fr) minmax(0, 1fr);
   }
 
+  .glossary-search-row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #glossary-count {
+    min-width: 0;
+    text-align: left;
+  }
+
   .glossary-nav {
     top: 62px;
     overflow-x: auto;
@@ -1385,6 +1441,8 @@ ul {
   .identity-gallery-card,
   .identity-gallery-card::before,
   .identity-gallery-card img,
+  .home-poster-stage,
+  .home-poster-image,
   .has-scroll-reveal [data-reveal] {
     animation: none !important;
     transition: none !important;

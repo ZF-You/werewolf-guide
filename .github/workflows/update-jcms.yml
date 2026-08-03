@@ -1,0 +1,43 @@
+name: Update JCMS videos
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Beijing time: Wednesday through Saturday at 06:00.
+    - cron: "0 22 * * 2-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jcms-videos
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the latest Bilibili collection
+        run: python tools/update_jcms.py
+
+      - name: Commit new videos
+        shell: bash
+        run: |
+          if git diff --quiet -- data/jcms-seasons.js data/season-dawn-voyage.js; then
+            echo "No new videos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/jcms-seasons.js data/season-dawn-voyage.js
+          git commit -m "自动更新京城大师赛视频"
+          git push

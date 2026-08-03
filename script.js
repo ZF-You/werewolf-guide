@@ -5,10 +5,39 @@
   renderJcmsPage();
   renderIdentityGallery();
   renderRolePage();
+  bindGlossarySearch();
   bindSiteMotion();
 });
 
-const ASSET_VERSION = "20260717-guide18";
+const ASSET_VERSION = "20260803-guide20";
+
+function bindGlossarySearch() {
+  const input = document.querySelector("#glossary-search");
+  if (!input) return;
+
+  const rows = [...document.querySelectorAll(".glossary-list > div")];
+  const count = document.querySelector("#glossary-count");
+  const empty = document.querySelector("#glossary-empty");
+  const normalize = (value) => value.toLocaleLowerCase("zh-CN").replace(/\s+/g, "");
+
+  const update = () => {
+    const query = normalize(input.value.trim());
+    let visible = 0;
+
+    rows.forEach((row) => {
+      const matches = !query || normalize(row.textContent).includes(query);
+      row.hidden = !matches;
+      if (matches) visible += 1;
+    });
+
+    if (count) count.textContent = query ? `找到 ${visible} 条` : `共 ${rows.length} 条`;
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  input.addEventListener("input", update);
+  input.addEventListener("search", update);
+  update();
+}
 
 function bindImageFallbacks() {
   const fallback =
@@ -381,8 +410,27 @@ function bindSiteMotion() {
   bindScrollProgress();
 
   if (reduceMotion) return;
+  bindHomePosterMotion();
   bindScrollReveals();
   bindPointerHalo();
+}
+
+function bindHomePosterMotion() {
+  const poster = document.querySelector(".home-poster-stage");
+  if (!poster || !window.matchMedia("(pointer: fine)").matches) return;
+
+  poster.parentElement.addEventListener("pointermove", (event) => {
+    const bounds = poster.parentElement.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * -12;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * -8;
+    poster.style.setProperty("--poster-x", `${x.toFixed(2)}px`);
+    poster.style.setProperty("--poster-y", `${y.toFixed(2)}px`);
+  });
+
+  poster.parentElement.addEventListener("pointerleave", () => {
+    poster.style.setProperty("--poster-x", "0px");
+    poster.style.setProperty("--poster-y", "0px");
+  });
 }
 
 function bindIdentityLightbox() {
@@ -433,7 +481,7 @@ function bindScrollReveals() {
   if (!("IntersectionObserver" in window)) return;
 
   const targets = document.querySelectorAll(
-    ".hero-copy, .hero-media, .page-hero-copy, .page-hero-media, .page-section > .page-visual, .page-section > h2, .portal-card, .stat-card, .setup-panel, .season-panel, .glossary-list > div",
+    ".hero-copy, .hero-media, .page-hero-copy, .page-hero-media, .page-section > .page-visual, .page-section > h2, .portal-card, .stat-card, .setup-panel, .season-panel",
   );
   if (!targets.length) return;
 
