@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 127,
+      "episodeCount": 131,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -1657,20 +1657,72 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1785859063,
           "aid": 117038043366457
+        },
+        {
+          "title": "20260805 正赛 第十期 Day-2 第一局-预女猎白混",
+          "bvid": "BV1DFM26ME2R",
+          "url": "https://www.bilibili.com/video/BV1DFM26ME2R",
+          "duration": 3942,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-08-05",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1785947740,
+          "aid": 117043781240560
+        },
+        {
+          "title": "20260805 正赛 第十期 Day-2 第二局-盗宝大师",
+          "bvid": "BV1hFM26ME7o",
+          "url": "https://www.bilibili.com/video/BV1hFM26ME7o",
+          "duration": 4190,
+          "board": "盗宝大师",
+          "stage": "正赛",
+          "date": "2026-08-05",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1785946915,
+          "aid": 117043781175026
+        },
+        {
+          "title": "20260805 正赛 第十期 Day-2 第三局-机械狼通灵师",
+          "bvid": "BV1DFM26MEWR",
+          "url": "https://www.bilibili.com/video/BV1DFM26MEWR",
+          "duration": 4078,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-08-05",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1785946989,
+          "aid": 117043781241332
+        },
+        {
+          "title": "20260805 正赛 第十期 Day-2 第四局-机械狼通灵师",
+          "bvid": "BV1DFM26ME2o",
+          "url": "https://www.bilibili.com/video/BV1DFM26ME2o",
+          "duration": 3463,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-08-05",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1785946930,
+          "aid": 117043781240566
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 43
+          "count": 45
         },
         {
           "name": "预女猎白混",
-          "count": 39
+          "count": 40
         },
         {
           "name": "盗宝大师",
-          "count": 12
+          "count": 13
         },
         {
           "name": "诡术之境",
