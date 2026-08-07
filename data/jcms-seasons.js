@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 131,
+      "episodeCount": 134,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -1709,16 +1709,55 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1785946930,
           "aid": 117043781240566
+        },
+        {
+          "title": "20260806 正赛 第十期 Day-3 第一局-预女猎白混",
+          "bvid": "BV1TDun6wEqw",
+          "url": "https://www.bilibili.com/video/BV1TDun6wEqw",
+          "duration": 8705,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-08-06",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786034233,
+          "aid": 117049485426717
+        },
+        {
+          "title": "20260806 正赛 第十期 Day-3 第二局-诡术之境",
+          "bvid": "BV1mDun6wEhp",
+          "url": "https://www.bilibili.com/video/BV1mDun6wEhp",
+          "duration": 4456,
+          "board": "诡术之境",
+          "stage": "正赛",
+          "date": "2026-08-06",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786033560,
+          "aid": 117049485559585
+        },
+        {
+          "title": "20260806 正赛 第十期 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV1mDun6wE3m",
+          "url": "https://www.bilibili.com/video/BV1mDun6wE3m",
+          "duration": 2992,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-08-06",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786033654,
+          "aid": 117049485560607
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 45
+          "count": 46
         },
         {
           "name": "预女猎白混",
-          "count": 40
+          "count": 41
         },
         {
           "name": "盗宝大师",
@@ -1726,7 +1765,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "诡术之境",
-          "count": 12
+          "count": 13
         },
         {
           "name": "假面舞会",
