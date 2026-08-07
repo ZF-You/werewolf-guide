@@ -1,30 +1,30 @@
 window.SEASON_DAWN_VOYAGE = {
   "source": "https://space.bilibili.com/19106800/lists/8209896?type=season",
-  "page_title": "20260806 正赛 第十期 Day-3 第三局-机械狼通灵师",
+  "page_title": "20260807 正赛 第十期 Day-4 第四局-机械狼通灵师",
   "video": {
-    "title": "20260806 正赛 第十期 Day-3 第三局-机械狼通灵师",
-    "bvid": "BV1mDun6wE3m",
-    "url": "https://www.bilibili.com/video/BV1mDun6wE3m",
-    "duration": 2992,
+    "title": "20260807 正赛 第十期 Day-4 第四局-机械狼通灵师",
+    "bvid": "BV1CSuN62Eey",
+    "url": "https://www.bilibili.com/video/BV1CSuN62Eey",
+    "duration": 2598,
     "board": "机械狼通灵师",
     "stage": "正赛",
-    "date": "2026-08-06",
+    "date": "2026-08-07",
     "section": "正片",
     "seasonTitle": "曙光航纪",
-    "pubdate": 1786033654,
-    "aid": 117049485560607
+    "pubdate": 1786118851,
+    "aid": 117055038752686
   },
   "season": {
     "id": 8209896,
     "title": "合集·曙光航纪",
     "mid": 19106800,
     "section_count": 1,
-    "episode_count": 134
+    "episode_count": 138
   },
   "sections": [
     {
       "title": "正片",
-      "episode_count": 134
+      "episode_count": 138
     }
   ],
   "episodes": [
@@ -1769,6 +1769,58 @@ window.SEASON_DAWN_VOYAGE = {
       "seasonTitle": "曙光航纪",
       "pubdate": 1786033654,
       "aid": 117049485560607
+    },
+    {
+      "title": "20260807 正赛 第十期 Day-4 第一局-预女猎白混",
+      "bvid": "BV1pSuN62EoT",
+      "url": "https://www.bilibili.com/video/BV1pSuN62EoT",
+      "duration": 4443,
+      "board": "预女猎白混",
+      "stage": "正赛",
+      "date": "2026-08-07",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1786118864,
+      "aid": 117055038686630
+    },
+    {
+      "title": "20260807 正赛 第十期 Day-4 第二局-唯邻是从",
+      "bvid": "BV1pSuN62Ekr",
+      "url": "https://www.bilibili.com/video/BV1pSuN62Ekr",
+      "duration": 3495,
+      "board": "唯邻是从",
+      "stage": "正赛",
+      "date": "2026-08-07",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1786118889,
+      "aid": 117055038687913
+    },
+    {
+      "title": "20260807 正赛 第十期 Day-4 第三局-机械狼通灵师",
+      "bvid": "BV1CSuN62Ee2",
+      "url": "https://www.bilibili.com/video/BV1CSuN62Ee2",
+      "duration": 4564,
+      "board": "机械狼通灵师",
+      "stage": "正赛",
+      "date": "2026-08-07",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1786118847,
+      "aid": 117055038752684
+    },
+    {
+      "title": "20260807 正赛 第十期 Day-4 第四局-机械狼通灵师",
+      "bvid": "BV1CSuN62Eey",
+      "url": "https://www.bilibili.com/video/BV1CSuN62Eey",
+      "duration": 2598,
+      "board": "机械狼通灵师",
+      "stage": "正赛",
+      "date": "2026-08-07",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1786118851,
+      "aid": 117055038752686
     }
   ]
 };
