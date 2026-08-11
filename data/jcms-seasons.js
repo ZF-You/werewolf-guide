@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 138,
+      "episodeCount": 141,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -1800,16 +1800,55 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1786118851,
           "aid": 117055038752686
+        },
+        {
+          "title": "20260811 正赛 第十一期 Day-1 第一局-预女猎白混",
+          "bvid": "BV11Mur6nEZb",
+          "url": "https://www.bilibili.com/video/BV11Mur6nEZb",
+          "duration": 6718,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-08-11",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786464528,
+          "aid": 117077687929735
+        },
+        {
+          "title": "20260811 正赛 第十一期 Day-1 第二局-假面舞会",
+          "bvid": "BV1KMur6HE7b",
+          "url": "https://www.bilibili.com/video/BV1KMur6HE7b",
+          "duration": 3418,
+          "board": "假面舞会",
+          "stage": "正赛",
+          "date": "2026-08-11",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786464291,
+          "aid": 117077687994765
+        },
+        {
+          "title": "20260811 正赛 第十一期 Day-1 第三局-机械狼通灵师",
+          "bvid": "BV12Mur6nEns",
+          "url": "https://www.bilibili.com/video/BV12Mur6nEns",
+          "duration": 4983,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-08-11",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786464381,
+          "aid": 117077687926927
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 48
+          "count": 49
         },
         {
           "name": "预女猎白混",
-          "count": 42
+          "count": 43
         },
         {
           "name": "盗宝大师",
@@ -1821,7 +1860,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "假面舞会",
-          "count": 11
+          "count": 12
         },
         {
           "name": "唯邻是从",
