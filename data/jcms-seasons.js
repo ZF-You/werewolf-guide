@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 147,
+      "episodeCount": 150,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -1917,16 +1917,55 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1786635163,
           "aid": 117088878397249
+        },
+        {
+          "title": "20260814 正赛 第十一期 Day-4 第一局-预女猎白混",
+          "bvid": "BV1PigN6nEjA",
+          "url": "https://www.bilibili.com/video/BV1PigN6nEjA",
+          "duration": 6449,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "date": "2026-08-14",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786724005,
+          "aid": 117094700158584
+        },
+        {
+          "title": "20260814 正赛 第十一期 Day-4 第二局-孤注一掷",
+          "bvid": "BV1yigN6JE5Y",
+          "url": "https://www.bilibili.com/video/BV1yigN6JE5Y",
+          "duration": 3945,
+          "board": "孤注一掷",
+          "stage": "正赛",
+          "date": "2026-08-14",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786723815,
+          "aid": 117094700090491
+        },
+        {
+          "title": "20260814 正赛 第十一期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1WigN6JEVS",
+          "url": "https://www.bilibili.com/video/BV1WigN6JEVS",
+          "duration": 4805,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "date": "2026-08-14",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1786724310,
+          "aid": 117094700027261
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 51
+          "count": 52
         },
         {
           "name": "预女猎白混",
-          "count": 45
+          "count": 46
         },
         {
           "name": "盗宝大师",
@@ -1946,6 +1985,10 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "四狼八猎",
+          "count": 1
+        },
+        {
+          "name": "孤注一掷",
           "count": 1
         },
         {
