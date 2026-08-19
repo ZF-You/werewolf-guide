@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 153,
+      "episodeCount": 157,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -1995,16 +1995,68 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1787064989,
           "aid": 117117064119349
+        },
+        {
+          "title": "20260819 决赛 Day-2 第一局-预女猎白混",
+          "bvid": "BV1tj8p6REqy",
+          "url": "https://www.bilibili.com/video/BV1tj8p6REqy",
+          "duration": 3936,
+          "board": "预女猎白混",
+          "stage": "其他",
+          "date": "2026-08-19",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787153545,
+          "aid": 117122868973116
+        },
+        {
+          "title": "20260819 决赛 Day-2 第二局-假面舞会",
+          "bvid": "BV1tj8p6RE2h",
+          "url": "https://www.bilibili.com/video/BV1tj8p6RE2h",
+          "duration": 2563,
+          "board": "假面舞会",
+          "stage": "其他",
+          "date": "2026-08-19",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787153479,
+          "aid": 117122868971583
+        },
+        {
+          "title": "20260819 决赛 Day-2 第三局-机械狼通灵师",
+          "bvid": "BV1tj8p6RE1V",
+          "url": "https://www.bilibili.com/video/BV1tj8p6RE1V",
+          "duration": 3342,
+          "board": "机械狼通灵师",
+          "stage": "其他",
+          "date": "2026-08-19",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787153590,
+          "aid": 117122868971586
+        },
+        {
+          "title": "20260819 决赛 Day-2 第四局-鬼魂新娘",
+          "bvid": "BV1tj8p6REfY",
+          "url": "https://www.bilibili.com/video/BV1tj8p6REfY",
+          "duration": 4597,
+          "board": "鬼魂新娘",
+          "stage": "其他",
+          "date": "2026-08-19",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787153617,
+          "aid": 117122868972357
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 53
+          "count": 54
         },
         {
           "name": "预女猎白混",
-          "count": 47
+          "count": 48
         },
         {
           "name": "诡术之境",
@@ -2016,7 +2068,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "假面舞会",
-          "count": 12
+          "count": 13
         },
         {
           "name": "唯邻是从",
@@ -2040,6 +2092,10 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "预女猎白",
+          "count": 1
+        },
+        {
+          "name": "鬼魂新娘",
           "count": 1
         },
         {
