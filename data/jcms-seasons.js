@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 157,
+      "episodeCount": 160,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -2047,24 +2047,63 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1787153617,
           "aid": 117122868972357
+        },
+        {
+          "title": "20260820 决赛 Day-3 第一局-预女猎白混",
+          "bvid": "BV1kG8A6dEfF",
+          "url": "https://www.bilibili.com/video/BV1kG8A6dEfF",
+          "duration": 5229,
+          "board": "预女猎白混",
+          "stage": "其他",
+          "date": "2026-08-20",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787241372,
+          "aid": 117128606779045
+        },
+        {
+          "title": "20260820 决赛 Day-3 第二局-盗宝大师",
+          "bvid": "BV1kG8A6dEye",
+          "url": "https://www.bilibili.com/video/BV1kG8A6dEye",
+          "duration": 5032,
+          "board": "盗宝大师",
+          "stage": "其他",
+          "date": "2026-08-20",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787241340,
+          "aid": 117128606780328
+        },
+        {
+          "title": "20260820 决赛 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV1kG8A6dE7A",
+          "url": "https://www.bilibili.com/video/BV1kG8A6dE7A",
+          "duration": 4462,
+          "board": "机械狼通灵师",
+          "stage": "其他",
+          "date": "2026-08-20",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787242052,
+          "aid": 117128606780842
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 54
+          "count": 55
         },
         {
           "name": "预女猎白混",
-          "count": 48
+          "count": 49
+        },
+        {
+          "name": "盗宝大师",
+          "count": 15
         },
         {
           "name": "诡术之境",
           "count": 15
-        },
-        {
-          "name": "盗宝大师",
-          "count": 14
         },
         {
           "name": "假面舞会",

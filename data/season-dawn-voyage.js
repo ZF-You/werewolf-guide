@@ -1,30 +1,30 @@
 window.SEASON_DAWN_VOYAGE = {
   "source": "https://space.bilibili.com/19106800/lists/8209896?type=season",
-  "page_title": "20260819 决赛 Day-2 第四局-鬼魂新娘",
+  "page_title": "20260820 决赛 Day-3 第三局-机械狼通灵师",
   "video": {
-    "title": "20260819 决赛 Day-2 第四局-鬼魂新娘",
-    "bvid": "BV1tj8p6REfY",
-    "url": "https://www.bilibili.com/video/BV1tj8p6REfY",
-    "duration": 4597,
-    "board": "鬼魂新娘",
+    "title": "20260820 决赛 Day-3 第三局-机械狼通灵师",
+    "bvid": "BV1kG8A6dE7A",
+    "url": "https://www.bilibili.com/video/BV1kG8A6dE7A",
+    "duration": 4462,
+    "board": "机械狼通灵师",
     "stage": "其他",
-    "date": "2026-08-19",
+    "date": "2026-08-20",
     "section": "正片",
     "seasonTitle": "曙光航纪",
-    "pubdate": 1787153617,
-    "aid": 117122868972357
+    "pubdate": 1787242052,
+    "aid": 117128606780842
   },
   "season": {
     "id": 8209896,
     "title": "合集·曙光航纪",
     "mid": 19106800,
     "section_count": 1,
-    "episode_count": 157
+    "episode_count": 160
   },
   "sections": [
     {
       "title": "正片",
-      "episode_count": 157
+      "episode_count": 160
     }
   ],
   "episodes": [
@@ -2068,6 +2068,45 @@ window.SEASON_DAWN_VOYAGE = {
       "seasonTitle": "曙光航纪",
       "pubdate": 1787153617,
       "aid": 117122868972357
+    },
+    {
+      "title": "20260820 决赛 Day-3 第一局-预女猎白混",
+      "bvid": "BV1kG8A6dEfF",
+      "url": "https://www.bilibili.com/video/BV1kG8A6dEfF",
+      "duration": 5229,
+      "board": "预女猎白混",
+      "stage": "其他",
+      "date": "2026-08-20",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1787241372,
+      "aid": 117128606779045
+    },
+    {
+      "title": "20260820 决赛 Day-3 第二局-盗宝大师",
+      "bvid": "BV1kG8A6dEye",
+      "url": "https://www.bilibili.com/video/BV1kG8A6dEye",
+      "duration": 5032,
+      "board": "盗宝大师",
+      "stage": "其他",
+      "date": "2026-08-20",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1787241340,
+      "aid": 117128606780328
+    },
+    {
+      "title": "20260820 决赛 Day-3 第三局-机械狼通灵师",
+      "bvid": "BV1kG8A6dE7A",
+      "url": "https://www.bilibili.com/video/BV1kG8A6dE7A",
+      "duration": 4462,
+      "board": "机械狼通灵师",
+      "stage": "其他",
+      "date": "2026-08-20",
+      "section": "正片",
+      "seasonTitle": "曙光航纪",
+      "pubdate": 1787242052,
+      "aid": 117128606780842
     }
   ]
 };
