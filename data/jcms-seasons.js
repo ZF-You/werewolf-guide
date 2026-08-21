@@ -5,7 +5,7 @@ window.JCMS_SEASONS = {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",
-      "episodeCount": 160,
+      "episodeCount": 163,
       "episodes": [
         {
           "title": "20260526 表演赛 Day-1 第一局-预女猎白混",
@@ -2086,23 +2086,62 @@ window.JCMS_SEASONS = {
           "seasonTitle": "曙光航纪",
           "pubdate": 1787242052,
           "aid": 117128606780842
+        },
+        {
+          "title": "20260821 决赛 Day-4 第一局-预女猎白混",
+          "bvid": "BV1jM8B6jE2i",
+          "url": "https://www.bilibili.com/video/BV1jM8B6jE2i",
+          "duration": 5421,
+          "board": "预女猎白混",
+          "stage": "其他",
+          "date": "2026-08-21",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787328815,
+          "aid": 117134327809198
+        },
+        {
+          "title": "20260821 决赛 Day-4 第二局-诡术之境",
+          "bvid": "BV1jM8B6jEkF",
+          "url": "https://www.bilibili.com/video/BV1jM8B6jEkF",
+          "duration": 3321,
+          "board": "诡术之境",
+          "stage": "其他",
+          "date": "2026-08-21",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787328547,
+          "aid": 117134327810993
+        },
+        {
+          "title": "20260821 决赛 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV18W8B6KE7C",
+          "url": "https://www.bilibili.com/video/BV18W8B6KE7C",
+          "duration": 8570,
+          "board": "机械狼通灵师",
+          "stage": "其他",
+          "date": "2026-08-21",
+          "section": "正片",
+          "seasonTitle": "曙光航纪",
+          "pubdate": 1787330212,
+          "aid": 117134361429891
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 55
+          "count": 56
         },
         {
           "name": "预女猎白混",
-          "count": 49
-        },
-        {
-          "name": "盗宝大师",
-          "count": 15
+          "count": 50
         },
         {
           "name": "诡术之境",
+          "count": 16
+        },
+        {
+          "name": "盗宝大师",
           "count": 15
         },
         {
