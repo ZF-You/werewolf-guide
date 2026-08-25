@@ -12,12 +12,11 @@ window.SEASON_DAWN_VOYAGE = {
     "section": "正片",
     "seasonTitle": "曙光航纪",
     "pubdate": 1787330212,
-    "aid": 117134361429891,
-    "cid": 41138193658
+    "aid": 117134361429891
   },
   "season": {
     "id": 8209896,
-    "title": "曙光航纪",
+    "title": "合集·曙光航纪",
     "mid": 19106800,
     "completed": true,
     "section_count": 1,
@@ -41,8 +40,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779815071,
-      "aid": 116641933365140,
-      "cid": 38635046608
+      "aid": 116641933365140
     },
     {
       "title": "20260526 表演赛 Day-1 第二局-狼王守卫",
@@ -55,8 +53,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779815081,
-      "aid": 116641933298583,
-      "cid": 38635110875
+      "aid": 116641933298583
     },
     {
       "title": "20260526 表演赛 Day-1 第三局-狼王骑士",
@@ -69,8 +66,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779815080,
-      "aid": 116641933297564,
-      "cid": 38635178717
+      "aid": 116641933297564
     },
     {
       "title": "20260527 表演赛 Day-2 第一局-预女猎白混",
@@ -83,8 +79,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779896329,
-      "aid": 116647251674787,
-      "cid": 38656936688
+      "aid": 116647251674787
     },
     {
       "title": "20260527 表演赛 Day-2 第二局-假面舞会",
@@ -97,8 +92,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779896349,
-      "aid": 116647251677095,
-      "cid": 38657065307
+      "aid": 116647251677095
     },
     {
       "title": "20260527 表演赛 Day-2 第三局-机械狼通灵师",
@@ -111,8 +105,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779896326,
-      "aid": 116647251677098,
-      "cid": 38657132855
+      "aid": 116647251677098
     },
     {
       "title": "20260528 表演赛 Day-3 第二局-诡术之境",
@@ -125,8 +118,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779988990,
-      "aid": 116653325028242,
-      "cid": 38682232761
+      "aid": 116653325028242
     },
     {
       "title": "20260528 表演赛 Day-3 第三局-机械狼通灵师",
@@ -139,8 +131,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1779988876,
-      "aid": 116653325025940,
-      "cid": 38682362688
+      "aid": 116653325025940
     },
     {
       "title": "20260529 表演赛 Day-4 第一局-预女猎白混",
@@ -153,8 +144,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780077154,
-      "aid": 116659113166751,
-      "cid": 38706612823
+      "aid": 116659113166751
     },
     {
       "title": "20260529 表演赛 Day-4 第二局-盗宝大师",
@@ -167,8 +157,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780077181,
-      "aid": 116659113167522,
-      "cid": 38706678260
+      "aid": 116659113167522
     },
     {
       "title": "20260529 表演赛 Day-4 第三局-机械狼通灵师",
@@ -181,8 +170,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780077338,
-      "aid": 116659113167524,
-      "cid": 38706808476
+      "aid": 116659113167524
     },
     {
       "title": "20260602 正赛 第一期 Day-1 第一局-预女猎白混",
@@ -195,8 +183,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780420255,
-      "aid": 116681594701999,
-      "cid": 38808521198
+      "aid": 116681594701999
     },
     {
       "title": "20260602 正赛 第一期 Day-1 第二局-盗宝大师",
@@ -209,8 +196,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780420380,
-      "aid": 116681594700466,
-      "cid": 38808650816
+      "aid": 116681594700466
     },
     {
       "title": "20260602 正赛 第一期 Day-1 第三局-机械狼通灵师",
@@ -223,8 +209,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780420259,
-      "aid": 116681594637236,
-      "cid": 38808781676
+      "aid": 116681594637236
     },
     {
       "title": "20260603 正赛 第一期 Day-2 第一局-预女猎白混",
@@ -237,8 +222,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780504020,
-      "aid": 116687064008900,
-      "cid": 38839521120
+      "aid": 116687064008900
     },
     {
       "title": "20260603 正赛 第一期 Day-2 第二局-假面舞会",
@@ -251,8 +235,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780504108,
-      "aid": 116687080784449,
-      "cid": 38839584825
+      "aid": 116687080784449
     },
     {
       "title": "20260603 正赛 第一期 Day-2 第三局-机械狼通灵师",
@@ -265,8 +248,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780504588,
-      "aid": 116687097628643,
-      "cid": 38836505455
+      "aid": 116687097628643
     },
     {
       "title": "20260604 正赛 第一期 Day-3 第一局-预女猎白混",
@@ -279,8 +261,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780589100,
-      "aid": 116692667600639,
-      "cid": 38860359012
+      "aid": 116692667600639
     },
     {
       "title": "20260604 正赛 第一期 Day-3 第二局-盗宝大师",
@@ -293,8 +274,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780589113,
-      "aid": 116692684375812,
-      "cid": 38860686855
+      "aid": 116692684375812
     },
     {
       "title": "20260605 正赛 第一期 Day-4 第一局-预女猎白混",
@@ -307,8 +287,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780675228,
-      "aid": 116698321586187,
-      "cid": 38888999272
+      "aid": 116698321586187
     },
     {
       "title": "20260605 正赛 第一期 Day-4 第二局-假面舞会",
@@ -321,8 +300,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780675213,
-      "aid": 116698321587471,
-      "cid": 38889130846
+      "aid": 116698321587471
     },
     {
       "title": "20260605 正赛 第一期 Day-4 第三局-机械狼通灵师",
@@ -335,8 +313,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1780675186,
-      "aid": 116698321521426,
-      "cid": 38889260610
+      "aid": 116698321521426
     },
     {
       "title": "20260609 正赛 第二期 Day-1 第一局-预女猎白混",
@@ -349,8 +326,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781021761,
-      "aid": 116720987605125,
-      "cid": 38991497968
+      "aid": 116720987605125
     },
     {
       "title": "20260609 正赛 第二期 Day-1 第二局-盗宝大师",
@@ -363,8 +339,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781021414,
-      "aid": 116720987539592,
-      "cid": 38991629380
+      "aid": 116720987539592
     },
     {
       "title": "20260609 正赛 第二期 Day-1 第三局-机械狼通灵师",
@@ -377,8 +352,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781021433,
-      "aid": 116720987540362,
-      "cid": 38991825777
+      "aid": 116720987540362
     },
     {
       "title": "20260610 正赛 第二期 Day-2 第一局-预女猎白混",
@@ -391,8 +365,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781113443,
-      "aid": 116727027336860,
-      "cid": 39018627145
+      "aid": 116727027336860
     },
     {
       "title": "20260610 正赛 第二期 Day-2 第二局-假面舞会",
@@ -405,8 +378,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781113426,
-      "aid": 116727027336863,
-      "cid": 39018696408
+      "aid": 116727027336863
     },
     {
       "title": "20260610 正赛 第二期 Day-2 第三局-机械狼通灵师",
@@ -419,8 +391,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781113469,
-      "aid": 116727027337381,
-      "cid": 39018891109
+      "aid": 116727027337381
     },
     {
       "title": "20260610 正赛 第二期 Day-2 第四局-机械狼通灵师",
@@ -433,8 +404,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781113434,
-      "aid": 116727027336866,
-      "cid": 39018955210
+      "aid": 116727027336866
     },
     {
       "title": "20260611 正赛 第二期 Day-3 第一局-预女猎白混",
@@ -447,8 +417,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781196524,
-      "aid": 116732463155124,
-      "cid": 39045497919
+      "aid": 116732463155124
     },
     {
       "title": "20260611 正赛 第二期 Day-3 第二局-诡术之境",
@@ -461,8 +430,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781196725,
-      "aid": 116732463155384,
-      "cid": 39045500496
+      "aid": 116732463155384
     },
     {
       "title": "20260611 正赛 第二期 Day-3 第三局-机械狼通灵师",
@@ -475,8 +443,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781196882,
-      "aid": 116732479933361,
-      "cid": 39045566144
+      "aid": 116732479933361
     },
     {
       "title": "20260611 正赛 第二期 Day-3 第四局-机械狼通灵师",
@@ -489,8 +456,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781197538,
-      "aid": 116732513486680,
-      "cid": 39045630906
+      "aid": 116732513486680
     },
     {
       "title": "20260612 正赛 第二期 Day-4 唯邻是从",
@@ -503,8 +469,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781280806,
-      "aid": 116737982925024,
-      "cid": 39070991291
+      "aid": 116737982925024
     },
     {
       "title": "20260612 正赛 第二期 Day-4 第一局-预女猎白混",
@@ -517,8 +482,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781281246,
-      "aid": 116737982859230,
-      "cid": 39070862992
+      "aid": 116737982859230
     },
     {
       "title": "20260612 正赛 第二期 Day-4 第三局-机械狼通灵师",
@@ -531,8 +495,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781280919,
-      "aid": 116737982924771,
-      "cid": 39071056250
+      "aid": 116737982924771
     },
     {
       "title": "20260616 正赛 第三期 Day-1 第一局-预女猎白混",
@@ -545,8 +508,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781627669,
-      "aid": 116760715986862,
-      "cid": 39169492780
+      "aid": 116760715986862
     },
     {
       "title": "20260616 正赛 第三期 Day-1 第二局-诡术之境",
@@ -559,8 +521,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781627370,
-      "aid": 116760715987889,
-      "cid": 39169557786
+      "aid": 116760715987889
     },
     {
       "title": "20260616 正赛 第三期 Day-1 第三局-机械狼通灵师",
@@ -573,8 +534,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781627350,
-      "aid": 116760715985331,
-      "cid": 39169624841
+      "aid": 116760715985331
     },
     {
       "title": "20260617 正赛 第三期 Day-2 第一局-预女猎白混",
@@ -587,8 +547,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781709193,
-      "aid": 116766067919708,
-      "cid": 39195313752
+      "aid": 116766067919708
     },
     {
       "title": "20260617 正赛 第三期 Day-2 第二局-假面舞会",
@@ -601,8 +560,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781709223,
-      "aid": 116766067917151,
-      "cid": 39195443791
+      "aid": 116766067917151
     },
     {
       "title": "20260617 正赛 第三期 Day-2 第三局-机械狼通灵师",
@@ -615,8 +573,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781709214,
-      "aid": 116766067984481,
-      "cid": 39195511687
+      "aid": 116766067984481
     },
     {
       "title": "20260618 正赛 第三期 Day-3 第一局-预女猎白混",
@@ -629,8 +586,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781797457,
-      "aid": 116771856189507,
-      "cid": 39222903251
+      "aid": 116771856189507
     },
     {
       "title": "20260618 正赛 第三期 Day-3 第二局-诡术之境",
@@ -643,8 +599,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781797527,
-      "aid": 116771856059720,
-      "cid": 39222969848
+      "aid": 116771856059720
     },
     {
       "title": "20260618 正赛 第三期 Day-3 第三局-机械狼通灵师",
@@ -657,8 +612,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781797880,
-      "aid": 116771856254337,
-      "cid": 39223102418
+      "aid": 116771856254337
     },
     {
       "title": "20260619 正赛 第三期 Day-4 第一局-预女猎白混",
@@ -671,8 +625,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781882441,
-      "aid": 116777392538055,
-      "cid": 39246827515
+      "aid": 116777392538055
     },
     {
       "title": "20260619 正赛 第三期 Day-4 第二局-盗宝大师",
@@ -685,8 +638,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781882717,
-      "aid": 116777426094887,
-      "cid": 39246956631
+      "aid": 116777426094887
     },
     {
       "title": "20260619 正赛 第三期 Day-4 第三局-机械狼通灵师",
@@ -699,8 +651,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1781882965,
-      "aid": 116777442869659,
-      "cid": 39247088102
+      "aid": 116777442869659
     },
     {
       "title": "20260623 正赛 第四期 Day-1 第一局-预女猎白混",
@@ -713,8 +664,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782236238,
-      "aid": 116800628984367,
-      "cid": 39350570122
+      "aid": 116800628984367
     },
     {
       "title": "20260623 正赛 第四期 Day-1 第二局-诡术之境",
@@ -727,8 +677,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782236242,
-      "aid": 116800629047601,
-      "cid": 39350764794
+      "aid": 116800629047601
     },
     {
       "title": "20260623 正赛 第四期 Day-1 第三局-机械狼通灵师",
@@ -741,8 +690,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782236667,
-      "aid": 116800628984371,
-      "cid": 39350832083
+      "aid": 116800628984371
     },
     {
       "title": "20260624 正赛 第四期 Day-2 第一局-预女猎白混",
@@ -755,8 +703,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782315957,
-      "aid": 116805712480310,
-      "cid": 39376193236
+      "aid": 116805712480310
     },
     {
       "title": "20260624 正赛 第四期 Day-2 第二局-诡术之境",
@@ -769,8 +716,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782315394,
-      "aid": 116805712481080,
-      "cid": 39376390489
+      "aid": 116805712481080
     },
     {
       "title": "20260624 正赛 第四期 Day-2 第三局-机械狼通灵师",
@@ -783,8 +729,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782315684,
-      "aid": 116805712547130,
-      "cid": 39376455429
+      "aid": 116805712547130
     },
     {
       "title": "20260625 正赛 第四期 Day-3 第一局-预女猎白混",
@@ -797,8 +742,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782402360,
-      "aid": 116811483909601,
-      "cid": 39404637293
+      "aid": 116811483909601
     },
     {
       "title": "20260625 正赛 第四期 Day-3 第二局-假面舞会",
@@ -811,8 +755,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782402375,
-      "aid": 116811483842532,
-      "cid": 39404830976
+      "aid": 116811483842532
     },
     {
       "title": "20260625 正赛 第四期 Day-3 第三局-机械狼通灵师",
@@ -825,8 +768,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782402770,
-      "aid": 116811483842023,
-      "cid": 39404962859
+      "aid": 116811483842023
     },
     {
       "title": "20260626 正赛 第四期 Day-4 第一局-预女猎白混",
@@ -839,8 +781,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782489985,
-      "aid": 116817255204720,
-      "cid": 39433932177
+      "aid": 116817255204720
     },
     {
       "title": "20260626 正赛 第四期 Day-4 第二局-盗宝大师",
@@ -853,8 +794,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782490355,
-      "aid": 116817255270003,
-      "cid": 39433995021
+      "aid": 116817255270003
     },
     {
       "title": "20260626 正赛 第四期 Day-4 第三局-机械狼通灵师",
@@ -867,8 +807,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782490885,
-      "aid": 116817255206262,
-      "cid": 39434061837
+      "aid": 116817255206262
     },
     {
       "title": "20260626 正赛 第四期 Day-4 第四局-诡术之境",
@@ -881,8 +820,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782490680,
-      "aid": 116817271980838,
-      "cid": 39434257725
+      "aid": 116817271980838
     },
     {
       "title": "20260630 正赛 第五期 Day-1 第一局-预女猎白混",
@@ -895,8 +833,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782835808,
-      "aid": 116839887668213,
-      "cid": 39540952709
+      "aid": 116839887668213
     },
     {
       "title": "20260630 正赛 第五期 Day-1 第二局-唯邻是从",
@@ -909,8 +846,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782836523,
-      "aid": 116839887800568,
-      "cid": 39541278653
+      "aid": 116839887800568
     },
     {
       "title": "20260630 正赛 第五期 Day-1 第三局-机械狼通灵师",
@@ -923,8 +859,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782836455,
-      "aid": 116839904446235,
-      "cid": 39541345416
+      "aid": 116839904446235
     },
     {
       "title": "20260701 正赛 第五期 Day-2 第一局-预女猎白混",
@@ -937,8 +872,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782919988,
-      "aid": 116845424151323,
-      "cid": 39568539813
+      "aid": 116845424151323
     },
     {
       "title": "20260701 正赛 第五期 Day-2 第二局-诡术之境",
@@ -951,8 +885,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782919981,
-      "aid": 116845424150302,
-      "cid": 39568606629
+      "aid": 116845424150302
     },
     {
       "title": "20260701 正赛 第五期 Day-2 第三局-机械狼通灵师",
@@ -965,8 +898,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1782920012,
-      "aid": 116845424216354,
-      "cid": 39568737085
+      "aid": 116845424216354
     },
     {
       "title": "20260702 正赛 第五期 Day-3 第一局-预女猎白混",
@@ -979,8 +911,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783010720,
-      "aid": 116851363350159,
-      "cid": 39599080108
+      "aid": 116851363350159
     },
     {
       "title": "20260702 正赛 第五期 Day-3 第二局-盗宝大师",
@@ -993,8 +924,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783010958,
-      "aid": 116851363286419,
-      "cid": 39599211166
+      "aid": 116851363286419
     },
     {
       "title": "20260702 正赛 第五期 Day-3 第三局-机械狼通灵师",
@@ -1007,8 +937,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783010673,
-      "aid": 116851363415701,
-      "cid": 39599344123
+      "aid": 116851363415701
     },
     {
       "title": "20260703 特辑 第一局-预女猎白",
@@ -1021,8 +950,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783095455,
-      "aid": 116856916543784,
-      "cid": 39628115375
+      "aid": 116856916543784
     },
     {
       "title": "20260703 特辑 第二局-黑狼王骑士",
@@ -1035,22 +963,20 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783095500,
-      "aid": 116856916608043,
-      "cid": 39628377109
+      "aid": 116856916608043
     },
     {
-      "title": "20260703 特辑 第三局-机械狼通灵师",
+      "title": "20260703 特辑 第三局-四狼八猎",
       "bvid": "BV1rETb6MErB",
       "url": "https://www.bilibili.com/video/BV1rETb6MErB",
       "duration": 1669,
-      "board": "机械狼通灵师",
+      "board": "四狼八猎",
       "stage": "其他",
       "date": "2026-07-03",
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783095276,
-      "aid": 116856916544302,
-      "cid": 39628505454
+      "aid": 116856916544302
     },
     {
       "title": "20260707 正赛 第六期 Day-1 第一局-预女猎白混",
@@ -1063,8 +989,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783440046,
-      "aid": 116879498677661,
-      "cid": 39739917834
+      "aid": 116879498677661
     },
     {
       "title": "20260707 正赛 第六期 Day-1 第二局-盗宝大师",
@@ -1077,8 +1002,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783440162,
-      "aid": 116879498675361,
-      "cid": 39740048233
+      "aid": 116879498675361
     },
     {
       "title": "20260707 正赛 第六期 Day-1 第三局-机械狼通灵师",
@@ -1091,8 +1015,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783440179,
-      "aid": 116879498675364,
-      "cid": 39740182085
+      "aid": 116879498675364
     },
     {
       "title": "20260708 正赛 第六期 Day-2 第一局-预女猎白混",
@@ -1105,8 +1028,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783529638,
-      "aid": 116885286880777,
-      "cid": 39769670170
+      "aid": 116885286880777
     },
     {
       "title": "20260708 正赛 第六期 Day-2 第二局-唯邻是从",
@@ -1119,8 +1041,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783528245,
-      "aid": 116885286945547,
-      "cid": 39769804005
+      "aid": 116885286945547
     },
     {
       "title": "20260708 正赛 第六期 Day-2 第三局-机械狼通灵师",
@@ -1133,8 +1054,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783528295,
-      "aid": 116885286817039,
-      "cid": 39769932044
+      "aid": 116885286817039
     },
     {
       "title": "20260709 正赛 第六期 Day-3 第一局-预女猎白混",
@@ -1147,8 +1067,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783612744,
-      "aid": 116890806520543,
-      "cid": 39799097103
+      "aid": 116890806520543
     },
     {
       "title": "20260709 正赛 第六期 Day-3 第二局-诡术之境",
@@ -1161,8 +1080,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783612895,
-      "aid": 116890806585570,
-      "cid": 39799162424
+      "aid": 116890806585570
     },
     {
       "title": "20260709 正赛 第六期 Day-3 第三局-机械狼通灵师",
@@ -1175,8 +1093,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783612713,
-      "aid": 116890806519270,
-      "cid": 39799229149
+      "aid": 116890806519270
     },
     {
       "title": "20260710 正赛 第六期 Day-4 第一局-预女猎白混",
@@ -1189,8 +1106,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783699485,
-      "aid": 116896493996505,
-      "cid": 39830489505
+      "aid": 116896493996505
     },
     {
       "title": "20260710 正赛 第六期 Day-4 第二局-假面舞会",
@@ -1203,8 +1119,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783699367,
-      "aid": 116896493997532,
-      "cid": 39830751496
+      "aid": 116896493997532
     },
     {
       "title": "20260710 正赛 第六期 Day-4 第三局-机械狼通灵师",
@@ -1217,8 +1132,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783699351,
-      "aid": 116896493995487,
-      "cid": 39830883181
+      "aid": 116896493995487
     },
     {
       "title": "20260710 正赛 第六期 Day-4 第四局-机械狼通灵师",
@@ -1231,8 +1145,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1783699392,
-      "aid": 116896494061027,
-      "cid": 39830947212
+      "aid": 116896494061027
     },
     {
       "title": "20260714 正赛 第七期 Day-1 第一局-预女猎白混",
@@ -1245,8 +1158,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784046352,
-      "aid": 116919243900726,
-      "cid": 39951469665
+      "aid": 116919243900726
     },
     {
       "title": "20260714 正赛 第七期 Day-1 第二局-盗宝大师",
@@ -1259,8 +1171,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784046391,
-      "aid": 116919244031033,
-      "cid": 39951535423
+      "aid": 116919244031033
     },
     {
       "title": "20260714 正赛 第七期 Day-1 第三局-机械狼通灵师",
@@ -1273,8 +1184,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784046337,
-      "aid": 116919243901500,
-      "cid": 39951664767
+      "aid": 116919243901500
     },
     {
       "title": "20260714 正赛 第七期 Day-1 第四局-机械狼通灵师",
@@ -1287,8 +1197,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784046421,
-      "aid": 116919243899967,
-      "cid": 39951731181
+      "aid": 116919243899967
     },
     {
       "title": "20260715 正赛 第七期 Day-2 第一局-预女猎白混",
@@ -1301,8 +1210,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784133213,
-      "aid": 116924881045487,
-      "cid": 39984762790
+      "aid": 116924881045487
     },
     {
       "title": "20260715 正赛 第七期 Day-2 第二局-诡术之境",
@@ -1315,8 +1223,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784132682,
-      "aid": 116924881045490,
-      "cid": 39985021480
+      "aid": 116924881045490
     },
     {
       "title": "20260715 正赛 第七期 Day-2 第三局-机械狼通灵师",
@@ -1329,8 +1236,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784133148,
-      "aid": 116924881046517,
-      "cid": 39985152770
+      "aid": 116924881046517
     },
     {
       "title": "20260716 正赛 第七期 Day-1 第一局-预女猎白混",
@@ -1343,8 +1249,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784216215,
-      "aid": 116930367261566,
-      "cid": 40016217966
+      "aid": 116930367261566
     },
     {
       "title": "20260716 正赛 第七期 Day-1 第二局-假面舞会",
@@ -1357,8 +1262,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784216159,
-      "aid": 116930367261313,
-      "cid": 40016349602
+      "aid": 116930367261313
     },
     {
       "title": "20260716 正赛 第七期 Day-1 第三局-机械狼通灵师",
@@ -1371,8 +1275,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784216285,
-      "aid": 116930367195779,
-      "cid": 40016416631
+      "aid": 116930367195779
     },
     {
       "title": "20260717 正赛 第七期 Day-4 第一局-预女猎白混",
@@ -1385,8 +1288,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784309730,
-      "aid": 116936490878694,
-      "cid": 40051148307
+      "aid": 116936490878694
     },
     {
       "title": "20260717 正赛 第七期 Day-4 第二局-唯邻是从",
@@ -1399,8 +1301,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784309845,
-      "aid": 116936490879720,
-      "cid": 40051216158
+      "aid": 116936490879720
     },
     {
       "title": "20260717 正赛 第七期 Day-4 第三局-机械狼通灵师",
@@ -1413,8 +1314,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784309754,
-      "aid": 116936490877163,
-      "cid": 40051410777
+      "aid": 116936490877163
     },
     {
       "title": "20260721 正赛 第八期 Day-1 第一局-预女猎白混",
@@ -1427,8 +1327,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784649456,
-      "aid": 116958737467895,
-      "cid": 40170687592
+      "aid": 116958737467895
     },
     {
       "title": "20260721 正赛 第八期 Day-1 第二局-假面舞会",
@@ -1441,8 +1340,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784649331,
-      "aid": 116958754244401,
-      "cid": 40171342160
+      "aid": 116958754244401
     },
     {
       "title": "20260721 正赛 第八期 Day-1 第三局-机械狼通灵师",
@@ -1455,8 +1353,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784650484,
-      "aid": 116958804705296,
-      "cid": 40171407842
+      "aid": 116958804705296
     },
     {
       "title": "20260722 正赛 第八期 Day-2 第一局-预女猎白混",
@@ -1469,8 +1366,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784736209,
-      "aid": 116964374611421,
-      "cid": 40202797141
+      "aid": 116964374611421
     },
     {
       "title": "20260722 正赛 第八期 Day-2 第二局-盗宝大师",
@@ -1483,8 +1379,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784736090,
-      "aid": 116964391388653,
-      "cid": 40202996799
+      "aid": 116964391388653
     },
     {
       "title": "20260722 正赛 第八期 Day-2 第三局-机械狼通灵师",
@@ -1497,8 +1392,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784735858,
-      "aid": 116964408166546,
-      "cid": 40203125736
+      "aid": 116964408166546
     },
     {
       "title": "20260723 正赛 第八期 Day-3 第一局-预女猎白混",
@@ -1511,8 +1405,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784823199,
-      "aid": 116970162751233,
-      "cid": 40233402661
+      "aid": 116970162751233
     },
     {
       "title": "20260723 正赛 第八期 Day-3 第二局-诡术之境",
@@ -1525,8 +1418,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784823149,
-      "aid": 116970162751497,
-      "cid": 40233536962
+      "aid": 116970162751497
     },
     {
       "title": "20260723 正赛 第八期 Day-3 第三局-机械狼通灵师",
@@ -1539,8 +1431,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784823248,
-      "aid": 116970162750979,
-      "cid": 40233730820
+      "aid": 116970162750979
     },
     {
       "title": "20260724 正赛 第八期 Day-4 第一局-预女猎白混",
@@ -1553,8 +1444,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784906204,
-      "aid": 116975598569512,
-      "cid": 40264141958
+      "aid": 116975598569512
     },
     {
       "title": "20260724 正赛 第八期 Day-4 第二局-唯邻是从",
@@ -1567,8 +1457,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784906222,
-      "aid": 116975598570283,
-      "cid": 40264272861
+      "aid": 116975598570283
     },
     {
       "title": "20260724 正赛 第八期 Day-4 第三局-机械狼通灵师",
@@ -1581,8 +1470,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1784906303,
-      "aid": 116975598570029,
-      "cid": 40264404669
+      "aid": 116975598570029
     },
     {
       "title": "20260728 正赛 第九期 Day-1 第一局-预女猎白混",
@@ -1595,8 +1483,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785255580,
-      "aid": 116998449201349,
-      "cid": 40385053623
+      "aid": 116998449201349
     },
     {
       "title": "20260728 正赛 第九期 Day-1 第二局-盗宝大师",
@@ -1609,8 +1496,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785255880,
-      "aid": 116998465914554,
-      "cid": 40385184468
+      "aid": 116998465914554
     },
     {
       "title": "20260728 正赛 第九期 Day-1 第三局-机械狼通灵师",
@@ -1623,8 +1509,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785255999,
-      "aid": 116998482823517,
-      "cid": 40385316540
+      "aid": 116998482823517
     },
     {
       "title": "20260729 正赛 第九期 Day-2 第一局-预女猎白混",
@@ -1637,8 +1522,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785341278,
-      "aid": 117004103124619,
-      "cid": 40417102738
+      "aid": 117004103124619
     },
     {
       "title": "20260729 正赛 第九期 Day-2 第二局-盗宝大师",
@@ -1651,8 +1535,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785341453,
-      "aid": 117004103060367,
-      "cid": 40417297759
+      "aid": 117004103060367
     },
     {
       "title": "20260729 正赛 第九期 Day-2 第三局-机械狼通灵师",
@@ -1665,8 +1548,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785341771,
-      "aid": 117004119836506,
-      "cid": 40418084488
+      "aid": 117004119836506
     },
     {
       "title": "20260730 正赛 第九期 Day-3 第一局-预女猎白混",
@@ -1679,8 +1561,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785428269,
-      "aid": 117009807313515,
-      "cid": 40450064761
+      "aid": 117009807313515
     },
     {
       "title": "20260730 正赛 第九期 Day-3 第二局-假面舞会",
@@ -1693,8 +1574,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785428173,
-      "aid": 117009807311214,
-      "cid": 40450129975
+      "aid": 117009807311214
     },
     {
       "title": "20260730 正赛 第九期 Day-3 第三局-机械狼通灵师",
@@ -1707,8 +1587,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785428681,
-      "aid": 117009807311216,
-      "cid": 40450262799
+      "aid": 117009807311216
     },
     {
       "title": "20260731 正赛 第九期 Day-4 第一局-预女猎白混",
@@ -1721,8 +1600,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785512589,
-      "aid": 117015327016620,
-      "cid": 40480342188
+      "aid": 117015327016620
     },
     {
       "title": "20260731 正赛 第九期 Day-4 第二局-诡术之境",
@@ -1735,8 +1613,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785512702,
-      "aid": 117015327015343,
-      "cid": 40480410663
+      "aid": 117015327015343
     },
     {
       "title": "20260731 正赛 第九期 Day-4 第三局-机械狼通灵师",
@@ -1749,8 +1626,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785513281,
-      "aid": 117015327015374,
-      "cid": 40480540771
+      "aid": 117015327015374
     },
     {
       "title": "20260804 正赛 第十期 Day-1 第一局-预女猎白混",
@@ -1763,8 +1639,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785859074,
-      "aid": 117038043498544,
-      "cid": 40597849021
+      "aid": 117038043498544
     },
     {
       "title": "20260804 正赛 第十期 Day-1 第二局-假面舞会",
@@ -1777,8 +1652,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785859147,
-      "aid": 117038043433522,
-      "cid": 40597917177
+      "aid": 117038043433522
     },
     {
       "title": "20260804 正赛 第十期 Day-1 第三局-机械狼通灵师",
@@ -1791,8 +1665,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785859055,
-      "aid": 117038043431990,
-      "cid": 40598112117
+      "aid": 117038043431990
     },
     {
       "title": "20260804 正赛 第十期 Day-1 第四局-机械狼通灵师",
@@ -1805,8 +1678,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785859063,
-      "aid": 117038043366457,
-      "cid": 40598178390
+      "aid": 117038043366457
     },
     {
       "title": "20260805 正赛 第十期 Day-2 第一局-预女猎白混",
@@ -1819,8 +1691,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785947740,
-      "aid": 117043781240560,
-      "cid": 40629960904
+      "aid": 117043781240560
     },
     {
       "title": "20260805 正赛 第十期 Day-2 第二局-盗宝大师",
@@ -1833,8 +1704,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785946915,
-      "aid": 117043781175026,
-      "cid": 40630029695
+      "aid": 117043781175026
     },
     {
       "title": "20260805 正赛 第十期 Day-2 第三局-机械狼通灵师",
@@ -1847,8 +1717,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785946989,
-      "aid": 117043781241332,
-      "cid": 40630812907
+      "aid": 117043781241332
     },
     {
       "title": "20260805 正赛 第十期 Day-2 第四局-机械狼通灵师",
@@ -1861,8 +1730,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1785946930,
-      "aid": 117043781240566,
-      "cid": 40630880366
+      "aid": 117043781240566
     },
     {
       "title": "20260806 正赛 第十期 Day-3 第一局-预女猎白混",
@@ -1875,8 +1743,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786034233,
-      "aid": 117049485426717,
-      "cid": 40662798200
+      "aid": 117049485426717
     },
     {
       "title": "20260806 正赛 第十期 Day-3 第二局-诡术之境",
@@ -1889,8 +1756,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786033560,
-      "aid": 117049485559585,
-      "cid": 40663059547
+      "aid": 117049485559585
     },
     {
       "title": "20260806 正赛 第十期 Day-3 第三局-机械狼通灵师",
@@ -1903,8 +1769,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786033654,
-      "aid": 117049485560607,
-      "cid": 40663253150
+      "aid": 117049485560607
     },
     {
       "title": "20260807 正赛 第十期 Day-4 第一局-预女猎白混",
@@ -1917,8 +1782,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786118864,
-      "aid": 117055038686630,
-      "cid": 40694124102
+      "aid": 117055038686630
     },
     {
       "title": "20260807 正赛 第十期 Day-4 第二局-唯邻是从",
@@ -1931,8 +1795,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786118889,
-      "aid": 117055038687913,
-      "cid": 40694318865
+      "aid": 117055038687913
     },
     {
       "title": "20260807 正赛 第十期 Day-4 第三局-机械狼通灵师",
@@ -1945,8 +1808,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786118847,
-      "aid": 117055038752684,
-      "cid": 40694385973
+      "aid": 117055038752684
     },
     {
       "title": "20260807 正赛 第十期 Day-4 第四局-机械狼通灵师",
@@ -1959,8 +1821,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786118851,
-      "aid": 117055038752686,
-      "cid": 40694515701
+      "aid": 117055038752686
     },
     {
       "title": "20260811 正赛 第十一期 Day-1 第一局-预女猎白混",
@@ -1973,8 +1834,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786464528,
-      "aid": 117077687929735,
-      "cid": 40819687604
+      "aid": 117077687929735
     },
     {
       "title": "20260811 正赛 第十一期 Day-1 第二局-假面舞会",
@@ -1987,8 +1847,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786464291,
-      "aid": 117077687994765,
-      "cid": 40819886042
+      "aid": 117077687994765
     },
     {
       "title": "20260811 正赛 第十一期 Day-1 第三局-机械狼通灵师",
@@ -2001,8 +1860,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786464381,
-      "aid": 117077687926927,
-      "cid": 40819953117
+      "aid": 117077687926927
     },
     {
       "title": "20260812 正赛 第十一期 Day-2 第一局-预女猎白混",
@@ -2015,8 +1873,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786550229,
-      "aid": 117083325072910,
-      "cid": 40850818481
+      "aid": 117083325072910
     },
     {
       "title": "20260812 正赛 第十一期 Day-2 第二局-诡术之境",
@@ -2029,8 +1886,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786550197,
-      "aid": 117083325073168,
-      "cid": 40850951353
+      "aid": 117083325073168
     },
     {
       "title": "20260812 正赛 第十一期 Day-2 第三局-机械狼通灵师",
@@ -2043,8 +1899,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786550174,
-      "aid": 117083325072914,
-      "cid": 40851081689
+      "aid": 117083325072914
     },
     {
       "title": "20260813 正赛 第十一期 Day-3 第一局-预女猎白混",
@@ -2057,8 +1912,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786634910,
-      "aid": 117088878464556,
-      "cid": 40882605395
+      "aid": 117088878464556
     },
     {
       "title": "20260813 正赛 第十一期 Day-3 第二局-盗宝大师",
@@ -2071,8 +1925,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786635626,
-      "aid": 117088878332975,
-      "cid": 40882735089
+      "aid": 117088878332975
     },
     {
       "title": "20260813 正赛 第十一期 Day-3 第三局-机械狼通灵师",
@@ -2085,8 +1938,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786635163,
-      "aid": 117088878397249,
-      "cid": 40882867189
+      "aid": 117088878397249
     },
     {
       "title": "20260814 正赛 第十一期 Day-4 第一局-预女猎白混",
@@ -2099,8 +1951,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786724005,
-      "aid": 117094700158584,
-      "cid": 40914847395
+      "aid": 117094700158584
     },
     {
       "title": "20260814 正赛 第十一期 Day-4 第二局-孤注一掷",
@@ -2113,8 +1964,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786723815,
-      "aid": 117094700090491,
-      "cid": 40915108386
+      "aid": 117094700090491
     },
     {
       "title": "20260814 正赛 第十一期 Day-4 第三局-机械狼通灵师",
@@ -2127,8 +1977,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1786724310,
-      "aid": 117094700027261,
-      "cid": 40915176411
+      "aid": 117094700027261
     },
     {
       "title": "20260818 决赛 Day-1 第一局-预女猎白混",
@@ -2141,8 +1990,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787064808,
-      "aid": 117117047278896,
-      "cid": 41036416625
+      "aid": 117117047278896
     },
     {
       "title": "20260818 决赛 Day-1 第二局-诡术之境",
@@ -2155,8 +2003,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787064840,
-      "aid": 117117047342985,
-      "cid": 41036612240
+      "aid": 117117047342985
     },
     {
       "title": "20260818 决赛 Day-1 第三局-机械狼通灵师",
@@ -2169,8 +2016,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787064989,
-      "aid": 117117064119349,
-      "cid": 41036874370
+      "aid": 117117064119349
     },
     {
       "title": "20260819 决赛 Day-2 第一局-预女猎白混",
@@ -2183,8 +2029,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787153545,
-      "aid": 117122868973116,
-      "cid": 41072527914
+      "aid": 117122868973116
     },
     {
       "title": "20260819 决赛 Day-2 第二局-假面舞会",
@@ -2197,8 +2042,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787153479,
-      "aid": 117122868971583,
-      "cid": 41072592651
+      "aid": 117122868971583
     },
     {
       "title": "20260819 决赛 Day-2 第三局-机械狼通灵师",
@@ -2211,8 +2055,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787153590,
-      "aid": 117122868971586,
-      "cid": 41072594267
+      "aid": 117122868971586
     },
     {
       "title": "20260819 决赛 Day-2 第四局-鬼魂新娘",
@@ -2225,8 +2068,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787153617,
-      "aid": 117122868972357,
-      "cid": 41072658657
+      "aid": 117122868972357
     },
     {
       "title": "20260820 决赛 Day-3 第一局-预女猎白混",
@@ -2239,8 +2081,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787241372,
-      "aid": 117128606779045,
-      "cid": 41104969108
+      "aid": 117128606779045
     },
     {
       "title": "20260820 决赛 Day-3 第二局-盗宝大师",
@@ -2253,8 +2094,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787241340,
-      "aid": 117128606780328,
-      "cid": 41105100206
+      "aid": 117128606780328
     },
     {
       "title": "20260820 决赛 Day-3 第三局-机械狼通灵师",
@@ -2267,8 +2107,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787242052,
-      "aid": 117128606780842,
-      "cid": 41105293331
+      "aid": 117128606780842
     },
     {
       "title": "20260821 决赛 Day-4 第一局-预女猎白混",
@@ -2281,8 +2120,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787328815,
-      "aid": 117134327809198,
-      "cid": 41137997338
+      "aid": 117134327809198
     },
     {
       "title": "20260821 决赛 Day-4 第二局-诡术之境",
@@ -2295,8 +2133,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787328547,
-      "aid": 117134327810993,
-      "cid": 41138127466
+      "aid": 117134327810993
     },
     {
       "title": "20260821 决赛 Day-4 第三局-机械狼通灵师",
@@ -2309,8 +2146,7 @@ window.SEASON_DAWN_VOYAGE = {
       "section": "正片",
       "seasonTitle": "曙光航纪",
       "pubdate": 1787330212,
-      "aid": 117134361429891,
-      "cid": 41138193658
+      "aid": 117134361429891
     }
   ]
 };
