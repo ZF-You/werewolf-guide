@@ -1,5 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
   bindNavigation();
+  bindSideDrawers();
   bindCopyButtons();
   bindImageFallbacks();
   renderJcmsPage();
@@ -10,7 +11,124 @@
   bindSiteMotion();
 });
 
-const ASSET_VERSION = "20260804-guide22";
+const ASSET_VERSION = "20260825-guide24";
+
+const SITE_CHANGELOG = [
+  ["2026-08-25", "拆分左右侧边菜单：左侧显示站点信息与更新记录，右侧作为活动影像廊；补齐曙光航纪完结视频。"],
+  ["2026-08-24", "移除交流论坛；调整全部身份与比赛版型顺序；更新游戏技巧；新增全站侧边信息与影像抽屉。"],
+  ["2026-08-04", "首页改用动态海报并加入播放控制；京城大师赛合集与比赛版型改为默认收起。"],
+  ["2026-08-03", "更新曙光航纪视频；加入自动检查新视频的工作流、术语搜索和首页身份群像海报。"],
+  ["2026-07-17", "更新术语与夜间手势；补充曙光航纪视频；替换猎人身份牌并优化全站动效；修复移动端术语列表。"],
+  ["2026-07-16", "统一版型身份卡片和背景图尺寸。"],
+  ["2026-07-15", "发布第二版与第三版；补充独立页面、比赛资料及各版型身份背景图。"],
+  ["2026-07-13", "狼人杀入坑指南第一版上线。"],
+];
+
+function sideDrawerContent(side) {
+  if (side === "right") {
+    return `
+      <section class="drawer-section drawer-gallery-section">
+        <p class="drawer-kicker">活动影像廊</p>
+        <h2>照片与视频</h2>
+        <div class="drawer-gallery" aria-label="活动影像廊预留区域">
+          <div><span aria-hidden="true">▧</span><small>活动照片</small></div>
+          <div><span aria-hidden="true">▶</span><small>活动视频</small></div>
+          <div><span aria-hidden="true">▦</span><small>线下合影</small></div>
+        </div>
+        <p class="drawer-note">后续上传活动影像后，可在这里点击查看大图或播放视频。</p>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="drawer-section">
+      <p class="drawer-kicker">站点信息</p>
+      <h2>狼人杀入坑指南</h2>
+      <div class="drawer-links">
+        <a href="https://github.com/ZF-You/werewolf-guide" target="_blank" rel="noreferrer">💻 源代码仓库</a>
+        <a href="mailto:zfy.sjtu@sjtu.edu.cn">📧 zfy.sjtu@sjtu.edu.cn</a>
+        <p>💬 WeChat：NovaFynne</p>
+        <p>🔍 小红书搜索：轻桌游聚集地</p>
+      </div>
+      <p class="drawer-welcome">欢迎加入轻桌游聚集地。</p>
+    </section>
+    <section class="drawer-section">
+      <p class="drawer-kicker">更新记录</p>
+      <h2>网站更新</h2>
+      <ol class="drawer-changelog">
+        ${changelogMarkup(SITE_CHANGELOG.map(([date, content]) => ({ date, content, timestamp: `${date}T12:00:00+08:00` })))}
+      </ol>
+    </section>
+  `;
+}
+
+function changelogMarkup(records) {
+  return records
+    .sort((a, b) => String(b.timestamp || b.date).localeCompare(String(a.timestamp || a.date)))
+    .map((item) => `<li><time datetime="${escapeHtml(item.timestamp || item.date)}">${escapeHtml(item.date)}</time><p>${escapeHtml(item.content)}</p></li>`)
+    .join("");
+}
+
+function bindSideDrawers() {
+  const createDrawer = (side) => {
+    const drawer = document.createElement("aside");
+    const direction = side === "left" ? "右" : "左";
+    drawer.className = `side-drawer side-drawer-${side}`;
+    drawer.setAttribute("aria-label", side === "left" ? "左侧站点信息与更新记录" : "右侧活动影像廊");
+    drawer.innerHTML = `
+      <button class="side-drawer-handle" type="button" aria-expanded="false" aria-label="向${direction}展开侧边菜单">
+        <span aria-hidden="true">${side === "left" ? "›" : "‹"}</span>
+      </button>
+      <div class="side-drawer-scroll">${sideDrawerContent(side)}</div>
+    `;
+    document.body.appendChild(drawer);
+    return drawer;
+  };
+
+  const drawers = [createDrawer("left"), createDrawer("right")];
+  const dataRoot = document.body.classList.contains("page-home") ? "" : "../";
+  fetch(`${dataRoot}data/jcms-update-history.json`, { cache: "no-store" })
+    .then((response) => response.ok ? response.json() : [])
+    .then((videoUpdates) => {
+      const siteUpdates = SITE_CHANGELOG.map(([date, content]) => ({ date, content, timestamp: `${date}T12:00:00+08:00` }));
+      const merged = [...siteUpdates, ...videoUpdates];
+      document.querySelectorAll(".drawer-changelog").forEach((list) => {
+        list.innerHTML = changelogMarkup(merged);
+      });
+    })
+    .catch(() => {});
+  const drawerSide = (drawer) => drawer.classList.contains("side-drawer-left") ? "left" : "right";
+  const closeDrawer = (drawer) => {
+    drawer.classList.remove("is-open");
+    drawer.querySelector(".side-drawer-handle").setAttribute("aria-expanded", "false");
+    document.body.classList.remove(`drawer-${drawerSide(drawer)}-open`);
+  };
+  const openDrawer = (drawer) => {
+    drawers.filter((item) => item !== drawer).forEach(closeDrawer);
+    drawer.classList.add("is-open");
+    drawer.querySelector(".side-drawer-handle").setAttribute("aria-expanded", "true");
+    document.body.classList.add(`drawer-${drawerSide(drawer)}-open`);
+  };
+
+  drawers.forEach((drawer) => {
+    const handle = drawer.querySelector(".side-drawer-handle");
+    const scrollArea = drawer.querySelector(".side-drawer-scroll");
+    handle.addEventListener("pointerenter", () => openDrawer(drawer));
+    drawer.addEventListener("pointerleave", () => closeDrawer(drawer));
+    drawer.addEventListener("focusin", () => openDrawer(drawer));
+    drawer.addEventListener("focusout", (event) => {
+      if (!drawer.contains(event.relatedTarget)) closeDrawer(drawer);
+    });
+    handle.addEventListener("click", () => {
+      if (drawer.classList.contains("is-open")) closeDrawer(drawer);
+      else openDrawer(drawer);
+    });
+    scrollArea.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      scrollArea.scrollTop += event.deltaY;
+    }, { passive: false });
+  });
+}
 
 function bindHomeVideoPlayer() {
   const player = document.querySelector("[data-video-player]");
@@ -368,14 +486,14 @@ const SETUP_GUIDES = [
   },
   {
     name: "假面舞会",
-    camps: ["神职：预言家、女巫、舞者、白痴", "平民：平民 x4", "狼人：假面、狼人 x3"],
+    camps: ["神职：预言家、女巫、舞者、白神", "平民：平民 x4", "狼人：假面、狼人 x3"],
     note: "舞池阵营会被改变。听发言时要看他是不是借“舞池变化”解释所有漏洞。",
     roles: [
       role("平民", "平民", "没有夜间技能。", "记录谁进过舞池，谁被面具改变过阵营，不要只靠原身份判断。"),
       role("预言家", "神职", "每晚查验一名玩家阵营。", "验人要和舞池结果一起看，单点查验不一定能解释全部死亡。"),
       role("女巫", "神职", "拥有药水，按房规救人或毒人。", "女巫要注意舞者和假面的免疫规则，毒药别打空收益。"),
       role("舞者", "神职", "自次夜起选择 3 名玩家共舞。同阵营无事；不同阵营时人数少的一方死亡。舞者免疫女巫的毒。若舞者选择自己参与共舞，当夜共舞三人均免疫狼刀。每名玩家只可参与一次共舞。", "收益是用三人组判断阵营并保护关键轮次，但选错组合会误伤好人。"),
-      role("白痴", "神职", "被放逐后按房规翻牌留场或保轮次。", "不要过早暴露，关键时用身份帮好人少亏一轮。"),
+      role("白神", "神职", "被放逐时公布自己的身份。", "不要过早暴露，关键时用身份帮助好人保住放逐轮次。"),
       role("假面", "狼人", "与狼人互不见面，每晚验证一名玩家是否在舞池中，并可赐予一名玩家面具，改变其当夜在舞池中的阵营。假面免疫女巫的毒，连续两晚不可验证同一人，连续两晚不可赐予同一人面具。", "目标是污染舞池判断，让好人把死亡归因到错误阵营。"),
       role("狼人", "狼人", "夜里共同击杀一名玩家。", "要配合假面制造错误共舞结果，但别聊出和假面见面的视角。"),
     ],
@@ -459,7 +577,6 @@ const SETUP_GUIDES = [
 ];
 
 const ROLE_ART = {
-  "白痴": "fool.png",
   "白狼王": "white-wolf-king.png",
   "白神": "white-god.png",
   "白夜使者": "white-night-envoy.png",
@@ -502,6 +619,19 @@ const ROLE_ART = {
   "证婚人": "officiant.png",
 };
 
+const IDENTITY_ORDER = [
+  "预言家", "女巫", "猎人", "白神", "平民", "混血儿", "狼人", "通灵师", "守卫", "机械狼",
+  "舞者", "假面", "魔术师", "定序王子", "诡术师", "狼王", "傀儡", "毒师", "摄梦人", "蒙面人",
+  "盗宝大师", "梦魇", "狼术师", "白夜使者", "黑夜使者", "禁言长老", "骑士", "白狼王", "狼美人", "鬼魂新娘",
+  "证婚人", "守墓人", "石像鬼", "杠精", "典狱长", "熊", "隐狼", "盗贼", "丘比特", "情侣",
+];
+
+const SETUP_ORDER = [
+  "预女猎白混", "机械狼通灵师", "假面舞会", "唯邻是从", "诡术之境", "盗宝大师",
+  "梦魇摄梦人", "鬼魂新娘", "白狼王骑士", "石像鬼守墓人", "狼美猎人", "盗贼丘比特",
+  "禁言长老", "针锋相杠", "黑白使者", "孤注一掷", "魔幻对决", "熊隐狼",
+];
+
 const IDENTITY_MOTION_GROUPS = {
   wolf: new Set([
     "白狼王", "典狱长", "诡术师", "黑夜使者", "机械狼", "假面", "傀儡", "狼美人", "狼人", "狼术师",
@@ -518,11 +648,11 @@ function renderIdentityGallery() {
   const container = document.querySelector("#identity-gallery");
   if (!container) return;
 
-  container.innerHTML = Object.entries(ROLE_ART)
+  container.innerHTML = IDENTITY_ORDER
     .map(
-      ([name, art]) => `
+      (name) => `
         <figure class="identity-gallery-card identity-motion-${identityMotionGroup(name)}" data-identity-name="${escapeHtml(name)}" tabindex="0" role="button" aria-label="查看${escapeHtml(name)}身份牌大图" title="${escapeHtml(name)}">
-          <img src="../images/identities/${escapeHtml(art)}?v=${ASSET_VERSION}" alt="${escapeHtml(name)}身份牌" width="480" height="680" loading="lazy" />
+          <img src="../images/identities/${escapeHtml(ROLE_ART[name])}?v=${ASSET_VERSION}" alt="${escapeHtml(name)}身份牌" width="480" height="680" loading="lazy" />
         </figure>
       `,
     )
@@ -733,7 +863,7 @@ function renderJcmsPage() {
         <details class="season-panel">
           <summary>
             <span>${escapeHtml(displaySeasonTitle(season.title))}</span>
-            <small>${episodes.length} 条视频</small>
+            <small>${season.completed ? "已完结 · " : ""}${episodes.length} 条视频</small>
           </summary>
           <div class="season-body">
             <div class="board-chip-row">
@@ -781,7 +911,8 @@ function renderRolePage() {
   const list = document.querySelector("#setup-guide-list");
   if (!list) return;
 
-  list.innerHTML = SETUP_GUIDES.map((guide) => {
+  const guidesByName = new Map(SETUP_GUIDES.map((guide) => [guide.name, guide]));
+  list.innerHTML = SETUP_ORDER.map((name) => guidesByName.get(name)).filter(Boolean).map((guide) => {
     return `
       <details class="setup-panel">
         <summary>

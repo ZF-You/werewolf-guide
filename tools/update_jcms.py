@@ -12,12 +12,15 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
 JCMS_PATH = ROOT / "data" / "jcms-seasons.js"
 DAWN_PATH = ROOT / "data" / "season-dawn-voyage.js"
+HISTORY_PATH = ROOT / "data" / "jcms-update-history.json"
 MID = 19106800
 SEASON_ID = 8209896
 SEASON_TITLE = "曙光航纪"
@@ -49,6 +52,27 @@ def load_js_json(path: Path, variable: str) -> dict:
 def write_js_json(path: Path, variable: str, data: dict) -> None:
     payload = json.dumps(data, ensure_ascii=False, indent=2)
     path.write_text(f"window.{variable} = {payload};\n", encoding="utf-8", newline="\n")
+
+
+def append_update_history(added: list[dict]) -> None:
+    if not added:
+        return
+    history = json.loads(HISTORY_PATH.read_text(encoding="utf-8-sig")) if HISTORY_PATH.exists() else []
+    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    titles = "；".join(item["title"] for item in added)
+    history.insert(
+        0,
+        {
+            "timestamp": now.isoformat(timespec="seconds"),
+            "date": now.date().isoformat(),
+            "content": f"自动更新京城大师赛“{SEASON_TITLE}”：新增 {len(added)} 条视频：{titles}。",
+        },
+    )
+    HISTORY_PATH.write_text(
+        json.dumps(history, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
 
 def request_json(url: str) -> dict:
@@ -191,7 +215,7 @@ def sort_key(episode: dict) -> tuple:
     )
 
 
-def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> int:
+def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> tuple[int, int]:
     normalized = [normalize_episode(item) for item in raw_episodes]
     normalized = [item for item in normalized if item["bvid"] and item["title"]]
     unique = {item["bvid"]: item for item in normalized}
@@ -199,8 +223,11 @@ def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> int:
 
     jcms = load_js_json(JCMS_PATH, "JCMS_SEASONS")
     season = next(item for item in jcms["seasons"] if int(item.get("id", 0)) == SEASON_ID)
+    previous_bvids = {item.get("bvid") for item in season.get("episodes", [])}
+    added = [item for item in episodes if item["bvid"] not in previous_bvids]
     season["title"] = SEASON_TITLE
     season["sourceTitle"] = SEASON_TITLE
+    season["completed"] = True
     season["episodeCount"] = len(episodes)
     season["episodes"] = episodes
     counts = Counter(item["board"] for item in episodes)
@@ -219,6 +246,7 @@ def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> int:
             "id": SEASON_ID,
             "title": metadata.get("name") or SEASON_TITLE,
             "mid": int(metadata.get("mid") or MID),
+            "completed": True,
             "section_count": 1,
             "episode_count": len(episodes),
         },
@@ -226,7 +254,8 @@ def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> int:
         "episodes": episodes,
     }
     write_js_json(DAWN_PATH, "SEASON_DAWN_VOYAGE", dawn)
-    return len(episodes)
+    append_update_history(added)
+    return len(episodes), len(added)
 
 
 def main() -> None:
@@ -235,8 +264,8 @@ def main() -> None:
         raw_episodes, metadata = extract_saved_html(args.html_file)
     else:
         raw_episodes, metadata = fetch_collection()
-    count = update_data(raw_episodes, metadata, REFERER)
-    print(f"Updated {SEASON_TITLE}: {count} videos")
+    count, added = update_data(raw_episodes, metadata, REFERER)
+    print(f"Updated {SEASON_TITLE}: {count} videos ({added} new)")
 
 
 if __name__ == "__main__":

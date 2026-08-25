@@ -47,6 +47,194 @@ main,
 .site-footer {
   position: relative;
   z-index: 1;
+  transition: margin 240ms ease;
+}
+
+.side-drawer {
+  --drawer-width: min(340px, 28vw);
+  position: fixed;
+  z-index: 160;
+  top: 0;
+  bottom: 0;
+  width: var(--drawer-width);
+  border-color: var(--line-strong);
+  background: rgba(251, 247, 234, 0.98);
+  box-shadow: 0 0 34px rgba(67, 52, 22, 0.16);
+  backdrop-filter: blur(18px);
+  transition: transform 240ms ease;
+}
+
+.side-drawer-left {
+  left: 0;
+  border-right: 1px solid var(--line-strong);
+  transform: translateX(-100%);
+}
+
+.side-drawer-right {
+  right: 0;
+  border-left: 1px solid var(--line-strong);
+  transform: translateX(100%);
+}
+
+.side-drawer.is-open {
+  transform: translateX(0);
+}
+
+.side-drawer-handle {
+  position: absolute;
+  top: 46%;
+  display: grid;
+  width: 38px;
+  height: 72px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--teal);
+  color: #fffaf0;
+  box-shadow: 0 10px 24px rgba(67, 52, 22, 0.15);
+  font: 700 2rem/1 Georgia, serif;
+  cursor: pointer;
+  transition: opacity 120ms ease, visibility 120ms ease, background 160ms ease;
+}
+
+.side-drawer-left .side-drawer-handle {
+  right: -38px;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+}
+
+.side-drawer-right .side-drawer-handle {
+  left: -38px;
+  border-right: 0;
+  border-radius: 7px 0 0 7px;
+}
+
+.side-drawer.is-open .side-drawer-handle {
+  opacity: 0;
+}
+
+.side-drawer-handle:hover,
+.side-drawer-handle:focus-visible {
+  background: var(--wine);
+  outline: 2px solid #fffaf0;
+  outline-offset: -4px;
+}
+
+.side-drawer-scroll {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--line-strong) transparent;
+  padding: 28px 24px 48px;
+}
+
+.drawer-section + .drawer-section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.drawer-kicker {
+  margin-bottom: 5px;
+  color: var(--wine);
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.drawer-section h2 {
+  font-size: 1.42rem;
+}
+
+.drawer-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.drawer-links a,
+.drawer-links p {
+  overflow-wrap: anywhere;
+}
+
+.drawer-links a {
+  color: var(--teal);
+  font-weight: 750;
+  text-underline-offset: 3px;
+}
+
+.drawer-welcome,
+.drawer-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.drawer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.drawer-gallery div {
+  display: grid;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+  place-items: center;
+  align-content: center;
+  gap: 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--teal);
+  text-align: center;
+}
+
+.drawer-gallery span {
+  font-size: 1.35rem;
+}
+
+.drawer-gallery small {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.drawer-changelog {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawer-changelog li {
+  padding-left: 12px;
+  border-left: 2px solid var(--gold);
+}
+
+.drawer-changelog time {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.drawer-changelog p {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.62;
+}
+
+body.drawer-left-open > .site-header,
+body.drawer-left-open > main,
+body.drawer-left-open > .site-footer {
+  margin-left: min(340px, 28vw);
+}
+
+body.drawer-right-open > .site-header,
+body.drawer-right-open > main,
+body.drawer-right-open > .site-footer {
+  margin-right: min(340px, 28vw);
 }
 
 a {
@@ -1311,6 +1499,10 @@ tr:last-child td {
   gap: 12px;
 }
 
+.compact-flow-list {
+  margin-top: 16px;
+}
+
 .flow-step {
   display: grid;
   grid-template-columns: 150px minmax(0, 1fr);
@@ -1511,6 +1703,22 @@ ul {
 
   .site-footer p + p {
     margin-top: 6px;
+  }
+}
+
+@media (max-width: 900px), (hover: none) {
+  .side-drawer {
+    display: none;
+  }
+
+  body.drawer-left-open > .site-header,
+  body.drawer-left-open > main,
+  body.drawer-left-open > .site-footer,
+  body.drawer-right-open > .site-header,
+  body.drawer-right-open > main,
+  body.drawer-right-open > .site-footer {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
