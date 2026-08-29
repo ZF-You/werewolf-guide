@@ -2,19 +2,19 @@
   bindNavigation();
   bindSideDrawers();
   bindCopyButtons();
+  renderHomeIdentityMarquee();
   bindImageFallbacks();
   renderJcmsPage();
   renderIdentityGallery();
   renderRolePage();
   bindGlossarySearch();
-  bindHomeVideoPlayer();
   bindSiteMotion();
 });
 
-const ASSET_VERSION = "20260825-guide24";
+const ASSET_VERSION = "20260829-guide26";
 
 const SITE_CHANGELOG = [
-  ["2026-08-25", "拆分左右侧边菜单：左侧显示站点信息与更新记录，右侧作为活动影像廊；补齐曙光航纪完结视频。"],
+  ["2026-08-29", "首页改为双行滚动身份海报，可暂停查看并点击放大身份牌。"],
   ["2026-08-24", "移除交流论坛；调整全部身份与比赛版型顺序；更新游戏技巧；新增全站侧边信息与影像抽屉。"],
   ["2026-08-04", "首页改用动态海报并加入播放控制；京城大师赛合集与比赛版型改为默认收起。"],
   ["2026-08-03", "更新曙光航纪视频；加入自动检查新视频的工作流、术语搜索和首页身份群像海报。"],
@@ -91,7 +91,7 @@ function bindSideDrawers() {
     .then((response) => response.ok ? response.json() : [])
     .then((videoUpdates) => {
       const siteUpdates = SITE_CHANGELOG.map(([date, content]) => ({ date, content, timestamp: `${date}T12:00:00+08:00` }));
-      const merged = [...siteUpdates, ...videoUpdates];
+      const merged = [...siteUpdates, ...videoUpdates].filter((item) => item.date !== "2026-08-25");
       document.querySelectorAll(".drawer-changelog").forEach((list) => {
         list.innerHTML = changelogMarkup(merged);
       });
@@ -130,133 +130,86 @@ function bindSideDrawers() {
   });
 }
 
-function bindHomeVideoPlayer() {
-  const player = document.querySelector("[data-video-player]");
-  if (!player) return;
+function renderHomeIdentityMarquee() {
+  const poster = document.querySelector("#identity-marquee-poster");
+  if (!poster) return;
 
-  const video = player.querySelector("video");
-  const toggle = player.querySelector("[data-video-toggle]");
-  const progress = player.querySelector("[data-video-progress]");
-  const current = player.querySelector("[data-video-current]");
-  const duration = player.querySelector("[data-video-duration]");
-  const mute = player.querySelector("[data-video-mute]");
-  const volume = player.querySelector("[data-video-volume]");
-  const speed = player.querySelector("[data-video-speed]");
-  const fullscreen = player.querySelector("[data-video-fullscreen]");
-  const speeds = [0.5, 0.75, 1, 1.25, 1.5, 2];
-  let lastVolume = 1;
+  const cardMarkup = (names, duplicate = false) => names
+    .map((name) => `
+      <button
+        class="identity-marquee-card identity-motion-${identityMotionGroup(name)}"
+        type="button"
+        data-identity-name="${escapeHtml(name)}"
+        aria-label="查看${escapeHtml(name)}身份牌大图"
+        title="${escapeHtml(name)}"
+        ${duplicate ? 'tabindex="-1"' : ""}
+      >
+        <span class="identity-marquee-card-inner">
+          <img
+            src="images/identities/${escapeHtml(ROLE_ART[name])}?v=${ASSET_VERSION}"
+            alt="${duplicate ? "" : `${escapeHtml(name)}身份牌`}"
+            width="480"
+            height="680"
+            loading="${duplicate ? "lazy" : "eager"}"
+          />
+        </span>
+      </button>
+    `)
+    .join("");
 
-  const timeLabel = (seconds) => {
-    if (!Number.isFinite(seconds)) return "0:00";
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const rest = Math.floor(seconds % 60);
-    return hours
-      ? `${hours}:${String(minutes).padStart(2, "0")}:${String(rest).padStart(2, "0")}`
-      : `${minutes}:${String(rest).padStart(2, "0")}`;
-  };
+  const rows = [
+    { direction: "left", label: "正序身份展示", names: IDENTITY_ORDER },
+    { direction: "right", label: "逆序身份展示", names: [...IDENTITY_ORDER].reverse() },
+  ];
 
-  const updatePlayback = () => {
-    const playing = !video.paused && !video.ended;
-    toggle.textContent = playing ? "❚❚" : "▶";
-    toggle.setAttribute("aria-label", playing ? "暂停" : "播放");
-  };
+  poster.innerHTML = rows.map((row) => `
+    <div class="identity-marquee-row identity-marquee-row-${row.direction}" data-marquee-direction="${row.direction}">
+      <span class="visually-hidden">${row.label}</span>
+      <div class="identity-marquee-track">
+        <div class="identity-marquee-group">${cardMarkup(row.names)}</div>
+        <div class="identity-marquee-group identity-marquee-group-copy" aria-hidden="true">${cardMarkup(row.names, true)}</div>
+      </div>
+    </div>
+  `).join("");
 
-  const updateProgress = () => {
-    const ratio = video.duration ? video.currentTime / video.duration : 0;
-    progress.value = String(Math.round(ratio * 1000));
-    progress.style.setProperty("--video-progress", `${ratio * 100}%`);
-    current.textContent = timeLabel(video.currentTime);
-    duration.textContent = timeLabel(video.duration);
-  };
+  const marqueeRows = [...poster.querySelectorAll(".identity-marquee-row")];
+  marqueeRows.forEach((row) => {
+    row.querySelectorAll(".identity-marquee-card").forEach((card) => {
+      card.addEventListener("pointerenter", () => row.classList.add("is-paused"));
+      card.addEventListener("pointerleave", () => row.classList.remove("is-paused"));
+      card.addEventListener("focus", () => row.classList.add("is-paused"));
+      card.addEventListener("blur", () => row.classList.remove("is-paused"));
+    });
+  });
 
-  const updateVolume = () => {
-    const effectiveVolume = video.muted ? 0 : video.volume;
-    volume.value = String(effectiveVolume);
-    volume.style.setProperty("--video-volume", `${effectiveVolume * 100}%`);
-    mute.textContent = effectiveVolume === 0 ? "🔇" : effectiveVolume < 0.55 ? "🔉" : "🔊";
-    mute.setAttribute("aria-label", effectiveVolume === 0 ? "开启声音" : "静音");
-  };
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  toggle.addEventListener("click", async () => {
-    if (video.paused || video.ended) {
-      if (video.ended || video.currentTime >= video.duration) video.currentTime = 0;
-      try {
-        await video.play();
-      } catch {
-        updatePlayback();
-      }
-    } else {
-      video.pause();
+  let frameCount = 0;
+  const paintCylinder = () => {
+    frameCount += 1;
+    if (frameCount % 2 === 0 && !document.hidden) {
+      marqueeRows.forEach((row) => {
+        const bounds = row.getBoundingClientRect();
+        const center = bounds.left + bounds.width / 2;
+        const halfWidth = Math.max(bounds.width / 2, 1);
+
+        row.querySelectorAll(".identity-marquee-card").forEach((card) => {
+          const cardBounds = card.getBoundingClientRect();
+          const cardCenter = cardBounds.left + cardBounds.width / 2;
+          const distance = Math.min(1, Math.abs(cardCenter - center) / halfWidth);
+          const curve = Math.pow(distance, 1.35);
+          const scale = 1 - curve * 0.43;
+          const tilt = (cardCenter < center ? 1 : -1) * curve * 24;
+
+          card.style.opacity = String(1 - curve * 0.5);
+          card.style.transform = `translateY(${curve * 7}px) rotateY(${tilt}deg) scale(${scale})`;
+        });
+      });
     }
-  });
-
-  progress.addEventListener("input", () => {
-    if (!video.duration) return;
-    video.currentTime = (Number(progress.value) / 1000) * video.duration;
-    updateProgress();
-  });
-
-  mute.addEventListener("click", () => {
-    if (video.muted || video.volume === 0) {
-      video.muted = false;
-      video.volume = lastVolume || 1;
-    } else {
-      lastVolume = video.volume;
-      video.muted = true;
-    }
-    updateVolume();
-  });
-
-  volume.addEventListener("input", () => {
-    const nextVolume = Number(volume.value);
-    video.volume = nextVolume;
-    video.muted = nextVolume === 0;
-    if (nextVolume > 0) lastVolume = nextVolume;
-    updateVolume();
-  });
-
-  speed.addEventListener("click", () => {
-    const currentIndex = speeds.indexOf(video.playbackRate);
-    const nextSpeed = speeds[(currentIndex + 1) % speeds.length];
-    video.playbackRate = nextSpeed;
-    speed.textContent = `${nextSpeed}×`;
-    speed.setAttribute("aria-label", `当前播放速度 ${nextSpeed} 倍，点击继续调整`);
-  });
-
-  fullscreen.addEventListener("click", async () => {
-    if (document.fullscreenElement) {
-      await document.exitFullscreen();
-    } else if (player.requestFullscreen) {
-      await player.requestFullscreen();
-    } else if (video.webkitEnterFullscreen) {
-      video.webkitEnterFullscreen();
-    }
-  });
-
-  video.addEventListener("loadedmetadata", updateProgress);
-  video.addEventListener("durationchange", updateProgress);
-  video.addEventListener("timeupdate", updateProgress);
-  video.addEventListener("play", updatePlayback);
-  video.addEventListener("pause", updatePlayback);
-  video.addEventListener("ended", () => {
-    updatePlayback();
-    updateProgress();
-  });
-  video.addEventListener("volumechange", updateVolume);
-
-  updatePlayback();
-  updateVolume();
-
-  const startMutedPlayback = () => {
-    video.muted = true;
-    video.play().catch(updatePlayback);
+    window.requestAnimationFrame(paintCylinder);
   };
-  if (video.readyState >= 2) {
-    startMutedPlayback();
-  } else {
-    video.addEventListener("canplay", startMutedPlayback, { once: true });
-  }
+
+  window.requestAnimationFrame(paintCylinder);
 }
 
 function bindGlossarySearch() {
@@ -675,7 +628,7 @@ function bindSiteMotion() {
 }
 
 function bindIdentityLightbox() {
-  const cards = document.querySelectorAll(".identity-gallery-card");
+  const cards = document.querySelectorAll(".identity-gallery-card, .identity-marquee-card");
   if (!cards.length) return;
 
   const dialog = document.createElement("dialog");
@@ -704,6 +657,7 @@ function bindIdentityLightbox() {
 
   cards.forEach((card) => {
     card.addEventListener("click", () => openCard(card));
+    if (card.tagName === "BUTTON") return;
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
@@ -768,7 +722,7 @@ function bindPointerHalo() {
     if (!frame) frame = window.requestAnimationFrame(paint);
   });
   document.addEventListener("pointerover", (event) => {
-    halo.classList.toggle("is-active", Boolean(event.target.closest("a, button, summary, .identity-gallery-card")));
+    halo.classList.toggle("is-active", Boolean(event.target.closest("a, button, summary, .identity-gallery-card, .identity-marquee-card")));
   });
   document.addEventListener("pointerleave", () => halo.classList.remove("is-visible"));
 }

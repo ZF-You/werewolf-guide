@@ -9,7 +9,7 @@
       name="description"
       content="狼人杀入门教学网站：了解基本玩法，查询京城大师赛、版型身份、夜间手势、常用术语和游戏技巧。"
     />
-    <link rel="stylesheet" href="styles.css?v=20260825-guide24" />
+    <link rel="stylesheet" href="styles.css?v=20260829-guide26" />
   </head>
   <body class="page-home">
     <a class="skip-link" href="#content">跳到正文</a>
@@ -32,38 +32,9 @@
     </header>
 
     <main id="content">
-      <section class="home-cinematic" aria-label="狼人杀动态身份群像海报">
-        <div class="home-video-stage" data-video-player>
-          <video
-            class="home-poster-video"
-            src="media/werewolf-dynamic-poster.mp4"
-            aria-label="月黑风高的村庄中，狼人杀各类身份动态群像"
-            autoplay
-            muted
-            playsinline
-            preload="metadata"
-          ></video>
-          <div class="video-controls" aria-label="视频控制栏">
-            <button class="video-control-button" type="button" data-video-toggle aria-label="暂停" title="播放或暂停">❚❚</button>
-            <input class="video-progress" type="range" min="0" max="1000" value="0" step="1" data-video-progress aria-label="视频进度" />
-            <span class="video-time" aria-live="off"><span data-video-current>0:00</span><span aria-hidden="true"> / </span><span data-video-duration>0:00</span></span>
-            <button class="video-control-button" type="button" data-video-mute aria-label="开启声音" title="静音或开启声音">🔇</button>
-            <input class="video-volume" type="range" min="0" max="1" value="0" step="0.05" data-video-volume aria-label="音量" />
-            <button class="video-speed" type="button" data-video-speed aria-label="调整播放速度" title="调整播放速度">1×</button>
-            <button class="video-control-button" type="button" data-video-fullscreen aria-label="全屏播放" title="全屏">⛶</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero home-guide-intro" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <h1 id="page-title">狼人杀入坑指南</h1>
-          <p class="lead home-definition">
-            <strong>狼人杀</strong>，衍生自俄罗斯的
-            <a href="https://zh.wikipedia.org/wiki/%E6%9D%80%E6%89%8B_(1986%E5%B9%B4%E6%B8%B8%E6%88%8F)" target="_blank" rel="noreferrer">《杀手》</a>
-            游戏及<a href="https://zh.wikipedia.org/wiki/%E7%B1%B3%E5%8B%92%E5%B1%B1%E8%B0%B7%E7%8B%BC%E4%BA%BA" target="_blank" rel="noreferrer">《米勒山谷狼人》</a><a href="https://zh.wikipedia.org/wiki/%E7%B4%99%E7%89%8C%E9%81%8A%E6%88%B2" target="_blank" rel="noreferrer">纸牌游戏</a>的推理桌面游戏，一般需要 6 至 12 位玩家。狼人杀桌面游戏于 2010 年由北京大魔王桌游俱乐部出版发行，现由狼人杀（海南）文化传媒有限公司出版发行。
-          </p>
-        </div>
+      <section class="home-cinematic" aria-label="狼人杀全部身份动态海报">
+        <h1 class="visually-hidden">狼人杀全部身份</h1>
+        <div class="identity-marquee-poster" id="identity-marquee-poster"></div>
       </section>
 
       <section class="section home-introduction" aria-labelledby="play-title">
@@ -134,7 +105,7 @@
       <p>狼人杀入坑指南</p>
       <p>具体房规和手势以当局法官说明为准。</p>
     </footer>
-    <script src="script.js?v=20260825-guide24"></script>
+    <script src="script.js?v=20260829-guide26"></script>
   </body>
 </html>
 
