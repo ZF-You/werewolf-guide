@@ -19,11 +19,11 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 JCMS_PATH = ROOT / "data" / "jcms-seasons.js"
-DAWN_PATH = ROOT / "data" / "season-dawn-voyage.js"
 HISTORY_PATH = ROOT / "data" / "jcms-update-history.json"
-MID = 19106800
-SEASON_ID = 8209896
-SEASON_TITLE = "曙光航纪"
+MID = 431977067
+SEASON_ID = 8990425
+SEASON_TITLE = "昆仑归墟"
+SEASON_SOURCE_TITLE = "京城大师赛S23昆仑归墟"
 API_URL = "https://api.bilibili.com/x/polymer/web-space/seasons_archives_list"
 REFERER = f"https://space.bilibili.com/{MID}/lists/{SEASON_ID}?type=season"
 
@@ -59,13 +59,13 @@ def append_update_history(added: list[dict]) -> None:
         return
     history = json.loads(HISTORY_PATH.read_text(encoding="utf-8-sig")) if HISTORY_PATH.exists() else []
     now = datetime.now(ZoneInfo("Asia/Shanghai"))
-    titles = "；".join(item["title"] for item in added)
+    details = "；".join(episode_history_label(item) for item in added)
     history.insert(
         0,
         {
             "timestamp": now.isoformat(timespec="seconds"),
             "date": now.date().isoformat(),
-            "content": f"自动更新京城大师赛“{SEASON_TITLE}”：新增 {len(added)} 条视频：{titles}。",
+            "content": f"自动更新京城大师赛“{SEASON_TITLE}”：新增 {len(added)} 条对局视频：{details}。",
         },
     )
     HISTORY_PATH.write_text(
@@ -156,16 +156,62 @@ def extract_saved_html(path: Path) -> tuple[list[dict], dict]:
     return episodes, metadata
 
 
-def normalize_title(title: str) -> str:
-    title = title.strip().replace("_狼人杀", "")
-    title = title.replace("20250723 正赛 第八期", "20260723 正赛 第八期")
-    title = title.replace("盗宝大师赛", "盗宝大师")
-    title = re.sub(r"(Day-2)\s+机械狼通灵师$", r"\1 第三局-机械狼通灵师", title)
-    return title
+def parse_title_parts(title: str) -> dict[str, str]:
+    source = title.strip().replace("_狼人杀", "")
+    source = source.split("+", 1)[0].strip()
+    source = re.sub(r"^京城大师赛S?\d*", "", source).strip()
+    if source.startswith(SEASON_TITLE):
+        source = source[len(SEASON_TITLE) :].strip()
+
+    date_match = re.search(r"(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)", source)
+    date_compact = "".join(date_match.groups()) if date_match else ""
+    date = "-".join(date_match.groups()) if date_match else ""
+    stage_match = re.search(r"表演赛|正赛|决赛", source)
+    issue_match = re.search(r"第[一二三四五六七八九十百]+期", source)
+    day_match = re.search(r"Day-\d+", source, re.I)
+    game_match = re.search(r"第[一二三四五六七八九十百]+局", source)
+
+    board_start = game_match.end() if game_match else date_match.end() if date_match else 0
+    board = source[board_start:]
+    board = re.sub(r"^(?:\s*[-·—:]\s*)+", "", board).strip()
+    board = re.sub(r"^(?:表演赛|正赛|决赛)", "", board).strip()
+    board = re.sub(r"^第[一二三四五六七八九十百]+期", "", board).strip()
+    board = re.sub(r"^Day-\d+", "", board, flags=re.I).strip()
+    board = board or "非对局/待补充"
+
+    stage = stage_match.group(0) if stage_match else "其他"
+    issue = issue_match.group(0) if issue_match else ""
+    day = day_match.group(0) if day_match else ""
+    game = game_match.group(0) if game_match else ""
+    title_parts = [date_compact, stage if stage != "其他" else "", issue, day]
+    normalized_title = " ".join(part for part in title_parts if part)
+    normalized_title += f" {game}" if game else ""
+    normalized_title += f"-{board}" if normalized_title else board
+
+    return {
+        "title": normalized_title.strip(),
+        "date": date,
+        "stage": stage,
+        "issue": issue,
+        "game": game,
+        "board": board,
+    }
+
+
+def episode_history_label(episode: dict) -> str:
+    parts = [
+        episode.get("date", ""),
+        episode.get("stage", "") if episode.get("stage") != "其他" else "",
+        episode.get("issue", ""),
+        episode.get("game", "") or "未标注局次",
+        episode.get("board", "") or "待补充版型",
+    ]
+    return " · ".join(part for part in parts if part)
 
 
 def normalize_episode(raw: dict) -> dict:
-    title = normalize_title(str(raw.get("title") or ""))
+    parts = parse_title_parts(str(raw.get("title") or ""))
+    title = parts["title"]
     bvid = str(raw.get("bvid") or "")
     page = raw.get("page") or {}
     arc = raw.get("arc") or {}
@@ -173,22 +219,16 @@ def normalize_episode(raw: dict) -> dict:
     aid = int(raw.get("aid") or arc.get("aid") or 0)
     cid = int(raw.get("cid") or page.get("cid") or 0)
     pubdate = int(raw.get("pubdate") or arc.get("pubdate") or arc.get("ctime") or 0)
-    date_match = re.match(r"(\d{4})(\d{2})(\d{2})", title)
-    date = "-".join(date_match.groups()) if date_match else ""
-    board_match = re.search(
-        r"Day-\d+(?:\s+第[一二三四五六七八九十]+局)?(?:\s*-\s*|\s+)(.+)$",
-        title,
-    )
-    board = board_match.group(1).strip() if board_match else title.rsplit("-", 1)[-1].strip()
-    stage = "表演赛" if "表演赛" in title else "正赛" if "正赛" in title else "其他"
     episode = {
         "title": title,
         "bvid": bvid,
         "url": f"https://www.bilibili.com/video/{bvid}",
         "duration": duration,
-        "board": board,
-        "stage": stage,
-        "date": date,
+        "board": parts["board"],
+        "stage": parts["stage"],
+        "issue": parts["issue"],
+        "game": parts["game"],
+        "date": parts["date"],
         "section": "正片",
         "seasonTitle": SEASON_TITLE,
     }
@@ -215,19 +255,25 @@ def sort_key(episode: dict) -> tuple:
     )
 
 
-def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> tuple[int, int]:
+def update_data(raw_episodes: list[dict], metadata: dict) -> tuple[int, int]:
     normalized = [normalize_episode(item) for item in raw_episodes]
     normalized = [item for item in normalized if item["bvid"] and item["title"]]
     unique = {item["bvid"]: item for item in normalized}
     episodes = sorted(unique.values(), key=sort_key)
 
     jcms = load_js_json(JCMS_PATH, "JCMS_SEASONS")
-    season = next(item for item in jcms["seasons"] if int(item.get("id", 0)) == SEASON_ID)
+    season = next(
+        (item for item in jcms["seasons"] if int(item.get("id", 0)) == SEASON_ID),
+        None,
+    )
+    if season is None:
+        season = {"id": SEASON_ID, "episodes": [], "boards": []}
+        jcms["seasons"].insert(0, season)
     previous_bvids = {item.get("bvid") for item in season.get("episodes", [])}
     added = [item for item in episodes if item["bvid"] not in previous_bvids]
     season["title"] = SEASON_TITLE
-    season["sourceTitle"] = SEASON_TITLE
-    season["completed"] = True
+    season["sourceTitle"] = metadata.get("name") or SEASON_SOURCE_TITLE
+    season["completed"] = False
     season["episodeCount"] = len(episodes)
     season["episodes"] = episodes
     counts = Counter(item["board"] for item in episodes)
@@ -237,23 +283,6 @@ def update_data(raw_episodes: list[dict], metadata: dict, source: str) -> tuple[
     ]
     write_js_json(JCMS_PATH, "JCMS_SEASONS", jcms)
 
-    latest = episodes[-1]
-    dawn = {
-        "source": source,
-        "page_title": latest["title"],
-        "video": latest,
-        "season": {
-            "id": SEASON_ID,
-            "title": metadata.get("name") or SEASON_TITLE,
-            "mid": int(metadata.get("mid") or MID),
-            "completed": True,
-            "section_count": 1,
-            "episode_count": len(episodes),
-        },
-        "sections": [{"title": "正片", "episode_count": len(episodes)}],
-        "episodes": episodes,
-    }
-    write_js_json(DAWN_PATH, "SEASON_DAWN_VOYAGE", dawn)
     append_update_history(added)
     return len(episodes), len(added)
 
@@ -264,7 +293,7 @@ def main() -> None:
         raw_episodes, metadata = extract_saved_html(args.html_file)
     else:
         raw_episodes, metadata = fetch_collection()
-    count, added = update_data(raw_episodes, metadata, REFERER)
+    count, added = update_data(raw_episodes, metadata)
     print(f"Updated {SEASON_TITLE}: {count} videos ({added} new)")
 
 

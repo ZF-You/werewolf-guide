@@ -2,6 +2,74 @@ window.JCMS_SEASONS = {
   "title": "京城大师赛",
   "seasons": [
     {
+      "id": 8990425,
+      "episodes": [
+        {
+          "title": "20260901 表演赛 第一局-预女猎白混",
+          "bvid": "BV1CftV67EKJ",
+          "url": "https://www.bilibili.com/video/BV1CftV67EKJ",
+          "duration": 6073,
+          "board": "预女猎白混",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第一局",
+          "date": "2026-09-01",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788267231,
+          "aid": 117195866642228
+        },
+        {
+          "title": "20260901 表演赛 第二局-狼王守卫",
+          "bvid": "BV1fstV66E5g",
+          "url": "https://www.bilibili.com/video/BV1fstV66E5g",
+          "duration": 4575,
+          "board": "狼王守卫",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第二局",
+          "date": "2026-09-01",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788272054,
+          "aid": 117196168634345
+        },
+        {
+          "title": "20260901 表演赛 第三局-机械狼通灵师",
+          "bvid": "BV18HtG69E4k",
+          "url": "https://www.bilibili.com/video/BV18HtG69E4k",
+          "duration": 5856,
+          "board": "机械狼通灵师",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第三局",
+          "date": "2026-09-01",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788278331,
+          "aid": 117196588061066
+        }
+      ],
+      "boards": [
+        {
+          "name": "机械狼通灵师",
+          "count": 1
+        },
+        {
+          "name": "狼王守卫",
+          "count": 1
+        },
+        {
+          "name": "预女猎白混",
+          "count": 1
+        }
+      ],
+      "title": "昆仑归墟",
+      "sourceTitle": "合集·京城大师赛S23昆仑归墟",
+      "completed": false,
+      "episodeCount": 3
+    },
+    {
       "id": 8209896,
       "title": "曙光航纪",
       "sourceTitle": "曙光航纪",

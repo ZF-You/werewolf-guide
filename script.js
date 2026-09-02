@@ -11,7 +11,7 @@
   bindSiteMotion();
 });
 
-const ASSET_VERSION = "20260829-guide26";
+const ASSET_VERSION = "20260902-kunlun27";
 
 const SITE_CHANGELOG = [
   ["2026-08-29", "首页改为双行滚动身份海报，可暂停查看并点击放大身份牌。"],
@@ -87,7 +87,7 @@ function bindSideDrawers() {
 
   const drawers = [createDrawer("left"), createDrawer("right")];
   const dataRoot = document.body.classList.contains("page-home") ? "" : "../";
-  fetch(`${dataRoot}data/jcms-update-history.json`, { cache: "no-store" })
+  fetch(`${dataRoot}data/jcms-update-history.json?v=${Date.now()}`, { cache: "no-store" })
     .then((response) => response.ok ? response.json() : [])
     .then((videoUpdates) => {
       const siteUpdates = SITE_CHANGELOG.map(([date, content]) => ({ date, content, timestamp: `${date}T12:00:00+08:00` }));
