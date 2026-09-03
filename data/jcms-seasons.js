@@ -93,19 +93,68 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1788360115,
           "aid": 117201956771593
+        },
+        {
+          "title": "20260903 表演赛 第一局-预女猎白混",
+          "bvid": "BV1aBto6DE5o",
+          "url": "https://www.bilibili.com/video/BV1aBto6DE5o",
+          "duration": 4999,
+          "board": "预女猎白混",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第一局",
+          "date": "2026-09-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788438832,
+          "aid": 117207107376524
+        },
+        {
+          "title": "20260903 表演赛 第二局-盗宝大师",
+          "bvid": "BV113to6uE5u",
+          "url": "https://www.bilibili.com/video/BV113to6uE5u",
+          "duration": 5430,
+          "board": "盗宝大师",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第二局",
+          "date": "2026-09-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788444661,
+          "aid": 117207476475590
+        },
+        {
+          "title": "20260903 表演赛 第三局-机械狼通灵师",
+          "bvid": "BV1JTbF6zEWV",
+          "url": "https://www.bilibili.com/video/BV1JTbF6zEWV",
+          "duration": 2913,
+          "board": "机械狼通灵师",
+          "stage": "表演赛",
+          "issue": "",
+          "game": "第三局",
+          "date": "2026-09-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1788447738,
+          "aid": 117207694580244
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 2
+          "count": 3
         },
         {
           "name": "预女猎白混",
-          "count": 2
+          "count": 3
         },
         {
           "name": "狼王守卫",
+          "count": 1
+        },
+        {
+          "name": "盗宝大师",
           "count": 1
         },
         {
@@ -116,7 +165,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·京城大师赛S23昆仑归墟",
       "completed": false,
-      "episodeCount": 6
+      "episodeCount": 9
     },
     {
       "id": 8209896,
