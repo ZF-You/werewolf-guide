@@ -20,10 +20,10 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 JCMS_PATH = ROOT / "data" / "jcms-seasons.js"
 HISTORY_PATH = ROOT / "data" / "jcms-update-history.json"
-MID = 431977067
-SEASON_ID = 8990425
+MID = 19106800
+SEASON_ID = 8992596
 SEASON_TITLE = "昆仑归墟"
-SEASON_SOURCE_TITLE = "京城大师赛S23昆仑归墟"
+SEASON_SOURCE_TITLE = "昆仑归墟"
 API_URL = "https://api.bilibili.com/x/polymer/web-space/seasons_archives_list"
 REFERER = f"https://space.bilibili.com/{MID}/lists/{SEASON_ID}?type=season"
 
@@ -150,7 +150,7 @@ def extract_saved_html(path: Path) -> tuple[list[dict], dict]:
     ]
     metadata = {
         "name": season.get("title") or SEASON_TITLE,
-        "mid": MID,
+        "mid": season.get("mid") or MID,
         "season_id": season.get("id") or SEASON_ID,
     }
     return episodes, metadata
@@ -263,14 +263,21 @@ def update_data(raw_episodes: list[dict], metadata: dict) -> tuple[int, int]:
 
     jcms = load_js_json(JCMS_PATH, "JCMS_SEASONS")
     season = next(
-        (item for item in jcms["seasons"] if int(item.get("id", 0)) == SEASON_ID),
+        (
+            item
+            for item in jcms["seasons"]
+            if int(item.get("id", 0)) == SEASON_ID
+            or item.get("title") == SEASON_TITLE
+        ),
         None,
     )
     if season is None:
         season = {"id": SEASON_ID, "episodes": [], "boards": []}
         jcms["seasons"].insert(0, season)
+    source_changed = int(season.get("id", 0)) not in {0, SEASON_ID}
     previous_bvids = {item.get("bvid") for item in season.get("episodes", [])}
-    added = [item for item in episodes if item["bvid"] not in previous_bvids]
+    added = [] if source_changed else [item for item in episodes if item["bvid"] not in previous_bvids]
+    season["id"] = SEASON_ID
     season["title"] = SEASON_TITLE
     season["sourceTitle"] = metadata.get("name") or SEASON_SOURCE_TITLE
     season["completed"] = False
@@ -293,6 +300,14 @@ def main() -> None:
         raw_episodes, metadata = extract_saved_html(args.html_file)
     else:
         raw_episodes, metadata = fetch_collection()
+    actual_mid = int(metadata.get("mid") or 0)
+    actual_season_id = int(metadata.get("season_id") or 0)
+    if actual_mid and actual_mid != MID:
+        raise RuntimeError(f"Unexpected Bilibili account: {actual_mid} (expected {MID})")
+    if actual_season_id and actual_season_id != SEASON_ID:
+        raise RuntimeError(
+            f"Unexpected Bilibili collection: {actual_season_id} (expected {SEASON_ID})"
+        )
     count, added = update_data(raw_episodes, metadata)
     print(f"Updated {SEASON_TITLE}: {count} videos ({added} new)")
 

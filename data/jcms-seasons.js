@@ -2,13 +2,13 @@ window.JCMS_SEASONS = {
   "title": "京城大师赛",
   "seasons": [
     {
-      "id": 8990425,
+      "id": 8992596,
       "episodes": [
         {
-          "title": "20260901 表演赛 第一局-预女猎白混",
-          "bvid": "BV1CftV67EKJ",
-          "url": "https://www.bilibili.com/video/BV1CftV67EKJ",
-          "duration": 6073,
+          "title": "20260901 表演赛 Day-1 第一局-预女猎白混",
+          "bvid": "BV1EktG6gEtZ",
+          "url": "https://www.bilibili.com/video/BV1EktG6gEtZ",
+          "duration": 6569,
           "board": "预女猎白混",
           "stage": "表演赛",
           "issue": "",
@@ -16,14 +16,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-01",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788267231,
-          "aid": 117195866642228
+          "pubdate": 1788279655,
+          "aid": 117196638391141
         },
         {
-          "title": "20260901 表演赛 第二局-狼王守卫",
-          "bvid": "BV1fstV66E5g",
-          "url": "https://www.bilibili.com/video/BV1fstV66E5g",
-          "duration": 4575,
+          "title": "20260901 表演赛 Day-1 第二局-狼王守卫",
+          "bvid": "BV1z6tG6rEfw",
+          "url": "https://www.bilibili.com/video/BV1z6tG6rEfw",
+          "duration": 4786,
           "board": "狼王守卫",
           "stage": "表演赛",
           "issue": "",
@@ -31,14 +31,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-01",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788272054,
-          "aid": 117196168634345
+          "pubdate": 1788279685,
+          "aid": 117196655232879
         },
         {
-          "title": "20260901 表演赛 第三局-机械狼通灵师",
-          "bvid": "BV18HtG69E4k",
-          "url": "https://www.bilibili.com/video/BV18HtG69E4k",
-          "duration": 5856,
+          "title": "20260901 表演赛 Day-1 第三局-机械狼通灵师",
+          "bvid": "BV171tG6ME7Y",
+          "url": "https://www.bilibili.com/video/BV171tG6ME7Y",
+          "duration": 6218,
           "board": "机械狼通灵师",
           "stage": "表演赛",
           "issue": "",
@@ -46,14 +46,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-01",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788278331,
-          "aid": 117196588061066
+          "pubdate": 1788280218,
+          "aid": 117196671944645
         },
         {
-          "title": "20260902 表演赛 第一局-预女猎白混",
-          "bvid": "BV1xetU6HEfV",
-          "url": "https://www.bilibili.com/video/BV1xetU6HEfV",
-          "duration": 4464,
+          "title": "20260902 表演赛 Day-2 第一局-预女猎白混",
+          "bvid": "BV1xitD6ZEzR",
+          "url": "https://www.bilibili.com/video/BV1xitD6ZEzR",
+          "duration": 4819,
           "board": "预女猎白混",
           "stage": "表演赛",
           "issue": "",
@@ -61,29 +61,29 @@ window.JCMS_SEASONS = {
           "date": "2026-09-02",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788351789,
-          "aid": 117201403124392
+          "pubdate": 1788364500,
+          "aid": 117202208425982
         },
         {
-          "title": "20260902 表演赛 第二局-诡术之镜",
-          "bvid": "BV1B3tU6TENF",
-          "url": "https://www.bilibili.com/video/BV1B3tU6TENF",
-          "duration": 4608,
-          "board": "诡术之镜",
+          "title": "20260902 表演赛 Day-2 第二局-诡术之境",
+          "bvid": "BV1xvtD6bEiG",
+          "url": "https://www.bilibili.com/video/BV1xvtD6bEiG",
+          "duration": 4864,
+          "board": "诡术之境",
           "stage": "表演赛",
           "issue": "",
           "game": "第二局",
           "date": "2026-09-02",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788356687,
-          "aid": 117201721890405
+          "pubdate": 1788364486,
+          "aid": 117202225204229
         },
         {
-          "title": "20260902 表演赛 第三局-机械狼通灵师",
-          "bvid": "BV1QCtm6xENY",
-          "url": "https://www.bilibili.com/video/BV1QCtm6xENY",
-          "duration": 3275,
+          "title": "20260902 表演赛 Day-2 第三局-机械狼通灵师",
+          "bvid": "BV1KvtD68EB4",
+          "url": "https://www.bilibili.com/video/BV1KvtD68EB4",
+          "duration": 3478,
           "board": "机械狼通灵师",
           "stage": "表演赛",
           "issue": "",
@@ -91,14 +91,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-02",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788360115,
-          "aid": 117201956771593
+          "pubdate": 1788364398,
+          "aid": 117202225335559
         },
         {
-          "title": "20260903 表演赛 第一局-预女猎白混",
-          "bvid": "BV1aBto6DE5o",
-          "url": "https://www.bilibili.com/video/BV1aBto6DE5o",
-          "duration": 4999,
+          "title": "20260903 表演赛 Day-3 第一局-预女猎白混",
+          "bvid": "BV1obtf6vE9h",
+          "url": "https://www.bilibili.com/video/BV1obtf6vE9h",
+          "duration": 5371,
           "board": "预女猎白混",
           "stage": "表演赛",
           "issue": "",
@@ -106,14 +106,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-03",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788438832,
-          "aid": 117207107376524
+          "pubdate": 1788449432,
+          "aid": 117207778526793
         },
         {
-          "title": "20260903 表演赛 第二局-盗宝大师",
-          "bvid": "BV113to6uE5u",
-          "url": "https://www.bilibili.com/video/BV113to6uE5u",
-          "duration": 5430,
+          "title": "20260903 表演赛 Day-3 第二局-盗宝大师",
+          "bvid": "BV1obtf6vE9i",
+          "url": "https://www.bilibili.com/video/BV1obtf6vE9i",
+          "duration": 5680,
           "board": "盗宝大师",
           "stage": "表演赛",
           "issue": "",
@@ -121,14 +121,14 @@ window.JCMS_SEASONS = {
           "date": "2026-09-03",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788444661,
-          "aid": 117207476475590
+          "pubdate": 1788449429,
+          "aid": 117207778526796
         },
         {
-          "title": "20260903 表演赛 第三局-机械狼通灵师",
-          "bvid": "BV1JTbF6zEWV",
-          "url": "https://www.bilibili.com/video/BV1JTbF6zEWV",
-          "duration": 2913,
+          "title": "20260903 表演赛 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV1obtf6vExo",
+          "url": "https://www.bilibili.com/video/BV1obtf6vExo",
+          "duration": 3280,
           "board": "机械狼通灵师",
           "stage": "表演赛",
           "issue": "",
@@ -136,8 +136,8 @@ window.JCMS_SEASONS = {
           "date": "2026-09-03",
           "section": "正片",
           "seasonTitle": "昆仑归墟",
-          "pubdate": 1788447738,
-          "aid": 117207694580244
+          "pubdate": 1788449347,
+          "aid": 117207778527318
         }
       ],
       "boards": [
@@ -158,12 +158,12 @@ window.JCMS_SEASONS = {
           "count": 1
         },
         {
-          "name": "诡术之镜",
+          "name": "诡术之境",
           "count": 1
         }
       ],
       "title": "昆仑归墟",
-      "sourceTitle": "合集·京城大师赛S23昆仑归墟",
+      "sourceTitle": "合集·昆仑归墟",
       "completed": false,
       "episodeCount": 9
     },
