@@ -8,12 +8,17 @@
   renderIdentityGallery();
   renderRolePage();
   bindGlossarySearch();
+  bindPageIndex();
+  bindStickyDisclosures();
   bindSiteMotion();
 });
 
 const ASSET_VERSION = "20260902-kunlun27";
 
 const SITE_CHANGELOG = [
+  ["2026-09-05", "统一滚动海报、身份列表与大图弹窗的卡面边界，修复悬停动画再次露出白边的问题；适度放大全站正文、表格及辅助说明字号，并调整手机端身份框高度以完整显示文字。"],
+  ["2026-09-05", "首页身份海报统一卡面尺寸并去除外侧白边；全部身份按村民、神职、小狼、大狼与特殊身份分组；合集和比赛版型新增标题随滚动固定；修正紫禁之巅、诡秘巫影、天空之城视频资料，移除紫禁之巅颁奖视频和版型筛选中的待补充项。"],
+  ["2026-09-05", "更新全站字体层级、留白与列表排版；优化首页身份展台；新增章节导航、返回顶部、赛事搜索与版型筛选、身份大图连续翻页，并优化移动端与减少动态效果设置。"],
   ["2026-08-29", "首页改为双行滚动身份海报，可暂停查看并点击放大身份牌。"],
   ["2026-08-24", "移除交流论坛；调整全部身份与比赛版型顺序；更新游戏技巧；新增全站侧边信息与影像抽屉。"],
   ["2026-08-04", "首页改用动态海报并加入播放控制；京城大师赛合集与比赛版型改为默认收起。"],
@@ -144,7 +149,7 @@ function renderHomeIdentityMarquee() {
         title="${escapeHtml(name)}"
         ${duplicate ? 'tabindex="-1"' : ""}
       >
-        <span class="identity-marquee-card-inner">
+        <span class="identity-marquee-card-inner identity-art-frame" style="${identityArtStyle(name)}">
           <img
             src="images/identities/${escapeHtml(ROLE_ART[name])}?v=${ASSET_VERSION}"
             alt="${duplicate ? "" : `${escapeHtml(name)}身份牌`}"
@@ -185,16 +190,24 @@ function renderHomeIdentityMarquee() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   let frameCount = 0;
+  let posterVisible = true;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      posterVisible = entry.isIntersecting;
+      poster.classList.toggle("is-offscreen", !posterVisible);
+    }).observe(poster);
+  }
+  const rowCards = marqueeRows.map((row) => [...row.querySelectorAll(".identity-marquee-card")]);
   const paintCylinder = () => {
     frameCount += 1;
-    if (frameCount % 2 === 0 && !document.hidden) {
-      marqueeRows.forEach((row) => {
+    if (frameCount % 2 === 0 && !document.hidden && posterVisible) {
+      marqueeRows.forEach((row, rowIndex) => {
         const bounds = row.getBoundingClientRect();
         const center = bounds.left + bounds.width / 2;
         const halfWidth = Math.max(bounds.width / 2, 1);
 
-        row.querySelectorAll(".identity-marquee-card").forEach((card) => {
-          const cardBounds = card.getBoundingClientRect();
+        const positions = rowCards[rowIndex].map((card) => ({ card, bounds: card.getBoundingClientRect() }));
+        positions.forEach(({ card, bounds: cardBounds }) => {
           const cardCenter = cardBounds.left + cardBounds.width / 2;
           const distance = Math.min(1, Math.abs(cardCenter - center) / halfWidth);
           const curve = Math.pow(distance, 1.35);
@@ -579,6 +592,34 @@ const IDENTITY_ORDER = [
   "证婚人", "守墓人", "石像鬼", "杠精", "典狱长", "熊", "隐狼", "盗贼", "丘比特", "情侣",
 ];
 
+const IDENTITY_CATEGORIES = [
+  { id: "villagers", title: "村民", names: ["平民"] },
+  { id: "gods", title: "神职", names: ["预言家", "女巫", "猎人", "白神", "通灵师", "守卫", "舞者", "魔术师", "定序王子", "毒师", "摄梦人", "蒙面人", "白夜使者", "禁言长老", "骑士", "守墓人", "杠精", "熊"] },
+  { id: "wolves", title: "小狼", names: ["狼人"] },
+  { id: "special-wolves", title: "大狼", note: "带有特殊技能的狼人", names: ["机械狼", "假面", "诡术师", "狼王", "盗宝大师", "梦魇", "狼术师", "黑夜使者", "白狼王", "狼美人", "石像鬼", "典狱长", "隐狼"] },
+  { id: "special", title: "特殊身份", note: "或第三方", names: ["混血儿", "傀儡", "鬼魂新娘", "证婚人", "盗贼", "丘比特", "情侣"] },
+];
+
+// Shared display bounds (left, top, right, bottom) in 480 x 680 source files.
+// Includes irregular blank edges; artwork files stay intact.
+const IDENTITY_ART_MARGINS = {
+  "黑夜使者": [19, 7, 20, 7], "舞者": [27, 13, 28, 13],
+  "杠精": [18, 5, 19, 5], "鬼魂新娘": [19, 7, 20, 7],
+  "守墓人": [27, 12, 27, 12], "守卫": [27, 12, 28, 13],
+  "假面": [19, 6, 20, 7], "机械狼": [20, 6, 20, 6],
+  "通灵师": [27, 12, 27, 12], "混血儿": [19, 7, 20, 7],
+  "定序王子": [16, 6, 16, 6], "毒师": [25, 4, 26, 4],
+  "傀儡": [20, 6, 20, 6], "禁言长老": [20, 6, 21, 6],
+  "诡术师": [19, 7, 20, 7], "典狱长": [25, 4, 26, 4],
+};
+
+function identityArtStyle(name) {
+  const [left, top, right, bottom] = IDENTITY_ART_MARGINS[name] || [0, 0, 0, 0];
+  const width = 480 - left - right;
+  const height = 680 - top - bottom;
+  return `--art-width:${480 / width * 100}%;--art-height:${680 / height * 100}%;--art-left:${-left / width * 100}%;--art-top:${-top / height * 100}%;`;
+}
+
 const SETUP_ORDER = [
   "预女猎白混", "机械狼通灵师", "假面舞会", "唯邻是从", "诡术之境", "盗宝大师",
   "梦魇摄梦人", "鬼魂新娘", "白狼王骑士", "石像鬼守墓人", "狼美猎人", "盗贼丘比特",
@@ -601,15 +642,24 @@ function renderIdentityGallery() {
   const container = document.querySelector("#identity-gallery");
   if (!container) return;
 
-  container.innerHTML = IDENTITY_ORDER
-    .map(
-      (name) => `
+  container.innerHTML = `
+    <nav class="identity-category-nav" aria-label="身份分类">
+      ${IDENTITY_CATEGORIES.map((group) => `<a href="#identity-${group.id}">${group.title}<span>${group.names.length}</span></a>`).join("")}
+    </nav>
+    ${IDENTITY_CATEGORIES.map((group) => `
+      <section class="identity-group" aria-labelledby="identity-${group.id}">
+        <header class="identity-group-heading"><h3 id="identity-${group.id}">${group.title}${group.note ? `<small>（${group.note}）</small>` : ""}</h3><span>${group.names.length} 个身份</span></header>
+        <div class="identity-gallery">
+          ${group.names.map((name) => `
         <figure class="identity-gallery-card identity-motion-${identityMotionGroup(name)}" data-identity-name="${escapeHtml(name)}" tabindex="0" role="button" aria-label="查看${escapeHtml(name)}身份牌大图" title="${escapeHtml(name)}">
+          <span class="identity-art-frame" style="${identityArtStyle(name)}">
           <img src="../images/identities/${escapeHtml(ROLE_ART[name])}?v=${ASSET_VERSION}" alt="${escapeHtml(name)}身份牌" width="480" height="680" loading="lazy" />
+          </span>
         </figure>
-      `,
-    )
-    .join("");
+          `).join("")}
+        </div>
+      </section>
+    `).join("")}`;
 }
 
 function identityMotionGroup(name) {
@@ -624,7 +674,89 @@ function bindSiteMotion() {
 
   if (reduceMotion) return;
   bindScrollReveals();
-  bindPointerHalo();
+}
+
+// Selected Lucide icons, kept local; see assets/lucide-LICENSE.txt.
+function uiIcon(name) {
+  const paths = {
+    left: '<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>',
+    right: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+    up: '<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>',
+    close: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+    search: '<path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>',
+  };
+  return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || ""}</svg>`;
+}
+
+function bindPageIndex() {
+  const hero = document.querySelector(".page-hero");
+  const sections = [...document.querySelectorAll(".page-shell > .page-section[aria-labelledby]")];
+  if (hero && sections.length > 1) {
+    const nav = document.createElement("nav");
+    nav.className = "page-index";
+    nav.setAttribute("aria-label", "本页章节");
+    nav.innerHTML = sections.map((section) => {
+      const heading = document.getElementById(section.getAttribute("aria-labelledby"));
+      return `<a href="#${heading.id}">${escapeHtml(heading.textContent)}</a>`;
+    }).join("");
+    hero.after(nav);
+    const links = [...nav.querySelectorAll("a")];
+    const update = () => {
+      let current = 0;
+      sections.forEach((section, index) => {
+        if (section.getBoundingClientRect().top <= 190) current = index;
+      });
+      links.forEach((link, index) => {
+        if (index === current) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+  const top = document.createElement("button");
+  top.className = "back-to-top";
+  top.type = "button";
+  top.title = "回到顶部";
+  top.setAttribute("aria-label", "回到顶部");
+  top.innerHTML = uiIcon("up");
+  document.body.append(top);
+  top.addEventListener("click", () => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" }));
+  const updateTop = () => { top.hidden = window.scrollY < 600; };
+  window.addEventListener("scroll", updateTop, { passive: true });
+  updateTop();
+}
+
+function bindStickyDisclosures() {
+  const header = document.querySelector(".site-header");
+  const index = document.querySelector(".page-index");
+  const updateOffset = () => {
+    const headerHeight = header?.getBoundingClientRect().height || 0;
+    const offset = headerHeight + (index?.getBoundingClientRect().height || 0);
+    document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
+    document.documentElement.style.setProperty("--disclosure-top", `${offset}px`);
+  };
+  updateOffset();
+  if ("ResizeObserver" in window) {
+    const observer = new ResizeObserver(updateOffset);
+    [header, index].filter(Boolean).forEach((element) => observer.observe(element));
+  } else {
+    window.addEventListener("resize", updateOffset);
+  }
+  document.querySelectorAll(".season-panel, .setup-panel").forEach((panel) => {
+    const summary = panel.querySelector(":scope > summary");
+    let closingPinned = false;
+    summary.addEventListener("click", () => {
+      const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--disclosure-top"));
+      closingPinned = panel.open && panel.getBoundingClientRect().top < offset;
+    });
+    panel.addEventListener("toggle", () => {
+      if (!panel.open && closingPinned) {
+        panel.scrollIntoView({ block: "start", behavior: "instant" });
+      }
+      closingPinned = false;
+    });
+  });
 }
 
 function bindIdentityLightbox() {
@@ -635,38 +767,77 @@ function bindIdentityLightbox() {
   dialog.className = "identity-dialog";
   dialog.setAttribute("aria-label", "身份牌大图");
   dialog.innerHTML = `
-    <button class="identity-dialog-close" type="button" aria-label="关闭大图">&times;</button>
+    <div class="identity-dialog-toolbar">
+      <span class="identity-dialog-position" aria-live="polite"></span>
+      <button class="identity-dialog-close" type="button" aria-label="关闭大图" title="关闭大图">${uiIcon("close")}</button>
+    </div>
     <figure>
-      <img alt="" />
+      <span class="identity-art-frame"><img alt="" /></span>
       <figcaption></figcaption>
     </figure>
+    <div class="identity-dialog-navigation">
+      <button type="button" data-step="-1" aria-label="上一张身份牌" title="上一张身份牌">${uiIcon("left")}</button>
+      <button type="button" data-step="1" aria-label="下一张身份牌" title="下一张身份牌">${uiIcon("right")}</button>
+    </div>
   `;
   document.body.appendChild(dialog);
 
   const image = dialog.querySelector("img");
   const caption = dialog.querySelector("figcaption");
   const closeButton = dialog.querySelector(".identity-dialog-close");
+  const uniqueCards = [...new Map([...cards].map((card) => [card.dataset.identityName, card])).values()];
+  let selected = 0;
+  let opener = null;
+  let openedWithKeyboard = false;
+  const paintCard = () => {
+    const card = uniqueCards[selected];
+    image.src = card.querySelector("img").src;
+    image.alt = `${card.dataset.identityName}身份牌`;
+    image.parentElement.style.cssText = identityArtStyle(card.dataset.identityName);
+    caption.textContent = card.dataset.identityName;
+    dialog.querySelector(".identity-dialog-position").textContent = `${String(selected + 1).padStart(2, "0")} / ${uniqueCards.length}`;
+  };
+  const step = (direction) => {
+    selected = (selected + direction + uniqueCards.length) % uniqueCards.length;
+    paintCard();
+  };
 
-  const openCard = (card) => {
-    const cardImage = card.querySelector("img");
-    image.src = cardImage.currentSrc || cardImage.src;
-    image.alt = cardImage.alt;
-    caption.textContent = card.dataset.identityName || "身份牌";
+  const openCard = (card, keyboard = false) => {
+    opener = card;
+    openedWithKeyboard = keyboard;
+    selected = uniqueCards.findIndex((item) => item.dataset.identityName === card.dataset.identityName);
+    paintCard();
     dialog.showModal();
+    document.body.classList.add("lightbox-open");
   };
 
   cards.forEach((card) => {
-    card.addEventListener("click", () => openCard(card));
+    card.addEventListener("click", (event) => openCard(card, event.detail === 0));
     if (card.tagName === "BUTTON") return;
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        openCard(card);
+        openCard(card, true);
       }
     });
   });
 
   closeButton.addEventListener("click", () => dialog.close());
+  dialog.querySelectorAll("[data-step]").forEach((button) => button.addEventListener("click", () => step(Number(button.dataset.step))));
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      step(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    opener?.focus({ preventScroll: true });
+    const row = opener?.closest(".identity-marquee-row");
+    if (row && !openedWithKeyboard) {
+      row.classList.toggle("is-paused", Boolean(row.querySelector(".identity-marquee-card:hover")));
+    }
+  });
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
@@ -761,6 +932,20 @@ function bindNavigation() {
     const isOpen = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
+  const close = () => {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("is-open")) {
+      close();
+      toggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".site-header")) close();
+  });
+  nav.querySelector(".is-active")?.setAttribute("aria-current", "page");
 }
 
 function bindCopyButtons() {
@@ -796,7 +981,7 @@ function renderJcmsPage() {
 
   const seasons = sortSeasons(data.seasons || []);
   const allEpisodes = seasons.flatMap((season) => season.episodes || []);
-  const allBoards = countValues(allEpisodes.map((episode) => episode.board));
+  const allBoards = countValues(allEpisodes.map((episode) => episode.board)).filter((board) => board.name && !["非对局/待补充", "待补充"].includes(board.name));
   const stats = document.querySelector("#jcms-stats");
 
   if (stats) {
@@ -846,6 +1031,51 @@ function renderJcmsPage() {
       `;
     })
     .join("");
+
+  const filters = document.createElement("form");
+  filters.className = "match-filters";
+  filters.setAttribute("role", "search");
+  filters.innerHTML = `
+    <label class="match-query"><span class="visually-hidden">搜索对局</span>${uiIcon("search")}<input type="search" placeholder="搜索日期、期数或版型" aria-label="搜索对局" /></label>
+    <label class="match-board"><span class="visually-hidden">筛选比赛版型</span><select aria-label="筛选比赛版型"><option value="">全部版型</option>${allBoards.map((board) => `<option value="${escapeHtml(board.name)}">${escapeHtml(board.name)}</option>`).join("")}</select></label>
+    <output aria-live="polite"></output>
+  `;
+  root.before(filters);
+  const empty = document.createElement("p");
+  empty.className = "match-empty";
+  empty.textContent = "没有匹配的对局";
+  empty.hidden = true;
+  root.after(empty);
+  let initialOpen = null;
+  const panels = [...root.querySelectorAll(".season-panel")];
+  const applyFilters = () => {
+    const query = filters.querySelector("input").value.trim().toLocaleLowerCase();
+    const board = filters.querySelector("select").value;
+    const filtering = Boolean(query || board);
+    if (filtering && !initialOpen) initialOpen = panels.map((panel) => panel.open);
+    let count = 0;
+    panels.forEach((panel, index) => {
+      let matched = 0;
+      panel.querySelectorAll("tbody tr").forEach((row, rowIndex) => {
+        const episode = seasons[index].episodes[rowIndex];
+        const text = `${seasons[index].title} ${episode.title} ${getEpisodeDate(episode, seasons[index])} ${episode.board}`.toLocaleLowerCase();
+        const visible = (!query || query.split(/\s+/).every((part) => text.includes(part))) && (!board || episode.board === board);
+        row.hidden = !visible;
+        if (visible) matched += 1;
+      });
+      panel.hidden = matched === 0;
+      if (filtering) panel.open = matched > 0;
+      else if (initialOpen) panel.open = initialOpen[index];
+      count += matched;
+    });
+    if (!filtering) initialOpen = null;
+    empty.hidden = count > 0;
+    filters.querySelector("output").textContent = `${count} 场对局`;
+  };
+  filters.addEventListener("submit", (event) => event.preventDefault());
+  filters.addEventListener("input", applyFilters);
+  filters.addEventListener("change", applyFilters);
+  applyFilters();
 }
 
 function episodeRow(episode, season, index) {

@@ -3968,7 +3968,7 @@ window.JCMS_SEASONS = {
       "id": 6648988,
       "title": "紫禁之巅",
       "sourceTitle": "紫禁之巅",
-      "episodeCount": 166,
+      "episodeCount": 165,
       "completed": true,
       "episodes": [
         {
@@ -4779,9 +4779,9 @@ window.JCMS_SEASONS = {
           "bvid": "BV1hWmHBAEpa",
           "url": "https://www.bilibili.com/video/BV1hWmHBAEpa",
           "duration": 8246,
-          "board": "非对局/待补充",
+          "board": "针锋相杠",
           "stage": "其他",
-          "date": "",
+          "date": "2025-12-09",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
         },
@@ -4913,7 +4913,7 @@ window.JCMS_SEASONS = {
           "duration": 5354,
           "board": "预女猎白混",
           "stage": "正赛",
-          "date": "",
+          "date": "2025-12-18",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
         },
@@ -4924,7 +4924,7 @@ window.JCMS_SEASONS = {
           "duration": 3445,
           "board": "假面舞会",
           "stage": "正赛",
-          "date": "",
+          "date": "2025-12-18",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
         },
@@ -4935,7 +4935,7 @@ window.JCMS_SEASONS = {
           "duration": 3452,
           "board": "机械狼通灵师",
           "stage": "正赛",
-          "date": "",
+          "date": "2025-12-18",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
         },
@@ -4946,7 +4946,7 @@ window.JCMS_SEASONS = {
           "duration": 5963,
           "board": "机械狼通灵师",
           "stage": "正赛",
-          "date": "",
+          "date": "2025-12-18",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
         },
@@ -5785,17 +5785,6 @@ window.JCMS_SEASONS = {
           "date": "2026-01-30",
           "section": "正片",
           "seasonTitle": "紫禁之巅"
-        },
-        {
-          "title": "20260130 决赛颁奖",
-          "bvid": "BV1fn6zBkEYQ",
-          "url": "https://www.bilibili.com/video/BV1fn6zBkEYQ",
-          "duration": 3424,
-          "board": "非对局/待补充",
-          "stage": "其他",
-          "date": "2026-01-30",
-          "section": "正片",
-          "seasonTitle": "紫禁之巅"
         }
       ],
       "boards": [
@@ -5833,11 +5822,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "针锋相杠",
-          "count": 2
-        },
-        {
-          "name": "非对局/待补充",
-          "count": 2
+          "count": 3
         },
         {
           "name": "预女猎禁混",
@@ -9238,7 +9223,7 @@ window.JCMS_SEASONS = {
           "duration": 4542,
           "board": "预女猎白",
           "stage": "其他",
-          "date": "",
+          "date": "2025-06-28",
           "section": "正片",
           "seasonTitle": "诡秘巫影"
         },
@@ -9249,7 +9234,7 @@ window.JCMS_SEASONS = {
           "duration": 5756,
           "board": "狼王守卫",
           "stage": "其他",
-          "date": "",
+          "date": "2025-06-28",
           "section": "正片",
           "seasonTitle": "诡秘巫影"
         },
@@ -13804,7 +13789,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1RNxceUEWd",
           "url": "https://www.bilibili.com/video/BV1RNxceUEWd",
           "duration": 4116,
-          "board": "非对局/待补充",
+          "board": "机械狼通灵师",
           "stage": "正赛",
           "date": "2024-09-27",
           "section": "正片",
@@ -13957,7 +13942,7 @@ window.JCMS_SEASONS = {
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 36
+          "count": 37
         },
         {
           "name": "预女猎白混",
@@ -13985,10 +13970,6 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "神秘交易",
-          "count": 1
-        },
-        {
-          "name": "非对局/待补充",
           "count": 1
         },
         {
