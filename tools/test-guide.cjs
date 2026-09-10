@@ -53,3 +53,14 @@ test('season statistics match the underlying videos', () => {
     for (const board of item.boards) assert.equal(board.count, counts.get(board.name), item.title);
   }
 });
+
+test('black-margin cards use shared display bounds and new terms appear once', () => {
+  for (const name of ['熊', '蒙面人', '梦魇', '证婚人', '情侣']) {
+    const margins = vm.runInContext(`IDENTITY_ART_MARGINS[${JSON.stringify(name)}]`, context);
+    assert(margins.every(value => value > 0), name);
+  }
+  const glossary = readFileSync(join(root, 'pages/speech.html'), 'utf8');
+  for (const name of ['压毒', '舞池']) {
+    assert.equal(glossary.split(`<dt>${name}</dt>`).length - 1, 1, name);
+  }
+});
