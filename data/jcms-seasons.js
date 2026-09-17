@@ -468,16 +468,61 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1789573312,
           "aid": 117281447283289
+        },
+        {
+          "title": "20260917 正赛 第二期 Day-3 第一局-预女猎白混",
+          "bvid": "BV1nJer6gEkx",
+          "url": "https://www.bilibili.com/video/BV1nJer6gEkx",
+          "duration": 4652,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第一局",
+          "date": "2026-09-17",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789657721,
+          "aid": 117286983697512
+        },
+        {
+          "title": "20260917 正赛 第二期 Day-3 第二局-青丘夜影",
+          "bvid": "BV1nJer63EDh",
+          "url": "https://www.bilibili.com/video/BV1nJer63EDh",
+          "duration": 3943,
+          "board": "青丘夜影",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第二局",
+          "date": "2026-09-17",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789657688,
+          "aid": 117286983895147
+        },
+        {
+          "title": "20260917 正赛 第二期 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV1nJer6gEBP",
+          "url": "https://www.bilibili.com/video/BV1nJer6gEBP",
+          "duration": 5024,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第三局",
+          "date": "2026-09-17",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789657796,
+          "aid": 117286983699309
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 11
+          "count": 12
         },
         {
           "name": "预女猎白混",
-          "count": 10
+          "count": 11
         },
         {
           "name": "假面舞会",
@@ -492,18 +537,18 @@ window.JCMS_SEASONS = {
           "count": 2
         },
         {
-          "name": "狼王守卫",
-          "count": 1
+          "name": "青丘夜影",
+          "count": 2
         },
         {
-          "name": "青丘夜影",
+          "name": "狼王守卫",
           "count": 1
         }
       ],
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 31
+      "episodeCount": 34
     },
     {
       "id": 8209896,
