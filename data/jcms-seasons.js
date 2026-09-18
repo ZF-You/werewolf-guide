@@ -513,28 +513,73 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1789657796,
           "aid": 117286983699309
+        },
+        {
+          "title": "20260918 正赛 第二期 Day-4 第一局-预女猎白混",
+          "bvid": "BV1tneS6kEnQ",
+          "url": "https://www.bilibili.com/video/BV1tneS6kEnQ",
+          "duration": 4458,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第一局",
+          "date": "2026-09-18",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789746215,
+          "aid": 117292788811829
+        },
+        {
+          "title": "20260918 正赛 第二期 Day-4 第二局-盗宝大师",
+          "bvid": "BV1tneS6rEx1",
+          "url": "https://www.bilibili.com/video/BV1tneS6rEx1",
+          "duration": 4441,
+          "board": "盗宝大师",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第二局",
+          "date": "2026-09-18",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789746358,
+          "aid": 117292788614969
+        },
+        {
+          "title": "20260918 正赛 第二期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1MneS6kEWz",
+          "url": "https://www.bilibili.com/video/BV1MneS6kEWz",
+          "duration": 6057,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第二期",
+          "game": "第三局",
+          "date": "2026-09-18",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1789746742,
+          "aid": 117292788746047
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 12
+          "count": 13
         },
         {
           "name": "预女猎白混",
-          "count": 11
+          "count": 12
         },
         {
           "name": "假面舞会",
           "count": 3
         },
         {
-          "name": "诡术之境",
+          "name": "盗宝大师",
           "count": 3
         },
         {
-          "name": "盗宝大师",
-          "count": 2
+          "name": "诡术之境",
+          "count": 3
         },
         {
           "name": "青丘夜影",
@@ -548,7 +593,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 34
+      "episodeCount": 37
     },
     {
       "id": 8209896,
