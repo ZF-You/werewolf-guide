@@ -1961,3 +1961,72 @@ th, .board-chip, .tag, .identity-category-nav span { font-size: 14px; }
   }
 }
 
+.masters-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  gap: 30px 24px;
+  margin: 0;
+  padding: 28px 24px 12px;
+  list-style: none;
+  background: linear-gradient(115deg, #edf2f0, #fafcfc 46%, #e5ebea);
+  border-inline: 1px solid #c8d4d0;
+  box-shadow: inset 8px 0 18px -18px #344b40, inset -8px 0 18px -18px #344b40;
+}
+
+.master-display {
+  min-width: 0;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.master-display::after {
+  content: "";
+  position: absolute;
+  inset: auto -12px 0;
+  height: 7px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #adbeb7;
+  background: linear-gradient(#e5efeb, #bccdc5);
+  box-shadow: 0 7px 10px -6px #778e82;
+}
+
+.master-poster {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #928269;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: 0 5px 12px #263d332b;
+  cursor: zoom-in;
+}
+
+.master-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.master-poster:hover { box-shadow: 0 6px 20px #263d3352; }
+.master-poster:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+.master-caption { display: flex; align-items: baseline; gap: 8px; min-height: 36px; padding-top: 10px; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.6; overflow-wrap: anywhere; }
+.master-number { flex: none; color: var(--muted); font-size: 12px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.master-dialog { width: min(520px, calc(100vw - 24px)); }
+.master-dialog figure img { display: block; width: auto; height: auto; max-width: 100%; max-height: max(120px, calc(100dvh - 230px)); object-fit: contain; border-radius: 0; }
+
+@media (max-width: 1000px) {
+  .masters-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .masters-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 12px; padding: 18px 12px 10px; }
+  .master-display::after { left: -6px; right: -6px; }
+  .master-caption { gap: 5px; font-size: 14px; }
+}
+
+@media (max-width: 420px) {
+  .masters-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+

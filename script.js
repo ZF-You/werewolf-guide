@@ -5,6 +5,7 @@
   renderHomeIdentityMarquee();
   bindImageFallbacks();
   renderJcmsPage();
+  renderMastersGallery();
   renderIdentityGallery();
   renderRolePage();
   bindGlossarySearch();
@@ -16,6 +17,7 @@
 const ASSET_VERSION = "20260912-identity34";
 
 const SITE_CHANGELOG = [
+  ["2026-09-26", "新增45位大师海报名录及大图浏览；统一比赛版型名称，补充狼王守卫、青丘夜影规则；视频搜索调整为八位日期或赛季名称。"],
   ["2026-09-12", "为诡术师、白泽、九尾狐补充统一的手绘墨线边框；修正狼术师左右黑边，首页海报、身份列表与大图同步使用修正后的卡面范围。"],
   ["2026-09-12", "重绘诡术师身份牌，新增九尾狐、白泽身份牌，同步加入首页双行海报、身份列表和大图浏览；新牌采用无外沿的等比满幅显示。"],
   ["2026-09-09", "修正熊、蒙面人、梦魇、证婚人、情侣身份牌在首页、身份列表和大图中的外侧黑边；常用术语新增“压毒”和“舞池”。"],
@@ -286,6 +288,34 @@ function bindImageFallbacks() {
 
 const SETUP_GUIDES = [
   {
+    name: "狼王守卫",
+    camps: ["神职：预言家、女巫、猎人、守卫", "平民：平民 x4", "狼人：狼王、狼人 x3"],
+    rules: "屠边规则：所有狼人出局则好人获胜；所有神职或所有平民出局则狼人获胜。暗牌局，设警长，双爆吞警徽，出局不亮身份。女巫全程不可自救；守护只防狼刀，不防毒药；同守同救仍会出局。",
+    roles: [
+      role("平民", "平民", "没有夜间技能。", "结合发言和票型找狼，不要仅凭开枪特效判断阵营。"),
+      role("预言家", "神职", "每晚查验一名玩家的阵营，结果为好人或狼人。", "讲清查验和警徽流，帮助好人区分真假预言家。"),
+      role("女巫", "神职", "拥有一瓶解药和一瓶毒药，全程不可自救。解药与守护作用于同一目标时，该玩家仍会出局。", "用药要考虑同守同救；毒杀狼王可以封住其开枪技能。"),
+      role("猎人", "神职", "出局时可开枪带走一名玩家，被女巫毒杀则无法开枪。猎人和狼王可在被对方开枪带走后继续开枪。", "枪口优先解决关键矛盾，注意狼王可能继续带人。"),
+      role("守卫", "神职", "每晚可守护一名玩家，包括自己，防止其被狼人袭击；不能连续两晚守护同一目标。不防毒药，同守同救会出局。", "规划交替守护路线，保护关键神职并留意女巫救人目标。"),
+      role("狼王", "狼人", "与三名狼人见面并共同刀人。被公投出局或被猎人带走时可开枪带走一名玩家；被毒杀或自爆不可开枪。开枪特效与猎人相同，均为狼爪加靶心，不能据此区分身份。", "隐藏带人能力，争取用枪口换掉关键神职。"),
+      role("狼人", "狼人", "夜晚与狼王见面，共同选择一名玩家击杀。", "配合狼王寻找神职，并考虑守卫可能的保护路线。"),
+    ],
+  },
+  {
+    name: "青丘夜影",
+    camps: ["神职：预言家、女巫、守卫、白泽", "平民：平民 x4", "狼人：九尾狐、狼人 x3（互不见面）"],
+    rules: "屠边规则：所有狼人出局则好人获胜；所有神职或所有平民出局则狼人获胜。夜间顺序：守卫 → 白泽 → 九尾狐（确认带刀状态、选择击杀、选择标记）→ 三名普通狼人 → 女巫 → 预言家。",
+    roles: [
+      role("平民", "平民", "没有夜间技能。被白泽指定为继承人后，变成神民双阵营。", "结合票型判断九尾狐可能留下的标记，注意传承后的阵营变化。"),
+      role("预言家", "神职", "每晚查验一名玩家的阵营。", "尽早建立可靠信息链，留意与普通狼人不见面的九尾狐。"),
+      role("女巫", "神职", "拥有一瓶解药和一瓶毒药，按当局房规使用；九尾狐免疫毒药。", "毒药不能处理九尾狐，需结合放逐票型安排轮次。"),
+      role("守卫", "神职", "每晚守护一名玩家，保护其免受狼刀，具体限制以当局房规为准。", "保护关键神职，同时把普通狼刀和九尾狐的猎杀时刻分开考虑。"),
+      role("白泽", "神职", "每夜选择一名玩家，清除其所有标记。出局时强制翻牌指定一名存活玩家为继承人：平民变为神民双阵营；神职夜间倒牌延迟至白天投票结束后；狼人或九尾狐无事发生。白泽作为最后一神或被猎杀时刻清除出局时，无法发动传承。", "清除关键存活位的标记，提前规划继承人，避免传承落到狼队。"),
+      role("九尾狐", "狼人", "大狼，与普通狼人互不见面，免疫女巫毒药。每夜必须标记一名玩家，标记隐藏；警徽投票和放逐投票时，所投玩家额外获得标记，重复标记无额外效果。白天自身发言阶段可发动猎杀时刻：A组为自己及所有被标记的存活玩家，B组为其余存活玩家；若A人数大于B，B组全员立刻出局。可重复发动，但全局仅生效一次。三名普通狼人全部出局后，获得夜间带刀权。", "记录存活标记人数和投票目标，准确计算猎杀时刻的触发条件。"),
+      role("狼人", "狼人", "三名普通狼人夜间见面并共同刀人，与九尾狐互不见面；三狼全部出局后九尾狐接刀。", "通过发言和票型寻找九尾狐，计算接刀与标记带来的轮次变化。"),
+    ],
+  },
+  {
     name: "魔幻对决",
     camps: ["神职：预言家、女巫、猎人、魔术师", "平民：平民 x4", "狼人：狼术师、狼人 x3"],
     note: "这一板最怕只记“谁被换了”。复盘时要把原号码、交换后号码、夜间技能目标分开记。",
@@ -356,7 +386,7 @@ const SETUP_GUIDES = [
     ],
   },
   {
-    name: "狼美猎人",
+    name: "狼美人猎人",
     camps: ["神职：预言家、女巫、猎人、守卫", "平民：平民 x4", "狼人：狼美人、狼人 x3"],
     note: "狼美人让“出谁”变成连锁问题。残局一定要算殉情和猎人能不能开枪。",
     roles: [
@@ -637,7 +667,7 @@ function identityArtStyle(name) {
 
 const SETUP_ORDER = [
   "预女猎白混", "机械狼通灵师", "假面舞会", "唯邻是从", "诡术之境", "盗宝大师",
-  "梦魇摄梦人", "鬼魂新娘", "白狼王骑士", "石像鬼守墓人", "狼美猎人", "盗贼丘比特",
+  "梦魇摄梦人", "鬼魂新娘", "白狼王骑士", "石像鬼守墓人", "狼美人猎人", "狼王守卫", "青丘夜影", "盗贼丘比特",
   "禁言长老", "针锋相杠", "黑白使者", "孤注一掷", "魔幻对决", "熊隐狼",
 ];
 
@@ -989,6 +1019,83 @@ function bindCopyButtons() {
   });
 }
 
+const MASTER_NAMES = [
+  "JY", "KS", "耿许儿", "牛肉干", "小苍", "诅咒", "李斯", "大卫", "申屠", "荣耀",
+  "翼风", "陈明峻", "鲸鱼", "佩玖", "彭彭", "二妖", "园长", "华仔仔", "笑笑", "果冻",
+  "苏打", "Bobby", "李舒服", "焦阳", "圈圈", "Ted", "冰辰", "蛋黄派", "宝玉妹妹", "又又",
+  "陈俊洁", "徐言雨", "亚亚", "鬼鬼", "橘子", "郭小炜", "周二珂", "葛小舞",
+  "谢朵儿", "饱嗝粒粒", "大道寺", "Duu", "猫儿曼", "Happy", "林花花",
+];
+const SHORT_MASTER_POSTERS = new Set(["冰辰", "大道寺", "鬼鬼", "猫儿曼", "佩玖", "谢朵儿", "又又", "周二珂"]);
+
+function renderMastersGallery() {
+  const gallery = document.querySelector("#masters-gallery");
+  if (!gallery) return;
+  gallery.innerHTML = MASTER_NAMES.map((name, index) => `
+    <li class="master-display">
+      <button class="master-poster" type="button" data-master-index="${index}" aria-label="查看${escapeHtml(name)}海报" aria-haspopup="dialog">
+        <img src="../images/masters/${encodeURIComponent(name)}.jpg" alt="${escapeHtml(name)}" width="1440" height="${SHORT_MASTER_POSTERS.has(name) ? 2524 : 2560}" loading="lazy" decoding="async" />
+      </button>
+      <span class="master-caption"><span class="master-number">${String(index + 1).padStart(2, "0")}</span><span>${escapeHtml(name)}</span></span>
+    </li>
+  `).join("");
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "identity-dialog master-dialog";
+  dialog.setAttribute("aria-label", "大师海报大图");
+  dialog.innerHTML = `
+    <div class="identity-dialog-toolbar">
+      <span class="identity-dialog-position" aria-live="polite"></span>
+      <button class="identity-dialog-close" type="button" aria-label="关闭大图" title="关闭大图">${uiIcon("close")}</button>
+    </div>
+    <figure><img alt="" /><figcaption></figcaption></figure>
+    <div class="identity-dialog-navigation">
+      <button type="button" data-step="-1" aria-label="上一位大师" title="上一位大师">${uiIcon("left")}</button>
+      <button type="button" data-step="1" aria-label="下一位大师" title="下一位大师">${uiIcon("right")}</button>
+    </div>
+  `;
+  document.body.appendChild(dialog);
+  const posters = [...gallery.querySelectorAll(".master-poster")];
+  const image = dialog.querySelector("figure img");
+  let selected = 0;
+  let opener = null;
+  const paint = () => {
+    const name = MASTER_NAMES[selected];
+    image.src = posters[selected].querySelector("img").src;
+    image.alt = `${name}海报`;
+    image.width = 1440;
+    image.height = SHORT_MASTER_POSTERS.has(name) ? 2524 : 2560;
+    dialog.querySelector("figcaption").textContent = name;
+    dialog.querySelector(".identity-dialog-position").textContent = `${String(selected + 1).padStart(2, "0")} / ${MASTER_NAMES.length}`;
+  };
+  const step = direction => {
+    selected = (selected + direction + MASTER_NAMES.length) % MASTER_NAMES.length;
+    paint();
+  };
+  posters.forEach((poster, index) => poster.addEventListener("click", () => {
+    opener = poster;
+    selected = index;
+    paint();
+    dialog.showModal();
+    document.body.classList.add("lightbox-open");
+  }));
+  dialog.querySelector(".identity-dialog-close").addEventListener("click", () => dialog.close());
+  dialog.querySelectorAll("[data-step]").forEach(button => button.addEventListener("click", () => step(Number(button.dataset.step))));
+  dialog.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      step(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  });
+  dialog.addEventListener("click", event => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    opener?.focus({ preventScroll: true });
+  });
+}
+
 function renderJcmsPage() {
   const data = window.JCMS_SEASONS;
   const root = document.querySelector("#jcms-seasons");
@@ -1051,7 +1158,7 @@ function renderJcmsPage() {
   filters.className = "match-filters";
   filters.setAttribute("role", "search");
   filters.innerHTML = `
-    <label class="match-query"><span class="visually-hidden">搜索对局</span>${uiIcon("search")}<input type="search" placeholder="搜索日期、期数或版型" aria-label="搜索对局" /></label>
+    <label class="match-query"><span class="visually-hidden">搜索日期或赛季</span>${uiIcon("search")}<input type="search" placeholder="日期（20260101）或赛季名称" aria-label="搜索日期或赛季" /></label>
     <label class="match-board"><span class="visually-hidden">筛选比赛版型</span><select aria-label="筛选比赛版型"><option value="">全部版型</option>${allBoards.map((board) => `<option value="${escapeHtml(board.name)}">${escapeHtml(board.name)}</option>`).join("")}</select></label>
     <output aria-live="polite"></output>
   `;
@@ -1073,8 +1180,7 @@ function renderJcmsPage() {
       let matched = 0;
       panel.querySelectorAll("tbody tr").forEach((row, rowIndex) => {
         const episode = seasons[index].episodes[rowIndex];
-        const text = `${seasons[index].title} ${episode.title} ${getEpisodeDate(episode, seasons[index])} ${episode.board}`.toLocaleLowerCase();
-        const visible = (!query || query.split(/\s+/).every((part) => text.includes(part))) && (!board || episode.board === board);
+        const visible = matchesJcmsEpisode(episode, seasons[index], query, board);
         row.hidden = !visible;
         if (visible) matched += 1;
       });
@@ -1091,6 +1197,14 @@ function renderJcmsPage() {
   filters.addEventListener("input", applyFilters);
   filters.addEventListener("change", applyFilters);
   applyFilters();
+}
+
+function matchesJcmsEpisode(episode, season, query = "", board = "") {
+  const term = query.trim().toLocaleLowerCase();
+  const matchesQuery = !term || (/^\d{8}$/.test(term)
+    ? getEpisodeDate(episode, season).replace(/-/g, "") === term
+    : !/\d/.test(term) && displaySeasonTitle(season.title).toLocaleLowerCase().includes(term));
+  return matchesQuery && (!board || episode.board === board);
 }
 
 function episodeRow(episode, season, index) {
@@ -1122,6 +1236,7 @@ function renderRolePage() {
           <div class="setup-camp-list">
             ${guide.camps.map((camp) => `<span class="board-chip">${escapeHtml(camp)}</span>`).join("")}
           </div>
+          ${guide.rules ? `<p class="callout">${escapeHtml(guide.rules)}</p>` : ""}
           <div class="role-mini-grid">
             ${guide.roles.map((item) => roleCard(item)).join("")}
           </div>

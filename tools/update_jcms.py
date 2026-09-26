@@ -16,6 +16,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from build_jcms_data import canonical_board_name
+
 
 ROOT = Path(__file__).resolve().parents[1]
 JCMS_PATH = ROOT / "data" / "jcms-seasons.js"
@@ -177,7 +179,7 @@ def parse_title_parts(title: str) -> dict[str, str]:
     board = re.sub(r"^(?:表演赛|正赛|决赛)", "", board).strip()
     board = re.sub(r"^第[一二三四五六七八九十百]+期", "", board).strip()
     board = re.sub(r"^Day-\d+", "", board, flags=re.I).strip()
-    board = board or "非对局/待补充"
+    board = canonical_board_name(board) or "非对局/待补充"
 
     stage = stage_match.group(0) if stage_match else "其他"
     issue = issue_match.group(0) if issue_match else ""

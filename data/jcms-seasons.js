@@ -1665,7 +1665,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1wETb6uE59",
           "url": "https://www.bilibili.com/video/BV1wETb6uE59",
           "duration": 7949,
-          "board": "黑狼王骑士",
+          "board": "狼王骑士",
           "stage": "其他",
           "date": "2026-07-03",
           "section": "正片",
@@ -2883,6 +2883,10 @@ window.JCMS_SEASONS = {
           "count": 6
         },
         {
+          "name": "狼王骑士",
+          "count": 2
+        },
+        {
           "name": "四狼八猎",
           "count": 1
         },
@@ -2895,19 +2899,11 @@ window.JCMS_SEASONS = {
           "count": 1
         },
         {
-          "name": "狼王骑士",
-          "count": 1
-        },
-        {
           "name": "预女猎白",
           "count": 1
         },
         {
           "name": "鬼魂新娘",
-          "count": 1
-        },
-        {
-          "name": "黑狼王骑士",
           "count": 1
         }
       ]
@@ -4266,7 +4262,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1AjdKBwEmT",
           "url": "https://www.bilibili.com/video/BV1AjdKBwEmT",
           "duration": 5812,
-          "board": "黑狼王骑士",
+          "board": "狼王骑士",
           "stage": "特辑",
           "date": "2026-05-07",
           "section": "正片",
@@ -4462,7 +4458,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "狼王骑士",
-          "count": 1
+          "count": 2
         },
         {
           "name": "趣味狼人杀",
@@ -4470,10 +4466,6 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "预女猎白",
-          "count": 1
-        },
-        {
-          "name": "黑狼王骑士",
           "count": 1
         }
       ]
@@ -5117,7 +5109,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1JAS3B9Ebx",
           "url": "https://www.bilibili.com/video/BV1JAS3B9Ebx",
           "duration": 5281,
-          "board": "黑狼王骑士",
+          "board": "狼王骑士",
           "stage": "特辑",
           "date": "2025-11-27",
           "section": "正片",
@@ -5469,7 +5461,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1oiqfBpEVC",
           "url": "https://www.bilibili.com/video/BV1oiqfBpEVC",
           "duration": 6182,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2025-12-19",
           "section": "正片",
@@ -5568,7 +5560,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1WHB9BHEVm",
           "url": "https://www.bilibili.com/video/BV1WHB9BHEVm",
           "duration": 4568,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2025-12-25",
           "section": "正片",
@@ -6335,11 +6327,15 @@ window.JCMS_SEASONS = {
           "count": 4
         },
         {
+          "name": "禁言长老",
+          "count": 3
+        },
+        {
           "name": "针锋相杠",
           "count": 3
         },
         {
-          "name": "预女猎禁混",
+          "name": "狼王骑士",
           "count": 2
         },
         {
@@ -6347,19 +6343,7 @@ window.JCMS_SEASONS = {
           "count": 1
         },
         {
-          "name": "狼王骑士",
-          "count": 1
-        },
-        {
-          "name": "禁言长老",
-          "count": 1
-        },
-        {
           "name": "预女猎白",
-          "count": 1
-        },
-        {
-          "name": "黑狼王骑士",
           "count": 1
         }
       ]
@@ -6387,7 +6371,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV15muJzsEDg",
           "url": "https://www.bilibili.com/video/BV15muJzsEDg",
           "duration": 3828,
-          "board": "狼美骑士",
+          "board": "狼美人骑士",
           "stage": "表演赛",
           "date": "2025-07-15",
           "section": "正片",
@@ -6420,7 +6404,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1C3uazqEdU",
           "url": "https://www.bilibili.com/video/BV1C3uazqEdU",
           "duration": 3730,
-          "board": "狼美骑士",
+          "board": "狼美人骑士",
           "stage": "表演赛",
           "date": "2025-07-16",
           "section": "正片",
@@ -8320,7 +8304,7 @@ window.JCMS_SEASONS = {
           "count": 3
         },
         {
-          "name": "狼美骑士",
+          "name": "狼美人骑士",
           "count": 2
         },
         {
@@ -12704,7 +12688,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV17izQYmE2V",
           "url": "https://www.bilibili.com/video/BV17izQYmE2V",
           "duration": 3798,
-          "board": "机械狼狼人杀",
+          "board": "机械狼通灵师",
           "stage": "正赛",
           "date": "2024-12-03",
           "section": "正片",
@@ -13198,7 +13182,7 @@ window.JCMS_SEASONS = {
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 43
+          "count": 44
         },
         {
           "name": "预女猎白混",
@@ -13226,10 +13210,6 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "捣蛋鬼",
-          "count": 1
-        },
-        {
-          "name": "机械狼狼人杀",
           "count": 1
         },
         {
@@ -13324,7 +13304,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1HU411S7hC",
           "url": "https://www.bilibili.com/video/BV1HU411S7hC",
           "duration": 4625,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-09",
           "section": "正片",
@@ -13357,7 +13337,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1w4421S78M",
           "url": "https://www.bilibili.com/video/BV1w4421S78M",
           "duration": 6372,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-13",
           "section": "正片",
@@ -13379,7 +13359,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1pm42137Qy",
           "url": "https://www.bilibili.com/video/BV1pm42137Qy",
           "duration": 4791,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-14",
           "section": "正片",
@@ -13412,7 +13392,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1Tf421i7yX",
           "url": "https://www.bilibili.com/video/BV1Tf421i7yX",
           "duration": 4433,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-15",
           "section": "正片",
@@ -13445,7 +13425,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1Nz421i7gg",
           "url": "https://www.bilibili.com/video/BV1Nz421i7gg",
           "duration": 8267,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-16",
           "section": "正片",
@@ -13478,7 +13458,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1G4421S7vM",
           "url": "https://www.bilibili.com/video/BV1G4421S7vM",
           "duration": 4767,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-20",
           "section": "正片",
@@ -13511,7 +13491,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1T1421t7E3",
           "url": "https://www.bilibili.com/video/BV1T1421t7E3",
           "duration": 8518,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-21",
           "section": "正片",
@@ -13544,7 +13524,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1GZ421K72F",
           "url": "https://www.bilibili.com/video/BV1GZ421K72F",
           "duration": 6753,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-22",
           "section": "正片",
@@ -13577,7 +13557,7 @@ window.JCMS_SEASONS = {
           "bvid": "BV1ur421T71c",
           "url": "https://www.bilibili.com/video/BV1ur421T71c",
           "duration": 4002,
-          "board": "预女猎禁混",
+          "board": "禁言长老",
           "stage": "正赛",
           "date": "2024-08-23",
           "section": "正片",
@@ -14467,7 +14447,7 @@ window.JCMS_SEASONS = {
           "count": 18
         },
         {
-          "name": "预女猎禁混",
+          "name": "禁言长老",
           "count": 9
         },
         {

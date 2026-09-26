@@ -6,7 +6,24 @@ import sys
 from pathlib import Path
 
 
+BOARD_ALIASES = {
+    "预女猎禁混": "禁言长老",
+    "黑狼王骑士": "狼王骑士",
+    "机械狼狼人杀": "机械狼通灵师",
+    "狼美骑士": "狼美人骑士",
+    "狼美猎人": "狼美人猎人",
+    "魔幻对局": "魔幻对决",
+}
+
+
+def canonical_board_name(board: str) -> str:
+    return BOARD_ALIASES.get(board, board)
+
+
 KNOWN_BOARDS = [
+    "机械狼狼人杀",
+    "狼美人骑士",
+    "青丘夜影",
     "机械狼通灵师",
     "预女猎白混",
     "预女猎禁混",
@@ -134,18 +151,14 @@ def get_board_name(title: str) -> str:
     normalized = title.replace("—", "-").replace("－", "-")
     for board in sorted(KNOWN_BOARDS, key=len, reverse=True):
         if board in normalized:
-            if board == "狼美猎人":
-                return "狼美人猎人"
-            if board == "魔幻对局":
-                return "魔幻对决"
-            return board
+            return canonical_board_name(board)
 
     if "-" not in normalized:
         return "非对局/待补充"
     board = normalized.rsplit("-", 1)[-1].strip()
     board = re.sub(r"^\d+\s*", "", board)
     board = re.sub(r"^第[一二三四五六七八九十]+局\s*", "", board)
-    return board or "非对局/待补充"
+    return canonical_board_name(board) or "非对局/待补充"
 
 
 def get_stage_name(title: str) -> str:
