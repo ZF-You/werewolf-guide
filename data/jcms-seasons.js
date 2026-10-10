@@ -1053,6 +1053,36 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1791471423,
           "aid": 117405833495797
+        },
+        {
+          "title": "20261009 正赛 第五期 Day-4 第一局-预女猎白混",
+          "bvid": "BV1U3p86dEHL",
+          "url": "https://www.bilibili.com/video/BV1U3p86dEHL",
+          "duration": 5220,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第五期",
+          "game": "第一局",
+          "date": "2026-10-09",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791571327,
+          "aid": 117412393387638
+        },
+        {
+          "title": "20261009 正赛 第五期 Day-4 第二局-魔幻对决",
+          "bvid": "BV1U3p86dEYR",
+          "url": "https://www.bilibili.com/video/BV1U3p86dEYR",
+          "duration": 5649,
+          "board": "魔幻对决",
+          "stage": "正赛",
+          "issue": "第五期",
+          "game": "第二局",
+          "date": "2026-10-09",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791571365,
+          "aid": 117412393386378
         }
       ],
       "boards": [
@@ -1062,7 +1092,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "预女猎白混",
-          "count": 22
+          "count": 23
         },
         {
           "name": "假面舞会",
@@ -1083,12 +1113,16 @@ window.JCMS_SEASONS = {
         {
           "name": "狼王守卫",
           "count": 1
+        },
+        {
+          "name": "魔幻对决",
+          "count": 1
         }
       ],
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 70
+      "episodeCount": 72
     },
     {
       "id": 8209896,
