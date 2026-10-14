@@ -1083,28 +1083,88 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1791571365,
           "aid": 117412393386378
+        },
+        {
+          "title": "20261009 正赛 第五期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1U3p86dEJY",
+          "url": "https://www.bilibili.com/video/BV1U3p86dEJY",
+          "duration": 3617,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第五期",
+          "game": "第三局",
+          "date": "2026-10-09",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791571328,
+          "aid": 117412393387665
+        },
+        {
+          "title": "20261013 正赛 第六期 Day-1 第一局-预女猎白混",
+          "bvid": "BV1zmpB6PEWL",
+          "url": "https://www.bilibili.com/video/BV1zmpB6PEWL",
+          "duration": 5716,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第六期",
+          "game": "第一局",
+          "date": "2026-10-13",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791911283,
+          "aid": 117434673529830
+        },
+        {
+          "title": "20261013 正赛 第六期 Day-1 第二局-盗宝大师",
+          "bvid": "BV1zmpB6PEcF",
+          "url": "https://www.bilibili.com/video/BV1zmpB6PEcF",
+          "duration": 6195,
+          "board": "盗宝大师",
+          "stage": "正赛",
+          "issue": "第六期",
+          "game": "第二局",
+          "date": "2026-10-13",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791911385,
+          "aid": 117434673530601
+        },
+        {
+          "title": "20261013 正赛 第六期 Day-1 第三局-机械狼通灵师",
+          "bvid": "BV1BmpB6PE2C",
+          "url": "https://www.bilibili.com/video/BV1BmpB6PE2C",
+          "duration": 5417,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第六期",
+          "game": "第三局",
+          "date": "2026-10-13",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1791911369,
+          "aid": 117434673531883
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 26
+          "count": 28
         },
         {
           "name": "预女猎白混",
-          "count": 23
+          "count": 24
         },
         {
           "name": "假面舞会",
           "count": 6
         },
         {
-          "name": "诡术之境",
+          "name": "盗宝大师",
           "count": 6
         },
         {
-          "name": "盗宝大师",
-          "count": 5
+          "name": "诡术之境",
+          "count": 6
         },
         {
           "name": "青丘夜影",
@@ -1122,7 +1182,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 72
+      "episodeCount": 76
     },
     {
       "id": 8209896,
