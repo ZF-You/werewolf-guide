@@ -1488,12 +1488,57 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1793395008,
           "aid": 117531914276243
+        },
+        {
+          "title": "20261103 正赛 第八期 Day-1 第一局-狼女孩",
+          "bvid": "BV1Gnxm6sEjQ",
+          "url": "https://www.bilibili.com/video/BV1Gnxm6sEjQ",
+          "duration": 7145,
+          "board": "狼女孩",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第一局",
+          "date": "2026-11-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793721419,
+          "aid": 117553288448473
+        },
+        {
+          "title": "20261103 正赛 第八期 Day-1 第二局-假面舞会",
+          "bvid": "BV1Qnxm6sEQq",
+          "url": "https://www.bilibili.com/video/BV1Qnxm6sEQq",
+          "duration": 5085,
+          "board": "假面舞会",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第二局",
+          "date": "2026-11-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793721426,
+          "aid": 117553288580315
+        },
+        {
+          "title": "20261103 正赛 第八期 Day-1 第三局-机械狼通灵师",
+          "bvid": "BV1anxm6sEWy",
+          "url": "https://www.bilibili.com/video/BV1anxm6sEWy",
+          "duration": 2979,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第三局",
+          "date": "2026-11-03",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793721309,
+          "aid": 117553288514790
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 37
+          "count": 38
         },
         {
           "name": "预女猎白混",
@@ -1501,7 +1546,7 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "假面舞会",
-          "count": 8
+          "count": 9
         },
         {
           "name": "诡术之境",
@@ -1524,6 +1569,10 @@ window.JCMS_SEASONS = {
           "count": 1
         },
         {
+          "name": "狼女孩",
+          "count": 1
+        },
+        {
           "name": "狼王守卫",
           "count": 1
         }
@@ -1531,7 +1580,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 99
+      "episodeCount": 102
     },
     {
       "id": 8209896,
