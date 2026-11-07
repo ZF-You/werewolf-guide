@@ -1578,16 +1578,106 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1793810720,
           "aid": 117559160474431
+        },
+        {
+          "title": "20261105 正赛 第八期 Day-3 第一局-预女猎白混",
+          "bvid": "BV1Ve4861ERZ",
+          "url": "https://www.bilibili.com/video/BV1Ve4861ERZ",
+          "duration": 5455,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第一局",
+          "date": "2026-11-05",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793897237,
+          "aid": 117564814396101
+        },
+        {
+          "title": "20261105 正赛 第八期 Day-3 第二局-狼女孩",
+          "bvid": "BV1Ve4861EtL",
+          "url": "https://www.bilibili.com/video/BV1Ve4861EtL",
+          "duration": 4838,
+          "board": "狼女孩",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第二局",
+          "date": "2026-11-05",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793897271,
+          "aid": 117564814396618
+        },
+        {
+          "title": "20261105 正赛 第八期 Day-3 第三局-机械狼通灵师",
+          "bvid": "BV1Ve4861Etu",
+          "url": "https://www.bilibili.com/video/BV1Ve4861Etu",
+          "duration": 5713,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第三局",
+          "date": "2026-11-05",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793897246,
+          "aid": 117564814396624
+        },
+        {
+          "title": "20261106 正赛 第八期 Day-4 第一局-狼女孩",
+          "bvid": "BV1B74563Exj",
+          "url": "https://www.bilibili.com/video/BV1B74563Exj",
+          "duration": 7595,
+          "board": "狼女孩",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第一局",
+          "date": "2026-11-06",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793989829,
+          "aid": 117570887748269
+        },
+        {
+          "title": "20261106 正赛 第八期 Day-4 第二局-盗宝大师",
+          "bvid": "BV1B74563ECy",
+          "url": "https://www.bilibili.com/video/BV1B74563ECy",
+          "duration": 7481,
+          "board": "盗宝大师",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第二局",
+          "date": "2026-11-06",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793989857,
+          "aid": 117570887747248
+        },
+        {
+          "title": "20261106 正赛 第八期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1B74563EXB",
+          "url": "https://www.bilibili.com/video/BV1B74563EXB",
+          "duration": 5868,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第八期",
+          "game": "第三局",
+          "date": "2026-11-06",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1793989732,
+          "aid": 117570887745716
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 39
+          "count": 41
         },
         {
           "name": "预女猎白混",
-          "count": 32
+          "count": 33
         },
         {
           "name": "假面舞会",
@@ -1599,11 +1689,15 @@ window.JCMS_SEASONS = {
         },
         {
           "name": "盗宝大师",
-          "count": 7
+          "count": 8
         },
         {
           "name": "青丘夜影",
           "count": 4
+        },
+        {
+          "name": "狼女孩",
+          "count": 3
         },
         {
           "name": "魔幻对决",
@@ -1614,10 +1708,6 @@ window.JCMS_SEASONS = {
           "count": 1
         },
         {
-          "name": "狼女孩",
-          "count": 1
-        },
-        {
           "name": "狼王守卫",
           "count": 1
         }
@@ -1625,7 +1715,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 105
+      "episodeCount": 111
     },
     {
       "id": 8209896,
