@@ -1940,36 +1940,6 @@ window.JCMS_SEASONS = {
           "aid": 117632594347012
         },
         {
-          "title": "20261118 正赛 第十期 Day-1 第一局-预女猎白混",
-          "bvid": "BV1xGsQ6pEWn",
-          "url": "https://www.bilibili.com/video/BV1xGsQ6pEWn",
-          "duration": 5566,
-          "board": "预女猎白混",
-          "stage": "正赛",
-          "issue": "第十期",
-          "game": "第一局",
-          "date": "2026-11-18",
-          "section": "正片",
-          "seasonTitle": "昆仑归墟",
-          "pubdate": 1795016193,
-          "aid": 117638147606629
-        },
-        {
-          "title": "20261118 正赛 第十期 Day-1 第二局-盗宝大师",
-          "bvid": "BV12GsQ6pE5D",
-          "url": "https://www.bilibili.com/video/BV12GsQ6pE5D",
-          "duration": 4525,
-          "board": "盗宝大师",
-          "stage": "正赛",
-          "issue": "第十期",
-          "game": "第二局",
-          "date": "2026-11-18",
-          "section": "正片",
-          "seasonTitle": "昆仑归墟",
-          "pubdate": 1795016114,
-          "aid": 117638147671418
-        },
-        {
           "title": "20261118 正赛 第十期 Day-1 第三局-机械狼通灵师",
           "bvid": "BV11GsQ6pEad",
           "url": "https://www.bilibili.com/video/BV11GsQ6pEad",
@@ -2043,12 +2013,72 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1795102440,
           "aid": 117643818305068
+        },
+        {
+          "title": "20261120 正赛 第十期 Day-4 第一局-预女猎白混",
+          "bvid": "BV1kxyszqE5v",
+          "url": "https://www.bilibili.com/video/BV1kxyszqE5v",
+          "duration": 3149,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第十期",
+          "game": "第一局",
+          "date": "2026-11-20",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795188620,
+          "aid": 117649455451097
+        },
+        {
+          "title": "20261120 正赛 第十期 Day-4 第二局-诡术之境",
+          "bvid": "BV1kxyszqEND",
+          "url": "https://www.bilibili.com/video/BV1kxyszqEND",
+          "duration": 2197,
+          "board": "诡术之境",
+          "stage": "正赛",
+          "issue": "第十期",
+          "game": "第二局",
+          "date": "2026-11-20",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795188608,
+          "aid": 117649455450588
+        },
+        {
+          "title": "20261120 正赛 第十期 Day-4 第三局-机械狼通灵师",
+          "bvid": "BV1pxyszBEpV",
+          "url": "https://www.bilibili.com/video/BV1pxyszBEpV",
+          "duration": 4169,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第十期",
+          "game": "第三局",
+          "date": "2026-11-20",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795188682,
+          "aid": 117649455580642
+        },
+        {
+          "title": "20261120 正赛 第十期 Day-4 第四局-机械狼通灵师",
+          "bvid": "BV1wxyszBEh7",
+          "url": "https://www.bilibili.com/video/BV1wxyszBEh7",
+          "duration": 5428,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第十期",
+          "game": "第四局",
+          "date": "2026-11-20",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795188765,
+          "aid": 117649455515878
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 52
+          "count": 54
         },
         {
           "name": "预女猎白混",
@@ -2059,11 +2089,11 @@ window.JCMS_SEASONS = {
           "count": 11
         },
         {
-          "name": "盗宝大师",
+          "name": "诡术之境",
           "count": 11
         },
         {
-          "name": "诡术之境",
+          "name": "盗宝大师",
           "count": 10
         },
         {
@@ -2090,7 +2120,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 136
+      "episodeCount": 138
     },
     {
       "id": 8209896,
