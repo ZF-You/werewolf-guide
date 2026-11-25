@@ -2073,16 +2073,61 @@ window.JCMS_SEASONS = {
           "seasonTitle": "昆仑归墟",
           "pubdate": 1795188765,
           "aid": 117649455515878
+        },
+        {
+          "title": "20261124 正赛 第十一期 Day-1 第一局-预女猎白混",
+          "bvid": "BV1FR1FzvE4T",
+          "url": "https://www.bilibili.com/video/BV1FR1FzvE4T",
+          "duration": 7723,
+          "board": "预女猎白混",
+          "stage": "正赛",
+          "issue": "第十一期",
+          "game": "第一局",
+          "date": "2026-11-24",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795534519,
+          "aid": 117672121469776
+        },
+        {
+          "title": "20261124 正赛 第十一期 Day-1 第二局-魔幻对决",
+          "bvid": "BV1fR1FzeERg",
+          "url": "https://www.bilibili.com/video/BV1fR1FzeERg",
+          "duration": 5015,
+          "board": "魔幻对决",
+          "stage": "正赛",
+          "issue": "第十一期",
+          "game": "第二局",
+          "date": "2026-11-24",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795534538,
+          "aid": 117672121470035
+        },
+        {
+          "title": "20261124 正赛 第十一期 Day-1 第三局-机械狼通灵师",
+          "bvid": "BV1JR1FzvE27",
+          "url": "https://www.bilibili.com/video/BV1JR1FzvE27",
+          "duration": 2924,
+          "board": "机械狼通灵师",
+          "stage": "正赛",
+          "issue": "第十一期",
+          "game": "第三局",
+          "date": "2026-11-24",
+          "section": "正片",
+          "seasonTitle": "昆仑归墟",
+          "pubdate": 1795534499,
+          "aid": 117672121534804
         }
       ],
       "boards": [
         {
           "name": "机械狼通灵师",
-          "count": 54
+          "count": 55
         },
         {
           "name": "预女猎白混",
-          "count": 40
+          "count": 41
         },
         {
           "name": "假面舞会",
@@ -2105,11 +2150,11 @@ window.JCMS_SEASONS = {
           "count": 3
         },
         {
-          "name": "狼王守卫",
-          "count": 2
+          "name": "魔幻对决",
+          "count": 3
         },
         {
-          "name": "魔幻对决",
+          "name": "狼王守卫",
           "count": 2
         },
         {
@@ -2120,7 +2165,7 @@ window.JCMS_SEASONS = {
       "title": "昆仑归墟",
       "sourceTitle": "合集·昆仑归墟",
       "completed": false,
-      "episodeCount": 138
+      "episodeCount": 141
     },
     {
       "id": 8209896,
